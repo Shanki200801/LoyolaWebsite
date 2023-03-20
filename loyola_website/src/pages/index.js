@@ -6,7 +6,7 @@ import WelcomeImage from '@/components/welcomeImage/WelcomeImage';
 import WelcomeText from '@/components/welcomeText/WelcomeText';
 import SupportAssistance from '@/components/supportAssistance/SupportAssistance';
 import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
+
 import FeaturedRecentEvents from '@/components/featuredRecentEvents/FeaturedRecentEvents';
 
 const inter = Inter({ subsets: ['latin'] })

@@ -2,7 +2,11 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <div>Navbar</div>
+    <div>
+      <div className='px-2'>
+        This is a navigation bar
+      </div>
+    </div>
   )
 }
 
