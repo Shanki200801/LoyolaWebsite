@@ -4,9 +4,9 @@ import Image from 'next/image';
 
 const LogoName = () => {
   return (
-    <div className="flex flex-row">
+    <div className="flex flex-row items-center">
       <Image src={Logo} height={100} width={100}/>
-      <h1 className="text-xs">Loyola Degree College</h1>
+      <h1 className="text-2xl font-bold px-2">Loyola Degree College</h1>
     </div>
   )
 };
