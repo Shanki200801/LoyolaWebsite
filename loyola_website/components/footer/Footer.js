@@ -1,13 +1,13 @@
-import React from 'react'
+import React from 'react';
+import LogoName from './LogoName';
 
 const Footer = () => {
   return (
     <>
     <div className='flex flex-row'>
-      <div className='flex flex-column basis-1/2'>
-        
+      <div className='flex flex-column '>
+        <LogoName/>
       </div>
-
     </div>
     </>
   )
