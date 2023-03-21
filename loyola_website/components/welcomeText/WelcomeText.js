@@ -2,7 +2,7 @@ import React from 'react'
 
 const WelcomeText = () => {
   return (
-    <div>WelcomeText</div>
+    <div>This is the WelcomeText panel</div>
   )
 }
 
