@@ -9,6 +9,9 @@ const Navbar = () => {
       </div>  
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
+          <li>
+            Home
+          </li>
           <li tabIndex={0}>
             <a>
               Student
@@ -22,7 +25,7 @@ const Navbar = () => {
                 <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
               </svg>
             </a>
-            <ul className="p-2 bg-base-100">
+            <ul className="p-2">
               <li>
                 <a>Submenu 1</a>
               </li>
@@ -44,7 +47,7 @@ const Navbar = () => {
                 <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
               </svg>
             </a>
-            <ul className="p-2 bg-base-100">
+            <ul className="p-2">
               <li>
                 <a>Submenu 1</a>
               </li>
@@ -66,7 +69,7 @@ const Navbar = () => {
                 <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
               </svg>
             </a>
-            <ul className="p-2 bg-base-100">
+            <ul className="p-2">
               <li>
                 <a>Submenu 1</a>
               </li>
@@ -88,7 +91,7 @@ const Navbar = () => {
                 <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
               </svg>
             </a>
-            <ul className="p-2 bg-base-100">
+            <ul className="p-2">
               <li>
                 <a>Submenu 1</a>
               </li>
@@ -110,7 +113,7 @@ const Navbar = () => {
                 <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
               </svg>
             </a>
-            <ul className="p-2 bg-base-100">
+            <ul className="p-2">
               <li>
                 <a>Submenu 1</a>
               </li>
