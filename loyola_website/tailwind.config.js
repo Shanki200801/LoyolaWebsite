@@ -7,7 +7,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'navbar-theme' : '#003D7A'
+        'navbar-theme' : '#003D7A',
+        'deptBtnColor' : '#257dad',
+        'deptBtnColorHover' : '#1D5F83',
       }
     },
   },
