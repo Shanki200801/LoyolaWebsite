@@ -1,20 +1,21 @@
 import React, { useState } from "react";
 import NavLogo from "./NavLogo";
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
-// import styles from './navbar.module.css'; 
+import styles from "./navbar.module.css";
+import "./navbar.module.css";
 
 const Navbar = () => {
   return (
     <div className="navbar bg-navbar-theme text-white">
       <div className="flex-1">
-        <a className=""><NavLogo/></a>
+        <a><NavLogo/></a>
       </div>  
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
 
         {/* About */}
         <li tabIndex={0}>
-            <a>
+          <a className={styles.primaryLinks}>
               About
               <svg
                 className="fill-current"
@@ -47,7 +48,7 @@ const Navbar = () => {
 
         {/* Student */}
         <li>
-            <a>
+          <a className={styles.primaryLinks}>
               Student
               <svg
                 className="fill-current"
@@ -67,12 +68,6 @@ const Navbar = () => {
                 <a>Note to parents</a>
               </li>
               <li>
-                <a>Student Council</a>
-              </li>
-              <li>
-                <a>Associations</a>
-              </li>
-              <li>
                 <a>Scholarships</a>
               </li>
               <li>
@@ -83,7 +78,7 @@ const Navbar = () => {
 
           {/* Academics */}
           <li>
-            <a>
+          <a className={styles.primaryLinks}>
               Academics
               <svg
                 className="fill-current"
@@ -109,17 +104,14 @@ const Navbar = () => {
                 <a>Cert Courses</a>
               </li>
               <li>
-                <a>Question Papers</a>
-              </li>
-              <li>
-                <a>Examination Result</a>
+                <a>Examination Results</a>
               </li>
             </ul>
           </li>
 
           {/* Departments */}
           <li>
-            <a>
+          <a className={styles.primaryLinks}>
               Departments
               <svg
                 className="fill-current"
@@ -161,7 +153,7 @@ const Navbar = () => {
 
           {/* News */}
           <li>
-            <a>
+          <a className={styles.primaryLinks}>
               News & Events
               <svg
                 className="fill-current"
@@ -186,7 +178,7 @@ const Navbar = () => {
             </ul>
           </li>
           <li>
-            <a>
+          <a className={styles.primaryLinks}>
               Admissions
             </a>
           </li>
