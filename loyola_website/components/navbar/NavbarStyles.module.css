@@ -1,0 +1,43 @@
+.nav {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    background: navy;
+    padding: 20px 80px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+#ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ul li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#ul li a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+}
+
+#ul li a:hover{
+    color: red;
+}
+
+#ul li a:hover::after{
+    content: "";
+    width: 70%;
+    height: 2px;
+    background: red;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
