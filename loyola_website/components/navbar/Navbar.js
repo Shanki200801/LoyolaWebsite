@@ -6,7 +6,7 @@ import "./navbar.module.css";
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-navbar-theme text-white">
+    <div className="navbar bg-navbar-theme text-white sticky top-0 z-20">
       <div className="flex-1">
         <a><NavLogo/></a>
       </div>  
@@ -27,7 +27,7 @@ const Navbar = () => {
                 <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
               </svg>
             </a>
-            <ul className="bg-white text-black">
+            <ul className="bg-white text-black z-10">
               <li>
                 <a>About University</a>
               </li>
@@ -60,7 +60,7 @@ const Navbar = () => {
                 <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
               </svg>
             </a>
-            <ul className="bg-white text-black">
+            <ul className="bg-white text-black z-10">
               <li>
                 <a>Rules & Regulations</a>
               </li>
@@ -90,7 +90,7 @@ const Navbar = () => {
                 <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
               </svg>
             </a>
-            <ul className="bg-white text-black">
+            <ul className="bg-white text-black z-10">
               <li>
                 <a>BA</a>
               </li>
@@ -123,7 +123,7 @@ const Navbar = () => {
                 <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
               </svg>
             </a>
-            <ul className="bg-white text-black">
+            <ul className="bg-white text-black z-10">
               <li>
                 <a>Department of Commerce</a>
               </li>
@@ -165,7 +165,7 @@ const Navbar = () => {
                 <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
               </svg>
             </a>
-            <ul className="bg-white text-black">
+            <ul className="bg-white text-black z-10">
               <li>
                 <a>News</a>
               </li>
