@@ -4,8 +4,8 @@ import CallIcon from '@mui/icons-material/CallSharp';
 import MobileIcon from '@mui/icons-material/PhoneAndroidSharp';
 import FacebookSharpIcon from '@mui/icons-material/FacebookSharp';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import EmailIcon from '@mui/icons-material/Email';
-import Image from 'next/image';
+// import EmailIcon from '@mui/icons-material/Email';
+// import Image from 'next/image';
 
 const map_embed_link = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.592227058149!2d77.58879226482097!3d12.869593440922875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6ac94e0b1eeb%3A0x561e8f0c78851bf0!2sLOYOLA+COMPOSITE+PU+COLLEGE!5e0!3m2!1sen!2sin!4v1503305299908'
 const Footer = () => {
