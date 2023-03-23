@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import NavLogo from "./NavLogo";
-import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import styles from "./navbar.module.css";
 import "./navbar.module.css";
 
@@ -47,7 +46,7 @@ const NavLinks = () => {
 const NavAbout = () => {
   return (
     <li tabIndex={0}>
-      <a className="hover:underline hover:underline-offset-4 decoration-red-500 bg-transparent">
+      <a className={`hover:underline hover:underline-offset-4 hover: decoration-white bg-transparent uppercase ${styles.primaryLinks}`}>
         About
         <svg
           className="fill-current"
@@ -67,9 +66,9 @@ const NavAbout = () => {
 //Navbar About Menu Component
 const AboutSubMenu = () => {
   return (
-    <ul className="bg-white text-black z-10">
+    <ul className={`bg-white text-black z-10 ${styles.subMenu}`}>
       <li>
-        <a>About University</a>
+        <a className>About University</a>
       </li>
       <li>
         <a>Vision & Mission</a>
@@ -91,7 +90,7 @@ const AboutSubMenu = () => {
 const NavStudent = () => {
   return (
     <li>
-      <a className="hover:underline hover:underline-offset-4 decoration-red-500 bg-transparent">
+      <a className={`hover:underline hover:underline-offset-4 hover: decoration-white bg-transparent uppercase ${styles.primaryLinks}`}>
         Student
         <svg
           className="fill-current"
@@ -111,7 +110,7 @@ const NavStudent = () => {
 //Navbar Student Menu Component
 const StudentSubMenu = () => {
   return (
-    <ul className="bg-white text-black z-10">
+    <ul className={`bg-white text-black z-10 ${styles.subMenu}`}>
       <li>
         <a>Rules & Regulations</a>
       </li>
@@ -132,7 +131,7 @@ const StudentSubMenu = () => {
 const NavAcads = () => {
   return (
     <li>
-      <a className="hover:underline hover:underline-offset-4 decoration-red-500 bg-transparent">
+      <a className={`hover:underline hover:underline-offset-4 hover: decoration-white bg-transparent uppercase ${styles.primaryLinks}`}>
         Academics
         <svg
           className="fill-current"
@@ -152,12 +151,15 @@ const NavAcads = () => {
 //Navbar Academics Menu Component
 const AcadsSubMenu = () => {
   return (
-    <ul className="bg-white text-black z-10">
+    <ul className={`bg-white text-black z-10 ${styles.subMenu} ${styles.acadsMenu}`}>
       <li>
-        <a>BA</a>
+        <a>B.A. Journalism, Psychology</a>
       </li>
       <li>
-        <a>BCom</a>
+        <a>B.A. Journalism, Political Science</a>
+      </li>
+      <li>
+        <a>B.Com</a>
       </li>
       <li>
         <a>Study Of Languages</a>
@@ -176,7 +178,7 @@ const AcadsSubMenu = () => {
 const NavDepts = () => {
   return (
     <li>
-      <a className="hover:underline hover:underline-offset-4 decoration-red-500 bg-transparent">
+      <a className={`hover:underline hover:underline-offset-4 hover: decoration-white bg-transparent uppercase ${styles.primaryLinks}`}>
         Departments
         <svg
           className="fill-current"
@@ -196,7 +198,7 @@ const NavDepts = () => {
 //Navbar Departments Menu Component
 const DeptSubMenu = () => {
   return (
-    <ul className="bg-white text-black z-10">
+    <ul className={`bg-white text-black z-10 ${styles.subMenu} ${styles.deptMenu}`}>
       <li>
         <a>Department of Commerce</a>
       </li>
@@ -229,36 +231,10 @@ const DeptSubMenu = () => {
 const NavNews = () => {
   return (
     <li>
-      <a className="hover:underline hover:underline-offset-4 decoration-red-500 bg-transparent">
+      <a className={`hover:underline hover:underline-offset-4 hover: decoration-white bg-transparent uppercase ${styles.primaryLinks}`}>
         News & Events
-        <svg
-          className="fill-current"
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-        >
-          <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
-        </svg>
       </a>
     </li>
-  );
-};
-
-//Navbar News Menu Component
-const NewsSubMenu = () => {
-  return (
-    <ul className="bg-white text-black z-10">
-      <li>
-        <a>News</a>
-      </li>
-      <li>
-        <a>Events</a>
-      </li>
-      <li>
-        <a>Gallery</a>
-      </li>
-    </ul>
   );
 };
 
@@ -266,7 +242,7 @@ const NewsSubMenu = () => {
 const NavAdmissions = () => {
   return (
     <li>
-      <a className="hover:underline hover:underline-offset-4 decoration-red-500 bg-transparent">
+      <a className={`hover:bg-white uppercase font-black ${styles.admissionsBtn} ${styles.primaryLinks}`}>
         Admissions
       </a>
     </li>
