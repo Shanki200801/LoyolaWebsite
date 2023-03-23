@@ -11,7 +11,7 @@ const map_embed_link = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38
 const Footer = () => {
   return (
     <>
-    <div className='flex flex-row bg-navbar-theme text-white items-center fixed py-2 max-w-max justify-between'>
+    <div className='flex flex-row bg-navbar-theme text-white items-center justify-between'>
       <div className='flex flex-col '>
         <LogoName/>
         <div className='px-32 py-4 flex flex-col'>
