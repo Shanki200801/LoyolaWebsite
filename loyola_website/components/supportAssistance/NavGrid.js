@@ -7,27 +7,33 @@ const NavGrid = () => {
 
   const icon_data = [
         {
+        key:1,
         name: 'Campus Facilities',
         icon: Icon,
         },
         {
+          key:2,
           name: 'Clubs and Associations',
           icon: Icon,
         },
         {
+          key: 3,
           name: 'Mid Day Meals',
           icon: Icon,
         },
         {
+          key:4,
           name: 'Scholarships',
           icon: Icon,
         },
         {
+          key: 5,
           name: 'Councilling',
           icon: Icon,
         },
         
         {
+          key: 6,
           name: 'Student Council',
           icon: Icon,
         }
