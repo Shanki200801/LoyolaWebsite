@@ -6,6 +6,7 @@ import React from "react";
 import NavLogo from "./NavLogo";
 import styles from "./NavbarStyles.module.css";
 import "./NavbarStyles.module.css";
+
 function Navbar2(){
     return(
         <>
@@ -14,10 +15,11 @@ function Navbar2(){
 
         <div>
             <ul id={styles.ul}>
+                <li><a href="http://loyolacollegeblr.com/founder.html" target="_blank">About</a></li>
                 <li><a href="http://loyolacollegeblr.com/Students_Corner.html" target="_blank">Student</a></li>
                 <li><a href="http://loyolacollegeblr.com/ba.html" target="_blank">Academics</a></li>
-                <li><a href="http://loyolacollegeblr.com/founder.html" target="_blank">About</a></li>
-                <li><a href="http://loyolacollegeblr.com/news.html" target="_blank">News</a></li>
+                <li><a href="" target="_blank">Departments</a></li>
+                <li><a href="http://loyolacollegeblr.com/news.html" target="_blank">News & Events</a></li>
                 <li><a href="http://loyolacollegeblr.com/home.html" target="_blank">Admissions</a></li>
             </ul>
         </div>
