@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./announcement_style.module.css";
+import Script from "next/script";
 
 const Announcement_marquee = () => {
 	const content = () => {return [
@@ -20,7 +21,7 @@ const Announcement_marquee = () => {
 			text: " Congratulations to our MCom students for winning overall Championship ",
 		},
 	];
-}
+	}
 
 	const list_elements = content().map((item) => 
 	<li className="[style.inline-block] px-4">{item.text}</li>
@@ -32,28 +33,19 @@ const Announcement_marquee = () => {
 	const duration = numItems * 5 + 's';
 			  
 				// Apply the calculated duration to the animation property
-	const set_animation_time = () => {
+	useEffect(() => {
 		document.getElementById('marquee_list').style.animationDuration = duration
-	}
+	 })
 
 	return (
-		<>
-		<script>
-			{
-				
-			}
-		</script>
 		<div className="flex flex-row items-center bg-slate-300">
 			<button className="btn btn-default w-1/8 mx-4 bg-yellow-600 text-indigo-900">Announcements</button>
 			<div className={styles.marqueecontainer}>
 				<ul id= "marquee_list" className={`${styles.marquee} text-black`} >
 					{list_elements}
 				</ul>
-			</div>
-			{set_animation_time()}
+			</div>	
 		</div>
-		</>
-		
 	);
 };
 
