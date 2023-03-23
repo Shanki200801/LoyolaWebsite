@@ -1,8 +1,8 @@
 import React from 'react'
-import LogoName from '../components/footer/LogoName.js'
+import WelcomeText from 'components/welcomeText/WelcomeText.js'
 const test = () => {
   return (
-    <div><LogoName/></div>
+    <div><WelcomeText/></div>
   )
 }
 
