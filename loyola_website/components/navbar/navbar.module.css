@@ -1,17 +1,17 @@
-/* Remaining changes to be made
-- Hover styling for menu items to be added 
-    - Spacing
-    - Active color
-    - Hover color
+.primaryLinks svg {
+    margin-left: -10px;
+}
 
-- Menu width to be changed 
+.primaryLinks:hover {
+    background-color: transparent !important;
+}
 
-- Font families
-
-- Background/special text shadow for 'Admissions'
-
--SVG spacing/different icon to help with that
-
-- Text shadows
-*/
-
+.primaryLinks:hover::after {
+    content: "";
+    width: 70%;
+    height: 0.2vh;
+    background: red;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 1rem;
+}
