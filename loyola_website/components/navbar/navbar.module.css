@@ -1,1 +1,17 @@
-/* Stuff to be added soon */
+.primaryLinks svg {
+    margin-left: -10px;
+}
+
+.primaryLinks:hover {
+    background-color: transparent !important;
+}
+
+.primaryLinks:hover::after {
+    content: "";
+    width: 70%;
+    height: 0.2vh;
+    background: red;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 1rem;
+}
