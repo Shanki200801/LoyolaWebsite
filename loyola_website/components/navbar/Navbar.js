@@ -68,7 +68,7 @@ const AboutSubMenu = () => {
   return (
     <ul className={`bg-white text-black z-10 ${styles.subMenu}`}>
       <li>
-        <a className>About University</a>
+        <a>About University</a>
       </li>
       <li>
         <a>Vision & Mission</a>
