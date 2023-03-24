@@ -6,18 +6,15 @@ import Courses from "../components/courses/Courses";
 import WelcomeImage from "../components/welcomeImage/WelcomeImage";
 import WelcomeText from "../components/welcomeText/WelcomeText";
 import SupportAssistance from "../components/supportAssistance/SupportAssistance";
+import FeaturedRecentEvents from '../components/featuredRecentEvents/FeaturedRecentEvents';
+
 import { Inter } from "next/font/google";
-
-import FeaturedRecentEvents from "../components/featuredRecentEvents/FeaturedRecentEvents";
-import Navbar2 from "components/navbar/Navbar2";
-
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-	return (
-		<>
-			<Navbar />
-			{/* <Navbar2/> */}
+  return (
+    <>
+     <Navbar />
 			<WelcomeImage />
 			{/* <Announcements /> */}
 			<Announcement_marquee />
@@ -26,6 +23,6 @@ export default function Home() {
 			<Courses />
 			<SupportAssistance />
 			<Footer />
-		</>
+    </>
 	);
 }
