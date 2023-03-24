@@ -1,0 +1,24 @@
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee {
+  animation: marquee 10s linear infinite;
+  white-space: nowrap;
+}
+
+.marqueecontainer {
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee li {
+  padding: 1rem;
+  display: inline-block;
+}
