@@ -25,7 +25,7 @@ const TextComponent = ()=>{
   return(
     <div>
       <Grid container >
-        <Grid xs={12}><p className='grid place-items-center mb-30' style={{height: '15vh', width: '80vw', borderWidth: '0.1rem'}}>TextComponent</p></Grid>
+        <Grid xs={12} item><p className='grid place-items-center mb-30' style={{height: '15vh', width: '80vw', borderWidth: '0.1rem'}}>TextComponent</p></Grid>
       </Grid>
     </div>
   )
@@ -35,7 +35,7 @@ const IconComponent = ()=>{
   return(
     <div>
       <Grid container >
-        <Grid xs={12}><p className='grid place-items-center my-20' style={{height: '15vh', width: '80vw', borderWidth: '0.1rem'}}>IconComponent</p></Grid>
+        <Grid xs={12} item><p className='grid place-items-center my-20' style={{height: '15vh', width: '80vw', borderWidth: '0.1rem'}}>IconComponent</p></Grid>
       </Grid>
     </div>
   )
@@ -44,7 +44,7 @@ const IconComponent = ()=>{
 const DeptBtnComponent = () => {
   return (
     <Stack spacing={2} direction="row">
-      <Button className=" font-mono bg-white text-deptBtnColor rounded-sm hover:bg-white hover: text-deptBtnColorHover"
+      <Button className=" font-mono bg-white text-deptBtnColor rounded-sm hover:bg-white"
        variant="contained"
         color="success"
         href="http://www.loyolacollegeblr.com/Teaching-Staff.html"

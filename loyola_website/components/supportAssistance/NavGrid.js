@@ -45,7 +45,7 @@ const NavGrid = () => {
     ] 
 
   const grid_map = icon_data.map((icon) =>
-    <div className="flex flex-col items-center m-6 justify-center transition-transform duration-300 transform hover:-translate-y-1">
+    <div key={icon.key} className="flex flex-col items-center m-6 justify-center transition-transform duration-300 transform hover:-translate-y-1">
       <Image src={icon.icon} height={50} width={50} alt="CampusFacilities" className="h-16 rounded-full image-full w-16 mb-2" />
       <div className="font-semibold">{icon.name}</div>
     </div>
