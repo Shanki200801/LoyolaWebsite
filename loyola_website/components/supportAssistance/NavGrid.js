@@ -1,5 +1,10 @@
 import React from 'react'
-import Icon from '../../Assets/GitHub-Mark.png'
+import Campus_facilities from '../../Assets/campus_facilities.jpg'
+import Councilling from '../../Assets/councilling.jpg'
+import Clubs_association from '../../Assets/clubs.png'
+import Scholarship from '../../Assets/scholarship.jpg'
+import Mdmeals from '../../Assets/middaymeals.jpg'
+import Student_council from '../../Assets/studentCouncil.jpg'
 import Image from 'next/image'
 
 
@@ -9,39 +14,39 @@ const NavGrid = () => {
         {
         key:1,
         name: 'Campus Facilities',
-        icon: Icon,
+        icon: Campus_facilities,
         },
         {
           key:2,
           name: 'Clubs and Associations',
-          icon: Icon,
+          icon: Clubs_association,
         },
         {
           key: 3,
           name: 'Mid Day Meals',
-          icon: Icon,
+          icon: Mdmeals,
         },
         {
           key:4,
           name: 'Scholarships',
-          icon: Icon,
+          icon: Scholarship,
         },
         {
           key: 5,
           name: 'Councilling',
-          icon: Icon,
+          icon: Councilling,
         },
         
         {
           key: 6,
           name: 'Student Council',
-          icon: Icon,
+          icon: Student_council,
         }
     ] 
 
   const grid_map = icon_data.map((icon) =>
-    <div className="flex flex-col items-center m-6 justify-center transition-transform duration-300 transform hover:-translate-y-1">
-      <Image src={icon.icon} height={50} width={50} alt="CampusFacilities" className="h-16 w-16 mb-2" />
+    <div key={icon.key} className="flex flex-col items-center m-6 justify-center transition-transform duration-300 transform hover:-translate-y-1">
+      <Image src={icon.icon} height={50} width={50} alt="CampusFacilities" className="h-16 rounded-full image-full w-16 mb-2" />
       <div className="font-semibold">{icon.name}</div>
     </div>
   ) 
