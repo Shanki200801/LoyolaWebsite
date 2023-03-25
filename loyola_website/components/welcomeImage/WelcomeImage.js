@@ -20,7 +20,7 @@ const WelcomeImage = () => {
   ]
 
   return (
-      <Carousel height={512} indicators={false} navButtonsAlwaysVisible={true}>
+      <Carousel height={512} className="" indicators={false} navButtonsAlwaysVisible={true}>
           {
               items.map( (item, i) => <Item key={i} item={item} /> )
           }
