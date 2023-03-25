@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styles from "./announcement_style.module.css";
-import Script from "next/script";
+
 
 const Announcement_marquee = () => {
 	const content = () => {return [
@@ -24,7 +24,7 @@ const Announcement_marquee = () => {
 	}
 
 	const list_elements = content().map((item) => 
-	<li className="[style.inline-block] px-4" key={item.index}>{item.text}</li>
+	<li className="[style.inline-block] px-4">{item.text}</li>
 	)
 
 	const numItems = content().length;
