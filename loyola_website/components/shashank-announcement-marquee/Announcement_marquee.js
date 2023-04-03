@@ -6,7 +6,7 @@ const Announcement_marquee = () => {
 	const content = () => {return [
 		{
 			index: 1,
-			text: "Welcome to st josephs's college",
+			text: "Welcome to Loyola degree college",
 		},
 		{
 			index: 2,

@@ -18,7 +18,7 @@ import commerce from '../../Assets/commerce.webp'
 
 const Courses = () => {
   return (
-    <div className='grid place-items-center' style={{ backgroundImage: `url(${redBgImg.src})`, height: '100vh' }}>
+    <div className='grid place-items-center h-screen' style={{ backgroundImage: `url(${redBgImg.src})`, height: '100vh' }}>
       <Container className='grid place-items-center' maxWidth="xl">
         <TextComponent/>
         <IconComponent/>
