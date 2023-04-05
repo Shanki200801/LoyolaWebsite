@@ -26,13 +26,13 @@ const Footer = () => {
 						<div>
 							<p className="py-2">
 								<a className="py-2" href="tel:08026584690">
-									<CallIcon />
+									<CallIcon className="m-2"/>
 									080-26584690
 								</a>
 							</p>
 							<p className="py-2">
 								<a className="py-2" href="tel:8904525696">
-									<MobileIcon />
+									<MobileIcon className="m-2"/>
 									8904525696
 								</a>
 							</p>
@@ -43,7 +43,7 @@ const Footer = () => {
 									className="py-2"
 									href="http://loyolacollegeblr.com/contact.html#"
 								>
-									<EmailIcon /> loyolacollegeblr.com
+									<EmailIcon className="m-2"/> loyolacollegeblr.com
 								</a>{" "}
 							</p>
 							{/* <a href =''><Image src = {FacebookSharpIcon} height={50} width = {50}/> 080-26584690</a> */}
@@ -52,7 +52,7 @@ const Footer = () => {
 									className="py-2"
 									href="https://www.instagram.com/loyoladegreeofficial/?hl=en"
 								>
-									<InstagramIcon /> loyoladegreeofficial
+									<InstagramIcon className="m-2"/> loyoladegreeofficial
 								</a>
 							</p>
 						</div>

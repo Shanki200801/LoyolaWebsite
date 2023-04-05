@@ -1,4 +1,3 @@
-import { red } from "@mui/material/colors";
 import Carousel from "react-material-ui-carousel";
 import Item from "./Item";
 
@@ -35,15 +34,15 @@ export default function FeaturedRecentEvents() {
 
   return (
     <div className="container m-auto px-16 py-8 bg-slate-300">
-      <div className="text-center text-5xl text-navbar-theme">Events</div>
-      <div className="tabs">
-        <a className="tab tab-lifted tab-lg tab-rounded-lg  bg-[#a60a1c] rounded-xl  text-white m-2">
+      <div className="text-center text-5xl text-navbar-theme m-4 ">Events</div>
+      <div className="tabs flex items-center justify-center">
+        <a className="tab tab-lifted tab-lg tab-rounded-lg w-1/5 bg-[#a60a1c] rounded-xl text-white m-2">
           Featured
         </a>
-        <a className="tab tab-lifted tab-lg tab-rounded-lg text-black bg-slate-300 m-2">Recent</a>
+        <a className="tab tab-lifted tab-lg tab-rounded-lg w-1/5 text-black bg-slate-300 m-2 rounded-xl">Recent</a>
       </div>
       <Carousel navButtonsProps={{
-        style: {backgroundColor: '#a60a1c'}
+        style: { backgroundColor: '#a60a1c' }
       }} navButtonsAlwaysVisible={true} animation="slide">
         {slides.map((slide, index) => (
           <Item slide={slide} key={index} />

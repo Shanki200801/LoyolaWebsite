@@ -7,7 +7,7 @@ const WelcomeText = () => {
   return (
     <div className=" grid h-screen place-items-center bg-slate-300">
      
-      <div className=" text-justify text-black mx-40 font-medium leading-relaxed ">
+      <div className=" text-justify text-black mx-48 font-medium text-lg leading-relaxed ">
         <div className=" text-center">
           <WelcomeTitle />
         </div>

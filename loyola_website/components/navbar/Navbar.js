@@ -6,7 +6,7 @@ import "./navbar.module.css";
 // Main Navbar Component
 const Navbar = () => {
   return (
-    <div className="navbar bg-navbar-theme text-white sticky top-0 z-20">
+    <div className="navbar bg-navbar-theme text-white sticky top-0 z-20 p-4">
       <NavLogoLink />
       <NavLinks />
     </div>
