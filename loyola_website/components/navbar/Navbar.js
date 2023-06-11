@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import NavLogo from "./NavLogo";
 import styles from "./navbar.module.css";
 import "./navbar.module.css";
+import Link from "next/link";
 
 // Main Navbar Component
 const Navbar = () => {
@@ -19,7 +20,7 @@ const Navbar = () => {
 const NavLogoLink = () => {
   return (
     <div className="flex-1">
-      <a>
+      <a href={"/"}>
         <NavLogo />
       </a>
     </div>
@@ -31,9 +32,9 @@ const NavLinks = () => {
   return (
     <div className="flex-none">
       <ul className="menu menu-horizontal px-1">
-        <NavAbout />
-        <NavStudent />
-        <NavAcads />
+        <NavAbout /> 
+        <NavStudent /> 
+        <NavAcads/> 
         <NavDepts />
         <NavNews />
         <NavAdmissions />
