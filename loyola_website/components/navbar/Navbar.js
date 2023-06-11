@@ -112,11 +112,14 @@ const NavStudent = () => {
 const StudentSubMenu = () => {
   return (
     <ul className={`bg-white text-black z-10 ${styles.subMenu}`}>
-      <li>
+      {/* <li>
         <a>Rules & Regulations</a>
       </li>
       <li>
         <a>Note to parents</a>
+      </li> */}
+      <li>
+        <a>Associations</a>
       </li>
       <li>
         <a>Scholarships</a>
