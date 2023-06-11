@@ -6,7 +6,7 @@ const ManagementStaff = () => {
     const staff = [
         {
           id: 1,
-          profileimage: '/clubs.png',
+          profileimage: '/staff-photos/placeholder.png',
           name: 'MR VIGNESH',
           designation: 'Assistant Professor and HOD, Department of Political Science',
           education: 'M A, B Ed, PGDIT, KSET',
@@ -14,7 +14,7 @@ const ManagementStaff = () => {
         },
         {
             id: 2,
-            profileimage: '/clubs.png',
+            profileimage: '/staff-photos/placeholder.png',
             name: 'MR VIGNESH',
             designation: 'Assistant Professor and HOD, Department of Political Science',
             education: 'M A, B Ed, PGDIT, KSET',
@@ -22,7 +22,7 @@ const ManagementStaff = () => {
           },
           {
             id: 3,
-            profileimage: '/clubs.png',
+            profileimage: '/staff-photos/placeholder.png',
             name: 'MR VIGNESH',
             designation: 'Assistant Professor and HOD, Department of Political Science',
             education: 'M A, B Ed, PGDIT, KSET',
@@ -30,7 +30,7 @@ const ManagementStaff = () => {
           },
           {
             id: 4,
-            profileimage: '/clubs.png',
+            profileimage: '/staff-photos/placeholder.png',
             name: 'MR VIGNESH',
             designation: 'Assistant Professor and HOD, Department of Political Science',
             education: 'M A, B Ed, PGDIT, KSET',
@@ -38,7 +38,7 @@ const ManagementStaff = () => {
           },
           {
             id: 5,
-            profileimage: '/clubs.png',
+            profileimage: '/staff-photos/placeholder.png',
             name: 'MR VIGNESH',
             designation: 'Assistant Professor and HOD, Department of Political Science',
             education: 'M A, B Ed, PGDIT, KSET',
@@ -52,9 +52,9 @@ const ManagementStaff = () => {
         return (
         <>
         
-        <div className='text-2xl text-center text-navbar-theme my-2'>MANAGEMENT STAFF</div>
+        {/* <div className='text-2xl text-center text-navbar-theme my-2'>MANAGEMENT STAFF</div> */}
         
-        <div className='grid grid-cols-2 gap-x-16 gap-y-6 place-content-center justify-evenly mt-8'>
+        <div className='grid grid-cols-2 gap-x-16 gap-y-6 place-content-center justify-evenly mt-8 mx-8'>
           
           {staff.map((staff) => {
             return <StaffCard key={staff.id} profileimage={staff.profileimage} name={staff.name} designation={staff.designation} education={staff.education} description={staff.description} />
