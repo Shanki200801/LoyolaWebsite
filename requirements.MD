@@ -18,5 +18,3 @@ Navbar contents:
 
 Color scheme:
  white, black, red and greys
-
-
