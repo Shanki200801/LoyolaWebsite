@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NavLogo from "./NavLogo";
 import styles from "../../styles/navbar.module.css";
 import "../../styles/navbar.module.css";
@@ -6,8 +6,30 @@ import Link from "next/link";
 
 // Main Navbar Component
 const Navbar = () => {
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true)
+
+  const handleScroll = () => {
+      const currentScrollPos = window.scrollY
+
+      if(currentScrollPos > prevScrollPos){
+          setVisible(false)
+      }else{
+          setVisible(true)
+      }
+
+      setPrevScrollPos(currentScrollPos)
+      console.log(visible);
+  }
+
+    useEffect( () => {
+        window.addEventListener('scroll', handleScroll);
+
+        return () => window.removeEventListener('scroll', handleScroll)
+    })
+
   return (
-    <div className="navbar bg-navbar-theme text-white sticky top-0 z-20 p-4">
+    <div className={`navbar bg-navbar-theme text-white sticky z-20 p-4   ${visible ? 'top-0': ''}`}>
       <NavLogoLink />
       <NavLinks />
     </div>
@@ -182,7 +204,7 @@ const AcadsSubMenu = () => {
 const NavDepts = () => {
   return (
     <li>
-      <a className={`hover:underline hover:underline-offset-4 hover: decoration-white bg-transparent uppercase ${styles.primaryLinks}`}>
+      <Link href={"/departments"}  className={`hover:underline hover:underline-offset-4 hover: decoration-white bg-transparent uppercase ${styles.primaryLinks}`}>
         Departments
         {/* <svg
           className="fill-current"
@@ -193,7 +215,7 @@ const NavDepts = () => {
         >
           <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
         </svg> */}
-      </a>
+      </Link>
       {/* <DeptSubMenu /> */}
     </li>
   );
@@ -235,9 +257,9 @@ const DeptSubMenu = () => {
 const NavNews = () => {
   return (
     <li>
-      <a className={`hover:underline hover:underline-offset-4 hover: decoration-white bg-transparent uppercase ${styles.primaryLinks}`}>
+      <Link href={"/news_events"} className={`hover:underline hover:underline-offset-4 hover: decoration-white bg-transparent uppercase ${styles.primaryLinks}`}>
         News & Events
-      </a>
+      </Link>
     </li>
   );
 };
