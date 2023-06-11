@@ -1,10 +1,10 @@
 import React from 'react'
-import Campus_facilities from '../Assets/campus_facilities.jpg'
-import Councilling from '../Assets/councilling.jpg'
-import Clubs_association from '../Assets/clubs.png'
-import Scholarship from '../Assets/scholarship.jpg'
-import Mdmeals from '../Assets/middaymeals.jpg'
-import Student_council from '../Assets/studentCouncil.jpg'
+import Campus_facilities from '../../Assets/campus_facilities.jpg'
+import Councilling from '../../Assets/councilling.jpg'
+import Clubs_association from '../../Assets/clubs.png'
+import Scholarship from '../../Assets/scholarship.jpg'
+import Mdmeals from '../../Assets/middaymeals.jpg'
+import Student_council from '../../Assets/studentCouncil.jpg'
 import Image from 'next/image'
 
 const SupportAssistance = () => {

@@ -10,10 +10,10 @@ import { Grade } from '@mui/icons-material';
 import { Great_Vibes } from 'next/font/google';
 
 //Images
-import redBgImg from '../Assets/coursesBgImage.webp'
-import artsAndHumanities from '../Assets/artsAndHumanities.webp'
-import certificateCourses from '../Assets/certificateCourses.webp'
-import commerce from '../Assets/commerce.webp'
+import redBgImg from '../../Assets/coursesBgImage.webp'
+import artsAndHumanities from '../../Assets/artsAndHumanities.webp'
+import certificateCourses from '../../Assets/certificateCourses.webp'
+import commerce from '../../Assets/commerce.webp'
 
 const greatVibes = Great_Vibes({subsets:['latin'], weight: '400'});
 

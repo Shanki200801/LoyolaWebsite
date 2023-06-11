@@ -2,9 +2,9 @@ import React from 'react';
 import Carousel from 'react-material-ui-carousel';
 import { Paper, Button } from '@mui/material';
 import Image from 'next/image';
-import slider1 from '../Assets/slider1.jpg';
-import slider2 from '../Assets/slider2.jpg';
-import slider3 from '../Assets/slider3.jpg';
+import slider1 from '../../Assets/slider1.jpg';
+import slider2 from '../../Assets/slider2.jpg';
+import slider3 from '../../Assets/slider3.jpg';
 
 const WelcomeImage = () => {
   var items = [

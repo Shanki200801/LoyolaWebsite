@@ -11,8 +11,6 @@ const departments = () => {
     const [departments, setDepartments] = useState('management');
   return (
     <>
-    
-    <Navbar/>
     <div className='flex flex-col justify-center bg-slate-300'>
         <h1 className='text-4xl font-bold my-4 text-center text-slate-800 '>FACILITATORS</h1>
     <section>
@@ -33,7 +31,6 @@ const departments = () => {
         {departments == 'nonteaching' && <NonTeaching/>}
     </section>
     </div>
-    <Footer/>
     </>
   )
 }
