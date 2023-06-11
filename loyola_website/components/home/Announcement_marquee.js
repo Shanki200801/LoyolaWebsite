@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import styles from "./announcement_style.module.css";
+import styles from "../../styles/announcement_style.module.css";
 
 
 const Announcement_marquee = () => {

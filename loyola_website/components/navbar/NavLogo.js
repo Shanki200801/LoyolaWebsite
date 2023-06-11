@@ -1,8 +1,8 @@
 import React from 'react';
 import Logo from '../../Assets/logo.png';
 import Image from 'next/image';
-import styles from "./navbar.module.css";
-import "./navbar.module.css";
+import styles from "../../styles/navbar.module.css";
+import "../../styles/navbar.module.css";
 
 const NavLogo = () => {
   return (

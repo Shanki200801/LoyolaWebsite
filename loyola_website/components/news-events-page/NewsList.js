@@ -1,7 +1,7 @@
 import React from 'react'
 import NewsFeatureCard from './NewsFeatureCard';
 import TestImg from '@/Assets/clubs.png';
-import styles from './news-events-page.module.css';
+import styles from '../../styles/news-events-page.module.css';
 const NewsList = () => {
   
     const eventObject =

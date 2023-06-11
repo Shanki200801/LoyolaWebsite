@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
-import styles from "./news-events-page.module.css";
+import styles from "../../styles/news-events-page.module.css";
 
 
 const NewsFeatureCard = ({ image, title, description }) => {

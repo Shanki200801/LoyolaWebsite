@@ -9,13 +9,11 @@ import CalenderComponent from '@/components/news-events-page/CalenderComponent'
 const news_events = () => {
   return (
     <>
-    <Navbar/>
     <div className='flex flex-row  justify-center'>
       <div className='w-full my-4px'><NewsList/></div>
       {/* <div className='w-1/4'><CalenderComponent/></div> */}
       
     </div>
-    <Footer/>
     </>
   )
 }
