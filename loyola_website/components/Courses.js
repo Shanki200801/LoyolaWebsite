@@ -6,15 +6,16 @@ import Avatar from '@mui/material/Avatar';
 import Grid from '@mui/material/Grid'; // Grid version 1
 import Grid2 from '@mui/material/Unstable_Grid2'; // Grid version 2
 import Image from 'next/image';
-import styles from './courses.module.css'
 import { Grade } from '@mui/icons-material';
+import { Great_Vibes } from 'next/font/google';
 
 //Images
-import redBgImg from '../../Assets/coursesBgImage.webp'
-import artsAndHumanities from '../../Assets/artsAndHumanities.webp'
-import certificateCourses from '../../Assets/certificateCourses.webp'
-import commerce from '../../Assets/commerce.webp'
+import redBgImg from '../Assets/coursesBgImage.webp'
+import artsAndHumanities from '../Assets/artsAndHumanities.webp'
+import certificateCourses from '../Assets/certificateCourses.webp'
+import commerce from '../Assets/commerce.webp'
 
+const greatVibes = Great_Vibes({subsets:['latin'], weight: '400'});
 
 const Courses = () => {
   return (
@@ -30,7 +31,7 @@ const Courses = () => {
 
 const TextComponent = ()=>{
   return(
-    <div className={`${styles.txtComponent}`}>
+    <div className={`${greatVibes.className}`}>
       <h1 className='font-bold pb-8  drop-shadow-xl  text-white'>
         <span className='text-5xl'>Our curriculum offers a brilliant set of degree programs in </span></h1>
         <p className=' font-mono text-center text-4xl text-white tracking-widest border-b-2 py-8 drop-shadow-xl'>ARTS AND COMMERCE</p>

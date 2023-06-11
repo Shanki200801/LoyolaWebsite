@@ -1,5 +1,5 @@
 import React from 'react'
-import WelcomeText from 'components/welcomeText/WelcomeText'
+import WelcomeText from '@/components/WelcomeText'
 
 const welcomeTesting = () => {
   return (

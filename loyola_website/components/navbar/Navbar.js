@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import NavLogo from "./NavLogo";
-import styles from "./navbar.module.css";
-import "./navbar.module.css";
+import styles from "../../styles/navbar.module.css";
+import "../../styles/navbar.module.css";
 import Link from "next/link";
 
 // Main Navbar Component

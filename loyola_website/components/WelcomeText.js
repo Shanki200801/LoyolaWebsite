@@ -1,7 +1,4 @@
 import React from "react";
-import WelcomeTitle from "./WelcomeTitle";
-
-
 
 const WelcomeText = () => {
   return (
@@ -35,6 +32,17 @@ const WelcomeText = () => {
         with facilities for cricket, basketball, volley ball and other sports
         and games.
       </div>
+    </div>
+  );
+};
+
+const WelcomeTitle = () => {
+  return (
+    <div className="">
+      <h1 className="  text-2xl font-bold pb-5 text-indigo-900">
+        <span className=" font-bold text-yellow-600">WELCOME TO</span> LOYOLA COLLEGE,
+        BENGALURU, INDIA
+      </h1>
     </div>
   );
 };
