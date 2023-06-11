@@ -20,7 +20,7 @@ const WelcomeImage = () => {
   ]
 
   return (
-      <Carousel height={`95vh`} indicators={false} navButtonsAlwaysVisible={true}>
+      <Carousel height={`100vh`} className='h-full' indicators={false} navButtonsAlwaysVisible={true}>
           {
               items.map( (item, i) => <Item key={i} item={item} /> )
           }
@@ -33,6 +33,7 @@ const Item= (props) =>{
         <Image
           src={props.item.image}
           fill={true}
+          className='object-contain bg-slate-300'
         />
     )
 }
