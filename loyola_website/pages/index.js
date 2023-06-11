@@ -6,7 +6,6 @@ import WelcomeImage from '../components/welcomeImage/WelcomeImage';
 import WelcomeText from '../components/welcomeText/WelcomeText';
 import SupportAssistance from '../components/supportAssistance/SupportAssistance';
 import { Inter } from 'next/font/google'
-
 import FeaturedRecentEvents from '../components/featuredRecentEvents/FeaturedRecentEvents';
 import Navbar2 from 'components/navbar/Navbar2';
 
@@ -24,7 +23,7 @@ export default function Home() {
      <Courses/>
      <SupportAssistance/>
      <Footer/>
-     
+          
     </>
   )
 }
