@@ -1,12 +1,12 @@
 import React from 'react'
 import StaffCard from './StaffCard'
-import {TestImg} from '@/Assets/clubs.png'
+import TestImg from '@/Assets/clubs.png'
 
 const NonTeaching = () => {
     const staff = [
         {
           id: 1,
-          profileimage: TestImg,
+          profileimage: {TestImg},
           name: 'MR VIGNESH',
           designation: 'Assistant Professor and HOD, Department of Political Science',
           education: 'M A, B Ed, PGDIT, KSET',

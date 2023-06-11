@@ -1,12 +1,12 @@
 import React from 'react'
 import StaffCard from './StaffCard'
-import {TestImg} from '@/Assets/clubs.png'
+
 
 const ManagementStaff = () => {
     const staff = [
         {
           id: 1,
-          profileimage: TestImg,
+          profileimage: '/clubs.png',
           name: 'MR VIGNESH',
           designation: 'Assistant Professor and HOD, Department of Political Science',
           education: 'M A, B Ed, PGDIT, KSET',
@@ -14,7 +14,7 @@ const ManagementStaff = () => {
         },
         {
             id: 2,
-            profileimage: TestImg,
+            profileimage: '/clubs.png',
             name: 'MR VIGNESH',
             designation: 'Assistant Professor and HOD, Department of Political Science',
             education: 'M A, B Ed, PGDIT, KSET',
@@ -22,7 +22,7 @@ const ManagementStaff = () => {
           },
           {
             id: 3,
-            profileimage: TestImg,
+            profileimage: '/clubs.png',
             name: 'MR VIGNESH',
             designation: 'Assistant Professor and HOD, Department of Political Science',
             education: 'M A, B Ed, PGDIT, KSET',
@@ -30,7 +30,7 @@ const ManagementStaff = () => {
           },
           {
             id: 4,
-            profileimage: TestImg,
+            profileimage: '/clubs.png',
             name: 'MR VIGNESH',
             designation: 'Assistant Professor and HOD, Department of Political Science',
             education: 'M A, B Ed, PGDIT, KSET',
@@ -38,7 +38,7 @@ const ManagementStaff = () => {
           },
           {
             id: 5,
-            profileimage: TestImg,
+            profileimage: '/clubs.png',
             name: 'MR VIGNESH',
             designation: 'Assistant Professor and HOD, Department of Political Science',
             education: 'M A, B Ed, PGDIT, KSET',
