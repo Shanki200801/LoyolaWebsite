@@ -3,10 +3,12 @@ import NavLogo from "./NavLogo";
 import styles from "./navbar.module.css";
 import "./navbar.module.css";
 
+
+
 // Main Navbar Component
 const Navbar = () => {
   return (
-    <div className="navbar bg-navbar-theme text-white sticky top-0 z-20 p-4">
+    <div className= "navbar bg-navbar-theme text-white sticky top-0 z-20 p-4">
       <NavLogoLink />
       <NavLinks />
     </div>
@@ -45,8 +47,9 @@ const NavLinks = () => {
 //Navbar About Component
 const NavAbout = () => {
   return (
+
     <li tabIndex={0}>
-      <a className={`hover:underline hover:underline-offset-4 hover: decoration-white bg-transparent uppercase ${styles.primaryLinks}`}>
+      <a  className={`hover:underline hover:underline-offset-4 hover: decoration-white bg-transparent uppercase ${styles.primaryLinks}`}>
         About
         <svg
           className="fill-current"
@@ -59,7 +62,11 @@ const NavAbout = () => {
         </svg>
       </a>
       <AboutSubMenu />
-    </li>
+      
+
+      </li>
+
+    
   );
 };
 
