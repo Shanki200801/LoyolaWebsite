@@ -7,46 +7,36 @@ const LanguagesStaff = () => {
     {
       id: 1,
       profileimage: '/staff-photos/placeholder.png',
-      name: 'MR VIGNESH',
-      designation: 'Assistant Professor and HOD, Department of Political Science',
-      education: 'M A, B Ed, PGDIT, KSET',
-      description: 'Eight years of teaching experience that includes Assistant Professorship at St Aloysius College, Bengaluru.  Director of Mahatma Gandhi Study Centre.'
+        name: 'SHRADHA',
+        designation: 'Lecturer, Department of English',
+        education: 'M A',
+        description: 'Interests: Reading, cinema and research.'
     },
     {
         id: 2,
         profileimage: '/staff-photos/placeholder.png',
-        name: 'MR VIGNESH',
-        designation: 'Assistant Professor and HOD, Department of Political Science',
-        education: 'M A, B Ed, PGDIT, KSET',
-        description: 'Eight years of teaching experience that includes Assistant Professorship at St Aloysius College, Bengaluru.  Director of Mahatma Gandhi Study Centre.'
+        name: 'DR RAVIKUMARA P G',
+        designation: 'Assistant Professor, Department of Kannada',
+        education: 'M A, M Phil, B Ed., NET, Ph D',
+        description: 'Fifteen years of teaching experience.  Director Centre for Social Concern. Presented several papers and authored two books. Member of Text-book committee, Bangalore University.'
       },
       {
         id: 3,
         profileimage: '/staff-photos/placeholder.png',
-        name: 'MR VIGNESH',
-        designation: 'Assistant Professor and HOD, Department of Political Science',
-        education: 'M A, B Ed, PGDIT, KSET',
-        description: 'Eight years of teaching experience that includes Assistant Professorship at St Aloysius College, Bengaluru.  Director of Mahatma Gandhi Study Centre.'
+        name: 'DR V TARA NAIR',
+        designation: 'Assistant Professor and HOD, Department of Hindi',
+        education: 'M A Geography, M A Hindi , M PhiL , B Ed , Ph D ',
+        description: 'Twenty four years of teaching experience.  BOE, Department of Hindi and Annual Scheme Evaluation Chairperson 2022-23, Bangalore University.'
       },
       {
         id: 4,
         profileimage: '/staff-photos/placeholder.png',
-        name: 'MR VIGNESH',
-        designation: 'Assistant Professor and HOD, Department of Political Science',
-        education: 'M A, B Ed, PGDIT, KSET',
-        description: 'Eight years of teaching experience that includes Assistant Professorship at St Aloysius College, Bengaluru.  Director of Mahatma Gandhi Study Centre.'
-      },
-      {
-        id: 5,
-        profileimage: '/staff-photos/placeholder.png',
-        name: 'MR VIGNESH',
-        designation: 'Assistant Professor and HOD, Department of Political Science',
-        education: 'M A, B Ed, PGDIT, KSET',
-        description: 'Eight years of teaching experience that includes Assistant Professorship at St Aloysius College, Bengaluru.  Director of Mahatma Gandhi Study Centre.'
-      },
-
-    
-    
+        name: 'Dr. Kumaraswamy B E',
+        designation: 'Assistant Professor',
+        education: 'MA Ph.D. RGNF, NET, K-SET',
+        description: `A progressive thinker and writer in Kannada, a critic and researcher. A first rank holder from Hampi University, completed his Doctor of Philosophy on the topic, “The State, Religion and People in Pre Modern Kannada Literature”.  Recipient of the Rajiv Gandhi National Fellowship Award, UGC, New Delhi. Currently is the Dean of Arts, Director of Dr.Ambedkar Study Centre and HOD, Department of Kannada, Loyola Degree College, Bengaluru.  Interests include Pro-life activism, literature, music, marginalized tribes and nomads`
+      }
+      
   ]
 
     

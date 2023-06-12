@@ -38,8 +38,8 @@ const Announcement_marquee = () => {
 	 })
 
 	return (
-		<div className="flex flex-row items-center bg-slate-300">
-			<button className="btn btn-default w-1/8 mx-4 bg-yellow-600 text-indigo-900">Announcements</button>
+		<div className="flex flex-row items-center bg-slate-300 py-2">
+			<button className="btn btn-default w-1/8 mx-4 border-0 hover:bg-navbar-theme hover:text-white bg-yellow-600 text-indigo-900">Announcements</button>
 			<div className={styles.marqueecontainer}>
 				<ul id= "marquee_list" className={`${styles.marquee} text-black`} >
 					{list_elements}

@@ -6,7 +6,7 @@ import styles from "../../styles/news-events-page.module.css";
 const NewsFeatureCard = ({ image, title, description }) => {
     
         return (
-          <div className= {`${styles.cardcontainer}`}>
+          <div className= {`${styles.cardcontainer} my-4`}>
             {/* Image */}
             <div className={`${styles.eventimage} odd:float-right`}>
               <Image src={image} alt="News"  className={`${styles.image}`} />
