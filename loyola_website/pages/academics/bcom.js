@@ -10,7 +10,7 @@ const ruda = Ruda({subsets: ['latin']});
 const BCom = ()=>{
     return (
         <div className="bg-white" >
-            <h1 className={`flex justify-center pt-10 text-black text-6xl ${specialElite.className}`}>Bachelor of Commerce (BCom)</h1>
+            <h1 className={`flex justify-center pt-10 text-black text-6xl ${specialElite.className}`}>Bachelor of Commerce {"("}BCom{")"}</h1>
             <div className={`grid grid-cols-2 grid-rows-2 ${ruda.className} gap-12`}>
                 <Overview/>
                 <Image src={finGrowth} className='h-60 w-4/5 object-cover mt-14 rounded-2xl'/>
