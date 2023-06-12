@@ -67,11 +67,7 @@ const NonTeaching = () => {
         designation: 'Support Staff',
         education: '',
         description: ''
-      },
-
-
-    
-    
+      },   
   ]
 
     
