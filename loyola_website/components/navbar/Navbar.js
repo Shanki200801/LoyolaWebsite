@@ -3,7 +3,8 @@ import NavLogo from "./NavLogo";
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import styles from "./navbar.module.css";
 import "./navbar.module.css";
-
+import Admissions from '../../pages/admissions';
+import Link from "next/link";
 const Navbar = () => {
   return (
     <div className="navbar bg-navbar-theme text-white sticky top-0 z-20">
@@ -178,9 +179,12 @@ const Navbar = () => {
             </ul>
           </li>
           <li>
-          <a className={styles.primaryLinks}>
+          {/* <a className={styles.primaryLinks} href="">
               Admissions
-            </a>
+            </a> */}
+            <Link href="/admissions" className={styles.primaryLinks}>
+              Admissions
+            </Link>
           </li>
         </ul>
       </div>
