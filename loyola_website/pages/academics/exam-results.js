@@ -7,7 +7,7 @@ const raleway = Josefin_Sans({subsets:['latin']});
 const Exam = ()=>{
     return(
         <div className='bg-white'>
-            <h1 className={`text-black text-6xl p-5 ${raleway.className} font-bold underline`}>Exam Results</h1>
+            <h1 className={`text-black text-6xl p-6 ${raleway.className} font-bold underline`}>Examination Results</h1>
             <div id="examBody" className='flex justify-center items-center h-96'>
                 <NoResAlrt msg="No results to display. Please check back later!"/>
             </div> 
