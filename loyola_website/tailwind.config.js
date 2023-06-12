@@ -10,6 +10,9 @@ module.exports = {
         'navbar-theme' : '#003D7A',
         'deptBtnColor' : '#257dad',
         'deptBtnColorHover' : '#1D5F83',
+      },
+      spacing: {
+        '128':'32rem',
       }
     },
   },
