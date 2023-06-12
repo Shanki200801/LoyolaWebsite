@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import NavLogo from "./NavLogo";
+
 import styles from "../../styles/navbar.module.css";
 import "../../styles/navbar.module.css";
 import Link from "next/link";
 
 // Main Navbar Component
+
 const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true)
@@ -29,9 +31,11 @@ const Navbar = () => {
     })
 
   return (
+
     <div className={`navbar bg-navbar-theme text-white sticky z-20 p-4   ${visible ? 'top-0': ''}`}>
       <NavLogoLink />
       <NavLinks />
+
     </div>
   );
 };
