@@ -145,7 +145,7 @@ const StudentSubMenu = () => {
         <a>Note to parents</a>
       </li> */}
       <li>
-        <a>Associations</a>
+        <Link href="/student/associations">Associations</Link>
       </li>
       <li>
         <a>Scholarships</a>
