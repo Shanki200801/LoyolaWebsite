@@ -1,14 +1,30 @@
 import * as React from "react";
 import Image from "next/image";
+import { Playfair_Display, Oswald, Inter } from "next/font/google";
+import sunSvg from "../../public/associations/sun.svg";
+import bellSvg from "../../public/associations/bell.svg";
 
+const playfair = Playfair_Display({ subsets: ["latin"] });
+const oswald = Oswald({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 const Block = ({ imageSrc, altText, header, para }) => {
   return (
     <>
-      <li className="flex gap-5 border-solid border-2 border-blue-950">
-        <Image src={imageSrc} alt={altText} width="100" height="100" />
-        <div className="flex flex-col gap-2 border-solid border-l-2 border-blue-950 px-3 py-2">
-          <h3>{header}</h3>
-          <p>{para}</p>
+      <li className={`grid grid-cols-10 gap-0 items-center`}>
+        <Image
+          src={imageSrc}
+          alt={altText}
+          width="120"
+          height="120"
+          className="col-span-1"
+        />
+        <div className={`flex flex-col gap-2 px-3 py-2 col-start-2 col-end-11`}>
+          <h2
+            className={`text-xl ${oswald.className} underline underline-offset-4 decoration-sky-500`}
+          >
+            {header}
+          </h2>
+          <p className={`text-m ${inter.className} tracking-tight`}>{para}</p>
         </div>
       </li>
     </>
@@ -17,17 +33,27 @@ const Block = ({ imageSrc, altText, header, para }) => {
 
 export default function Associations() {
   return (
-    <div className="bg-white text-black">
+    <div className={`grid grid-rows-15 items-center bg-white text-black`}>
       <section id="header">
-        <div className="py-5">
-          <h1 className="text-6xl text-center">Associations</h1>
+        <div className={`py-5`}>
+          <span className="flex items-center justify-center">
+            <h1
+              className={`text-6xl text-center ${playfair.className} text-shadow-custom-blue`}
+            >
+              Associations
+            </h1>
+          </span>
         </div>
       </section>
       <section id="introduction" className="px-10">
-        <div className="py-3">
-          <h2 className="text-xl pb-2">Why Associations @ Loyola?</h2>
-          <ul>
-            <li className="pb-2">
+        <div className={`py-3`}>
+          <h2
+            className={`text-xl pb-2 ${oswald.className} underline underline-offset-4 decoration-sky-500`}
+          >
+            Why Associations @ Loyola?
+          </h2>
+          <ul className={`text-m ${inter.className} tracking-tight`}>
+            <li className={`pb-2`}>
               Most students go to college to learn. Most know, or at least soon
               discover, that their academic work at college will be different
               than the work that they did in school. They are expected to spend
@@ -48,13 +74,13 @@ export default function Associations() {
           </ul>
         </div>
       </section>
-      <section id="clubs" className="px-10">
-        <ul className="flex flex-col gap-3 pb-3">
-            <Block
-              imageSrc="/associations/commerce.webp"
-              altText="1"
-              header="Commerce Association"
-              para="The Commerce Association is formed to equip budding B Com
+      <section id="clubs" className={`px-10`}>
+        <ul className={`flex flex-col gap-3 pb-3`}>
+          <Block
+            imageSrc="/associations/commerce.webp"
+            altText="1"
+            header="Commerce Association"
+            para="The Commerce Association is formed to equip budding B Com
                   students with required skill-set to be the best-fit for
                   Corporate. It aims to develop sensible, responsible, seasoned
                   top professionals. This club will create an inducive
@@ -67,12 +93,12 @@ export default function Associations() {
                   become easier. This club aims to provide information related
                   to current industry activities, innovations, technological
                   changes sharing success stories of entrepreneurs."
-            />
-            <Block
-              imageSrc="/associations/nss.webp"
-              altText="2"
-              header="National Service Scheme (NSS)"
-              para="The National Service Scheme (NSS) is a Central Sector
+          />
+          <Block
+            imageSrc="/associations/nss.webp"
+            altText="2"
+            header="National Service Scheme (NSS)"
+            para="The National Service Scheme (NSS) is a Central Sector
                   Scheme of Government of India, Ministry of Youth Affairs &
                   Sports. It provides opportunity to the student youth of India
                   to take part in various government led community service
@@ -85,12 +111,12 @@ export default function Associations() {
                   opportunities. It effectively channels the energy and interest
                   of the students into areas of social, cultural and community
                   development part"
-            />
-            <Block
-              imageSrc="/associations/kannada_sanga.webp"
-              altText="3"
-              header="Kannada Sangha"
-              para="The Kannada people or Kannadigas are speakers of Kannada
+          />
+          <Block
+            imageSrc="/associations/kannada_sanga.webp"
+            altText="3"
+            header="Kannada Sangha"
+            para="The Kannada people or Kannadigas are speakers of Kannada
                   language and trace their ancestry to the state of Karnataka in
                   India and its surrounding regions. Modern Kannada stands among
                   30 of the most widely spoken languages of the world. Kannada
@@ -99,12 +125,12 @@ export default function Associations() {
                   awareness of Kannada language and culture, Make the students
                   aware of the rich culture and literary heritage of Karnataka
                   and make them responsible citizens of the country."
-            />
-            <Block
-              imageSrc="/associations/aicuf.webp"
-              altText="4"
-              header="All India Catholic University Students Federations (A.I.C.U.F.)"
-              para="All India Catholic University Students Federations (A.I.C.U.F.)
+          />
+          <Block
+            imageSrc="/associations/aicuf.webp"
+            altText="4"
+            header="All India Catholic University Students Federations (A.I.C.U.F.)"
+            para="All India Catholic University Students Federations (A.I.C.U.F.)
                 is an organization meant to impart the values of compassion and
                 service to the student community in Universities. Our aim is to
                 live up to the AICUF motto- “We are born into an unjust society
@@ -118,12 +144,12 @@ export default function Associations() {
                 experiences, many of the students take up the challenging tasks
                 of contributing towards the emancipation of women and the uplift
                 of the deprived and needy the sections of our society."
-            />
-            <Block
-              imageSrc="/associations/youth_redcross.webp"
-              altText="5"
-              header="Youth Red Cross"
-              para="We are reminded of the famous quote of Late Pandit Jawaharlal
+          />
+          <Block
+            imageSrc="/associations/youth_redcross.webp"
+            altText="5"
+            header="Youth Red Cross"
+            para="We are reminded of the famous quote of Late Pandit Jawaharlal
                 Nehru the former Prime Minister of India that “The youth of
                 today is the driving force of tomorrow”. It is our duty to mould
                 the youth to become socially useful citizens of the country.
@@ -131,7 +157,7 @@ export default function Associations() {
                 Hence it becomes the challenge for the present generation to
                 groom the future of tomorrow and that is the 'Youth'. Youth Red
                 Cross it is a group movement organized for students in colleges"
-            />
+          />
         </ul>
       </section>
     </div>
