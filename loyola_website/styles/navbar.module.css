@@ -1,0 +1,79 @@
+/* 
+Changes to be made: 
+
+done- Submenu size
+done- Submenu active & hover colors
+done- Submenu item spacing
+done- Submenu border radius removal
+
+done- Button for admissions
+
+done- Font families
+
+- Figure out code to reduce className repetitions
+
+- Substitute Tailwind classes wherever possible
+
+*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap');
+/* To be downloaded later */
+
+/* NavBar Logo */
+.logoLink {
+    font-family: 'Playfair Display', serif;
+}
+
+/* NavBar Primary Links */
+.primaryLinks {
+    font-family: 'Slabo 27px', serif;
+    font-size: clamp(0.5rem, 3rem, 1.1rem);
+}
+
+/* NavBar Sub Menu */
+.subMenu {
+    top: 100%;
+    left: 10%;
+    width: clamp(10rem, 50vw, 16rem);
+    border-radius: 3px !important;
+    font-family: 'Inconsolata', monospace;
+    font-size: clamp(0.2rem, 2rem, 1rem);
+    color: #003D7A
+}
+
+/* NavBar Sub Menu Links*/
+.subMenu li a {
+    padding: 1rem 1rem 0.3rem 1rem;
+}
+
+/* NavBar Sub Menu Links Last Element*/
+.subMenu li:last-child {
+    padding-bottom: 0.5rem;
+}
+
+.subMenu li a:hover {
+    background-color: transparent;
+    color: #003D7A;
+    text-shadow: 1px 0.1px 0.2px #003D7A, 0 0 0.2em #ffffff, 0 0 0.2em #6cb0f3;
+}
+
+/* NavBar Academic Menu*/
+.acadsMenu {
+    width: clamp(10rem, 50vw, 19rem);
+}
+
+/* NavBar Department Menu*/
+.deptMenu {
+    width: clamp(10rem, 50vw, 18rem);
+}
+
+/* NavBar Admission Button*/
+.admissionsBtn {
+    margin-left: 1rem;
+    background-color: #a2ccf7;
+    color: #003D7A;
+    border-radius: 5px !important;
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Slabo 27px', serif;
+}
