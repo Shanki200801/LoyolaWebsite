@@ -3,6 +3,7 @@ import {Satisfy, Ruda} from 'next/font/google';
 import journalism from '../../Assets/journalism.webp'
 import psychologyImg from '../../Assets/psychology.webp'
 import Image from 'next/image';
+import Link from 'next/link';
 
 const satisfy = Satisfy({ subsets: ['latin'], weight: '400' });
 const ruda = Ruda({subsets: ['latin']});
@@ -53,14 +54,14 @@ const Offerings = ()=>{
 const BAFacultyBtn = ()=>{
     return (
         <div id="faculty-btn">
-            <a href="#_" className="relative inline-block text-lg group">
+            <Link href="/departments" className="relative inline-block text-lg group">
             <span className="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-purple-900 transition-colors duration-300 ease-out border-2 border-purple-900 rounded-lg group-hover:text-white">
             <span className="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>
             <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-purple-900 group-hover:-rotate-180 ease"></span>
             <span className="relative">Faculty</span>
             </span>
             <span className="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-purple-900 rounded-lg group-hover:mb-0 group-hover:mr-0" data-rounded="rounded-lg"></span>
-            </a>
+            </Link>
         </div>
     );
 }
@@ -68,7 +69,7 @@ const BAFacultyBtn = ()=>{
 const ApplyBtn = ()=>{
     return (
         <div id="apply-btn">
-            <a href="#_" className="relative inline-flex items-center justify-start py-3.5 pl-4 pr-12 overflow-hidden font-semibold text-purple-900 transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-gray-50 group">
+            <Link href="/admissions/index" className="relative inline-flex items-center justify-start py-3.5 pl-4 pr-12 overflow-hidden font-semibold text-purple-900 transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-gray-50 group">
 <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-purple-900 group-hover:h-full"></span>
 <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
 <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -77,7 +78,7 @@ const ApplyBtn = ()=>{
 <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
 </span>
 <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white">Apply Now</span>
-</a>
+</Link>
         </div>
     );
 }

@@ -46,9 +46,9 @@ const Navbar = () => {
 const NavLogoLink = () => {
   return (
     <div className="flex-1">
-      <a href={"/"}>
+      <Link href={"/"}>
         <NavLogo />
-      </a>
+      </Link>
     </div>
   );
 };
@@ -183,22 +183,19 @@ const AcadsSubMenu = () => {
   return (
     <ul className={`bg-white text-black z-10 ${styles.subMenu} ${styles.acadsMenu}`}>
       <li>
-        <a>B.A. Journalism, Psychology</a>
+        <Link href={`/academics/ba`}>B.A.</Link>
       </li>
       <li>
-        <a>B.A. Journalism, Political Science</a>
+        <Link href={`/academics/bcom`}>B.Com</Link>
       </li>
       <li>
-        <a>B.Com</a>
+        <Link href={`/academics/certificate-courses`}>Study Of Languages</Link>
       </li>
       <li>
-        <a>Study Of Languages</a>
+        <Link href={`/academics/certificate-courses`}>Certificate Courses</Link>
       </li>
       <li>
-        <a>Cert Courses</a>
-      </li>
-      <li>
-        <a>Examination Results</a>
+        <Link href={`/academics/exam-results`}>Examination Results</Link>
       </li>
     </ul>
   );
