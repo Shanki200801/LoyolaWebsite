@@ -151,7 +151,7 @@ const StudentSubMenu = () => {
         <a>Scholarships</a>
       </li>
       <li>
-        <a>Placements</a>
+        <Link href={`/student/placements`}>Placements</Link>
       </li>
     </ul>
   );
