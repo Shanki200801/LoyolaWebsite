@@ -1,4 +1,8 @@
 import * as React from 'react';
+import { Josefin_Sans, Aclonica } from 'next/font/google';
+
+const placementHead = Aclonica({subsets:['latin'], weight: '400'});
+const overviewBody = Josefin_Sans({subsets:['latin']});
 
 const Placements = ()=>{
     return (
@@ -64,13 +68,16 @@ const Placements = ()=>{
 const PlacementHeader = ()=>{
     return (
         <div className='h-screen grid grid-cols-2 bg-gradient-to-tr from-red-700 to-black p-10'>
-            <h1 className='text-9xl justify-self-center self-center pb-20 text-white'>Placements</h1>
+            <h1 className={`text-8xl justify-self-center self-center pb-20 text-white ${placementHead.className}`}>PLACEMENTS</h1>
             <div id="header-box" className='w-5/6 justify-self-center self-center'>
-            <p className='text-2xl bg-gradient-to-tr from-amber-700 to-amber-200 p-10'>Placement cell of Loyola Degree College aims in equipping every student to be industry ready by offering 
-placement training programs that are specially designed by keeping in mind the presents requirement of Job market.
- A series of guest lectures and career guidance sessions are conducted to broaden the perspectives of students in
+            <div className={`text-3xl text-amber-100 bg-gradient-to-tr from-orange-400 via-orange-600 to-orange-700 shadow-2xl p-10 ${overviewBody.className} `}>
+                <p>Placement cell of Loyola Degree College aims in equipping every student to be industry ready by offering 
+placement training programs that are specially designed by keeping in mind the presents requirement of Job market.</p>
+                <p className='text-base mt-5'>A series of guest lectures and career guidance sessions are conducted to broaden the perspectives of students in
   making them understand where they exactly fit. The placement cell provides both on campus and off campus placements
-   assistance to the students. </p>
+   assistance to the students.</p>
+  </div>
+   
             </div>
             
         </div>
