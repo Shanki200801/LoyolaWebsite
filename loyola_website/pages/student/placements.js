@@ -40,13 +40,13 @@ const PlacementHeader = () => {
       className={`h-screen grid grid-cols-2 bg-gradient-to-tr from-red-700 to-black p-10`}
     >
       <h1
-        className={`text-8xl justify-self-center self-center pb-20 text-white ${placementHead.className} tracking-tight`}
+        className={`text-8xl justify-self-center self-center pb-20 text-white ${placementHead.className} tracking-tight text-shadow-white`}
       >
         PLACEMENTS
       </h1>
       <div id="header-box" className={`w-5/6 justify-self-center self-center`}>
         <div
-          className={`text-3xl text-amber-100 bg-gradient-to-tr from-orange-400 via-orange-600 to-orange-700 shadow-2xl p-10 ${overviewBody.className} `}
+          className={`text-3xl text-amber-100 bg-gradient-to-tr from-orange-400 via-orange-600 to-orange-700 shadow-2xl rounded-custom box-shadow-custom-orange p-10 ${overviewBody.className} `}
         >
           <p className={`tracking-tight`}>
             Placement cell of Loyola Degree College aims in equipping every
@@ -105,7 +105,7 @@ const TrainingCards = (props) => {
     <a
       href="#"
       //   class={`w-64 h-52 relative block overflow-hidden rounded-lg border bg-green-200 border-gray-100 p-4 sm:p-6 lg:p-8 ${props.className}`}
-      class={`w-64 h-52 relative block overflow-hidden rounded-lg border bg-red-200 border-gray-100 p-4 sm:p-6 lg:p-8 ${props.className}`}
+      class={`w-64 h-52 relative block overflow-hidden rounded-lg border bg-red-200 border-gray-100 shadow-md box-shadow-custom-red p-4 sm:p-6 lg:p-8 ${props.className} hover:bg-rose-700 hover:text-white`}
     >
       {/* <span class="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span> */}
       <span class="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-yellow-200 via-rose-500 to-blue-400"></span>
@@ -122,7 +122,7 @@ const Talks = () => {
       <h2
         className={`text-5xl mt-10 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-200 tracking-tight`}
       >
-        Talks & Guest lecture{" "}
+        Talks & <span className={`text-red-800 whitespace-pre`}> Guest Lectures{" "}</span>
       </h2>
       <p
         className={`px-32 text-justify mt-10 ${generalText.className} tracking-tight`}
@@ -146,7 +146,7 @@ const RecentActivities = () => {
       <h2
         className={`text-5xl mt-10 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-200 tracking-tight`}
       >
-        Recent activities conducted by the Placement cell
+        <span className={`text-red-800 whitespace-pre`}>Recent activities{" "}</span> conducted by the <span className={`text-red-800 whitespace-pre`}> Placement Cell{" "}</span>
       </h2>
       <ul
         className={`px-32 text-justify mt-10 ${generalText.className} tracking-tight`}
@@ -179,7 +179,7 @@ const Process = () => {
       <h2
         className={`text-5xl mt-5 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-200 tracking-tight`}
       >
-        Placement Process
+        Placement <span className={`text-red-800 whitespace-pre`}> Process{" "}</span>
       </h2>
 
       <p
@@ -243,7 +243,7 @@ const Stats = () => {
       <h2
         className={`text-5xl mt-5 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-200 tracking-tight`}
       >
-        Placement Statistics{" "}
+        Placement <span className={`text-red-800 whitespace-pre`}> Statistics{" "}</span>
       </h2>
       <ul
         className={`flex flex-col justify-center gap-4 px-32 pb-5 text-center mt-7 ${generalText.className} tracking-tight`}
