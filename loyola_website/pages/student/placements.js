@@ -8,22 +8,18 @@ const Placements = ()=>{
     return (
         <div className='bg-white text-black'>
             <PlacementHeader/>
-            <h2>Training programs</h2>
-            <p>Along with academics the Placement cells aims in promoting employability integrated training programs
-             for students of LDC. The Placement cell in association with TNS India foundation, Magic bus foundation 
-             and Hope foundation has organized various training programs both online and offline, the training modules
-              covered soft skills for employability, quantitative aptitude and logical reasoning, verbal aptitude,
-               resume building, communication, personality development, interview etiquettes, corporate linkage sessions
-                and mock interviews. Alongside the training curriculum to students of LDC special assistance to certificate 
-                course like Tally ERP 9 and Microsoft office – Excel. Placement Cell also helps students interested in 
-                aspiring to crack different competitive examinations such as UPSC, SSC and Bank PO.
-            </p>
-            <h3>Recent training programs conducted</h3>
-            <ul>
-                <li>In association with TNS India foundation – Future skills program LMS – Ms. Mary </li>
-                <li>In association with Magic bus foundation – Ms. Soumya, Ms. Prathyusha, Mr. Naveen and Mr. Chandra Mohan </li>
-                <li>In association Hope foundation – Sis Jessy and Mr. Manjunath </li>
-            </ul>
+            <TrainingProg/>
+            
+            
+            <div className='grid grid-cols-3 mt-10'>
+                <TrainingCards body="In association with TNS India foundation - Future skills program LMS - Ms. Mary" 
+                    className="justify-self-end"
+                /> 
+                <TrainingCards body="In association with Magic bus foundation - Ms. Soumya, Ms. Prathyusha, Mr. Naveen and Mr. Chandra Mohan"
+                    className="justify-self-center"
+                /> 
+                <TrainingCards body="In association Hope foundation - Sis Jessy and Mr. Manjunath " className="justify-self-start"/>
+            </div>
             <h2>Talks & Guest lecture </h2>
             <p>Cognitive interactions are the best way to mould student’s understanding on different topics and
              recent socio-economic trends, so to increase the awareness among students talks and guest lectures 
@@ -70,7 +66,7 @@ const PlacementHeader = ()=>{
         <div className='h-screen grid grid-cols-2 bg-gradient-to-tr from-red-700 to-black p-10'>
             <h1 className={`text-8xl justify-self-center self-center pb-20 text-white ${placementHead.className}`}>PLACEMENTS</h1>
             <div id="header-box" className='w-5/6 justify-self-center self-center'>
-            <div className={`text-3xl text-amber-100 bg-gradient-to-tr from-orange-400 via-orange-600 to-orange-700 shadow-2xl p-10 ${overviewBody.className} `}>
+            <div className={`text-3xl  text-amber-100 bg-gradient-to-tr from-orange-400 via-orange-600 to-orange-700 shadow-2xl p-10 ${overviewBody.className} `}>
                 <p>Placement cell of Loyola Degree College aims in equipping every student to be industry ready by offering 
 placement training programs that are specially designed by keeping in mind the presents requirement of Job market.</p>
                 <p className='text-base mt-5'>A series of guest lectures and career guidance sessions are conducted to broaden the perspectives of students in
@@ -81,6 +77,34 @@ placement training programs that are specially designed by keeping in mind the p
             </div>
             
         </div>
+    );
+}
+
+const TrainingProg = ()=>{
+    return(
+        <div>
+            <h2 className='text-5xl mt-10 flex justify-center'>Training programs</h2>
+            <p className='px-32 text-justify mt-10'>Along with academics the Placement cells aims in promoting employability integrated training programs
+             for students of LDC. The Placement cell in association with TNS India foundation, Magic bus foundation 
+             and Hope foundation has organized various training programs both online and offline, the training modules
+              covered soft skills for employability, quantitative aptitude and logical reasoning, verbal aptitude,
+               resume building, communication, personality development, interview etiquettes, corporate linkage sessions
+                and mock interviews. Alongside the training curriculum to students of LDC special assistance to certificate 
+                course like Tally ERP 9 and Microsoft office - Excel. Placement Cell also helps students interested in 
+                aspiring to crack different competitive examinations such as UPSC, SSC and Bank PO.
+            </p>
+            <h3 className='text-2xl px-32 mt-5'>Recent training programs conducted</h3>
+        </div>
+    );
+}
+
+const TrainingCards = (props)=>{
+    return(
+        <a href="#" class={`w-64 h-52 relative block overflow-hidden rounded-lg border border-gray-100 p-4 sm:p-6 lg:p-8 ${props.className}`}>
+        <span class="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span>
+            <p>{props.body}</p>
+        </a>
+
     );
 }
 
