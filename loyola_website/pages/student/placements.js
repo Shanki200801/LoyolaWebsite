@@ -1,5 +1,9 @@
 import * as React from "react";
 import { Josefin_Sans, Aclonica, Inter, Oswald } from "next/font/google";
+import Image from "next/image";
+import imageOne from "../../public/placements/imageOne.webp";
+import imageTwo from "../../public/placements/imageTwo.webp";
+import imageThree from "../../public/placements/imageThree.webp";
 
 const placementHead = Aclonica({ subsets: ["latin"], weight: "400" });
 const overviewBody = Josefin_Sans({ subsets: ["latin"] });
@@ -105,10 +109,10 @@ const TrainingCards = (props) => {
     <a
       href="#"
       //   class={`w-64 h-52 relative block overflow-hidden rounded-lg border bg-green-200 border-gray-100 p-4 sm:p-6 lg:p-8 ${props.className}`}
-      class={`w-64 h-52 relative block overflow-hidden rounded-lg border bg-red-200 border-gray-100 shadow-md box-shadow-custom-red p-4 sm:p-6 lg:p-8 ${props.className} hover:bg-rose-700 hover:text-white`}
+      className={`w-64 h-52 relative block overflow-hidden rounded-lg border bg-red-200 border-gray-100 shadow-md box-shadow-custom-red p-4 sm:p-6 lg:p-8 ${props.className} hover:bg-rose-700 hover:text-white`}
     >
       {/* <span class="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span> */}
-      <span class="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-yellow-200 via-rose-500 to-blue-400"></span>
+      <span className="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-yellow-200 via-rose-500 to-blue-400"></span>
       <p className={`${generalText.className} tracking-tighter`}>
         {props.body}
       </p>
@@ -122,7 +126,8 @@ const Talks = () => {
       <h2
         className={`text-5xl mt-10 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-200 tracking-tight`}
       >
-        Talks & <span className={`text-red-800 whitespace-pre`}> Guest Lectures{" "}</span>
+        Talks &{" "}
+        <span className={`text-red-800 whitespace-pre`}> Guest Lectures </span>
       </h2>
       <p
         className={`px-32 text-justify mt-10 ${generalText.className} tracking-tight`}
@@ -146,27 +151,39 @@ const RecentActivities = () => {
       <h2
         className={`text-5xl mt-10 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-200 tracking-tight`}
       >
-        <span className={`text-red-800 whitespace-pre`}>Recent activities{" "}</span> conducted by the <span className={`text-red-800 whitespace-pre`}> Placement Cell{" "}</span>
+        <span className={`text-red-800 whitespace-pre`}>
+          Recent activities{" "}
+        </span>{" "}
+        conducted by the{" "}
+        <span className={`text-red-800 whitespace-pre`}> Placement Cell </span>
       </h2>
       <ul
-        className={`px-32 text-justify mt-10 ${generalText.className} tracking-tight`}
+        className={`flex flex-col items-center justify-center gap-4 px-32 text-justify mt-10 ${generalText.className} tracking-tight`}
       >
-        <li className={`pb-5`}>
-          “NAVIGATION '23” {"("}Know where you belong{")"} - Career guidance
-          session for final year BCOM students was conducted on Feb 20, 2023.
-          Specially topics such as Job opportunities after graduation,
-          opportunities to pursue higher studies and preparation for UPSC -
-          civil service exam was covered. The resource persons for the program
-          were Prof Teena Maria Rani and Prof Grace Prerana from school of
-          business, St Joseph's University.{" "}
+        <li>
+          <span className={`text-orange-600 font-semibold whitespace-pre`}>
+            “NAVIGATION '23” {"("}Know where you belong{")"}{" "}
+          </span>
+          - Career guidance session for final year BCOM students was conducted
+          on Feb 20, 2023. Specially topics such as Job opportunities after
+          graduation, opportunities to pursue higher studies and preparation for
+          UPSC - civil service exam was covered. The resource persons for the
+          program were Prof Teena Maria Rani and Prof Grace Prerana from school
+          of business, St Joseph's University.{" "}
         </li>
-        <li className={`pb-5`}>
+        <li>
+          <Image src={imageOne} className={`bg-yellow-100 rounded-xl`}/>
+        </li>
+        <li>
           Vijay Karnataka the largest read daily in Karnataka in association
           with Gillette India conducted a career guidance session for final year
           students of BCOM and BA on Feb 27, 2023. Special focus to
           opportunities in the area of communication and media covered. Mr.
           Sandeep the regional head was accompanied by Mr. Kishore and Ms.
-          Chandni.{" "}
+          Chandni.
+        </li>
+        <li>
+          <Image src={imageTwo} className={`bg-yellow-100 rounded-xl`}/>
         </li>
       </ul>
     </div>
@@ -179,7 +196,8 @@ const Process = () => {
       <h2
         className={`text-5xl mt-5 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-200 tracking-tight`}
       >
-        Placement <span className={`text-red-800 whitespace-pre`}> Process{" "}</span>
+        Placement{" "}
+        <span className={`text-red-800 whitespace-pre`}> Process </span>
       </h2>
 
       <p
@@ -192,7 +210,7 @@ const Process = () => {
       <ul
         className={`flex flex-col gap-3 px-32 justify-center mt-3 text-md ${generalText.className} tracking-tight`}
       >
-        <span className={`border-2 border-yellow-200 rounded-lg p-3`}>
+        <span className={`border-2 border-yellow-200 rounded-lg p-3 bg-yellow-100`}>
           <li className={`pb-2`}>
             <span
               className={`text-red-500 font-semibold uppercase whitespace-pre`}
@@ -243,23 +261,31 @@ const Stats = () => {
       <h2
         className={`text-5xl mt-5 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-200 tracking-tight`}
       >
-        Placement <span className={`text-red-800 whitespace-pre`}> Statistics{" "}</span>
+        Placement{" "}
+        <span className={`text-red-800 whitespace-pre`}> Statistics </span>
       </h2>
       <ul
-        className={`flex flex-col justify-center gap-4 px-32 pb-5 text-center mt-7 ${generalText.className} tracking-tight`}
+        className={`flex flex-col items-center justify-center gap-4 px-32 pb-5 text-center mt-7 ${generalText.className} tracking-tight`}
       >
-        <li className={`text-left`}>The academic year 2020 - 2021 was momentous for the placement cell of
-        the Loyola degree college. A total number of 86 students were
-        successfully placed in esteemed companies with annual CTC of 2.5 lakhs
-        to 3 lakhs. In the Academic year 2021 - 2022 more than 90% of the
-        students have opted for higher studies and have admitted themselves for
-        post-graduation in commerce and arts. </li>
-        <li className={`text-left`}>On Dec 21, 2023 campus recruitment
-        drive was organised with L & T financial services and along with
-        students of LDC other students from St. Joseph's university, Christ
-        college, AMC college and Jain University addended the job drive and were
-        placed with 3 lakhs CTC. Some of our esteemed recruiters are L&T, ASTER
-        Pharma, Edutech, HDFC bank, Capgemini and Nirvana and Navi finance.</li>
+        <li className={`text-left`}>
+          The academic year 2020 - 2021 was momentous for the placement cell of
+          the Loyola degree college. A total number of 86 students were
+          successfully placed in esteemed companies with annual CTC of 2.5 lakhs
+          to 3 lakhs. In the Academic year 2021 - 2022 more than 90% of the
+          students have opted for higher studies and have admitted themselves
+          for post-graduation in commerce and arts.{" "}
+        </li>
+        <li className={`text-left`}>
+          On Dec 21, 2023 campus recruitment drive was organised with L & T
+          financial services and along with students of LDC other students from
+          St. Joseph's university, Christ college, AMC college and Jain
+          University addended the job drive and were placed with 3 lakhs CTC.
+          Some of our esteemed recruiters are L&T, ASTER Pharma, Edutech, HDFC
+          bank, Capgemini and Nirvana and Navi finance.
+        </li>
+        <li>
+          <Image src={imageThree} className={`bg-yellow-100 rounded-xl`}/>
+        </li>
       </ul>
     </div>
   );

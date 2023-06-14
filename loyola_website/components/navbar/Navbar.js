@@ -73,7 +73,7 @@ const NavLinks = () => {
 const NavAbout = () => {
   return (
     <li tabIndex={0}>
-      <a className={`hover:underline hover:underline-offset-4 hover: decoration-white bg-transparent uppercase ${styles.primaryLinks}`}>
+      <a className={`hover:underline hover:underline-offset-4 hover:decoration-white bg-transparent uppercase ${styles.primaryLinks}`}>
         About
         <svg
           className="fill-current"
