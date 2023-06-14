@@ -1,27 +1,27 @@
 import Navbar from 'components/navbar/Navbar';
-import WelcomeImage from 'components/welcomeImage/WelcomeImage';
+import WelcomeImage from '@/components/home/WelcomeImage';
 import { Announcement } from '@mui/icons-material';
-import Announcements from 'components/announcementsMarquee/Announcements';
+import Announcement_marquee from '@/components/home/Announcement_marquee';
 import Link from 'next/link';
 import Form from './form';
+import styles from '../../styles/Form.module.css'
 const Admissions = () => {
     
     return ( 
         <>
-        <Navbar />
-        <div className="bg-slate-300 w-full">
+        <div className="bg-slate-300 w-full"><br/>
             <h1 className=" text-4xl font-bold pb-5 text-indigo-900 text-center">ADMISSIONS</h1>
             <br /><br />
-            <br /><br />
+            <br />
             <h2 className=" text-2xl font-bold pb-5 text-indigo-900 ml-24">ELIGIBILITY</h2>
             <div className="text-black mx-40 font-medium leading-relaxed ">
-                • BCom  It is mandatory that the candidate scores a minimum of 55% in the previous board examination.<br />
-                • B.A  It is mandatory that the candidate scores a minimum of 45% in the previous board examination. <br /><br /><br />
+                B.Com  It is mandatory that the candidate scores a minimum of 55% in the previous board examination.<br />
+                B.A  It is mandatory that the candidate scores a minimum of 45% in the previous board examination. <br /><br /><br />
             </div><br />
             <div>
-                <h2 className="  text-2xl font-bold pb-5 text-indigo-900">GENERAL INSTRUCTIONS</h2>
+                <h2 className="  text-2xl font-bold pb-5 text-indigo-900 ml-24">GENERAL INSTRUCTIONS</h2>
                 <li>
-                <ol className="text-black mx-40 font-medium leading-relaxed list-decimal">
+                <ol className="text-black mx-48 font-medium leading-relaxed list-decimal">
                     <li>Application must be submitted online only.</li>
                     <li>The applicant should have a valid e-mail id and mobile number. </li>
                     <li>After submitting the application online, take a printout of the same and submit it to the college office on the same or next day. Applying online does not guarantee your seat in the college.</li>
@@ -42,36 +42,32 @@ const Admissions = () => {
             <br /><br />
             <br /><br />
 
-            <h2 className=" text-2xl font-bold pb-5 text-indigo-900">ADMISSION SCHOLARSHIP INSTRUCTIONS</h2>
-            <table className="table-auto">
+            <h2 className=" text-2xl font-bold pb-5 text-indigo-900 ml-24">ADMISSION SCHOLARSHIP INSTRUCTIONS</h2><br/>
+            <table className="ml-80 bg-slate-300 text-black border-collapse border-2 border-black">
   <thead>
     <tr>
-      <th>Song</th>
-      <th>Artist</th>
-      <th>Year</th>
+      <th className='border-2 border-black'>Criteria</th>
+      <th className='border-2 border-black'>Scholarship</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody >
     <tr>
-      <td>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
-      <td>Malcolm Lockyer</td>
-      <td>1961</td>
+      <td className='border-2 border-black'>Within 3 days of the announcement of PUC results</td>
+      <td className='border-2 border-black'>10% of the fees</td>
+      
     </tr>
     <tr>
-      <td>Witchy Woman</td>
-      <td>The Eagles</td>
-      <td>1972</td>
+      <td className='border-2 border-black'>Within 3 days of the announcement of PUC results and above 85% marks</td>
+      <td className='border-2 border-black'>10% + 5% = 15% of the fees</td>
+      
     </tr>
     <tr>
-      <td>Shining Star</td>
-      <td>Earth, Wind, and Fire</td>
-      <td>1975</td>
+      <td className='border-2 border-black'>Within 3 days of the announcement of PUC results and above 95% marks</td>
+      <td className='border-2 border-black'>10% + 15% = 25% of the fees</td>
     </tr>
   </tbody>
-</table>
-
-
-            <Link href="/admissions/form" className='border-opacity-100 text-indigo-900 bg-yellow-600' >Here to apply!!</Link>
+</table><br/><br/>
+            <Link href="/admissions/form" className={styles.inputsubmit2} >Click here to apply!!</Link><br/>
         </div>
         </>
      );
