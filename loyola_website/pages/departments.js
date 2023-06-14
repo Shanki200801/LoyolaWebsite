@@ -6,7 +6,8 @@ import ManagementStaff from '@/components/departments/ManagementStaff';
 import LanguagesStaff from '@/components/departments/LanguagesStaff';
 import NonTeaching from '@/components/departments/NonTeaching';
 import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
-const departments = () => {
+const departments = ({staff_details}) => {
+    console.log(staff_details)
     const [departments, setDepartments] = useState('management');
   return (
     <>
@@ -24,11 +25,11 @@ const departments = () => {
     </section>
     
     <section className='mx-auto '>
-        {departments == 'management' && <ManagementStaff/>}
-        {departments == 'languages' && <LanguagesStaff/>}
-        {departments == 'commerce' && <CommerceStaff/>}
-        {departments == 'arts' && <ArtsStaff/>}
-        {departments == 'nonteaching' && <NonTeaching/>}
+        {departments == 'management' && <ManagementStaff data={staff_details['management-staff']}/>}
+        {departments == 'languages' && <LanguagesStaff data={staff_details['language-staff']} />}
+        {departments == 'commerce' && <CommerceStaff data={staff_details['commerce-staff']}/>}
+        {departments == 'arts' && <ArtsStaff data={staff_details['arts-staff']}/>}
+        {departments == 'nonteaching' && <NonTeaching data={staff_details['nonteaching-staff']}/>}
     </section>
     </div>
     </div>
@@ -37,3 +38,22 @@ const departments = () => {
 }
 
 export default departments
+
+
+export async function getServerSideProps(){
+    const staff_details = {
+      'management-staff': '',
+      'language-staff': '',
+      'commerce-staff': '',
+      'arts-staff': '',
+      'nonteaching-staff': '',
+    }
+    for(let key in staff_details){
+      staff_details[key] = await fetch(`http://localhost:3000/api/${key}`);
+      staff_details[key] = await staff_details[key].json();
+    }
+   
+    return {
+      props: {staff_details}
+    };
+  }
