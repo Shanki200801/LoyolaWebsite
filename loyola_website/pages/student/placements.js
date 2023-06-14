@@ -70,9 +70,10 @@ const TrainingProg = () => {
   return (
     <div>
       <h2
-        className={`text-5xl mt-10 flex justify-center ${generalHeadings.className}`}
+        className={`text-5xl mt-10 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-200 tracking-tight`}
       >
-        Training programs
+        Training{" "}
+        <span className={`text-red-800 whitespace-pre`}> Programs</span>
       </h2>
       <p
         className={`px-32 text-justify mt-10 ${generalText.className} tracking-tight`}
@@ -90,7 +91,9 @@ const TrainingProg = () => {
         students interested in aspiring to crack different competitive
         examinations such as UPSC, SSC and Bank PO.
       </p>
-      <h3 className={`text-2xl px-32 mt-5 ${generalHeadings.className}`}>
+      <h3
+        className={`text-2xl px-32 mt-5 ${generalHeadings.className} underline decoration-wavy decoration-1 underline-offset-2 decoration-orange-500 `}
+      >
         Recent training programs conducted
       </h3>
     </div>
@@ -117,7 +120,7 @@ const Talks = () => {
   return (
     <div>
       <h2
-        className={`text-5xl mt-10 flex justify-center ${generalHeadings.className}`}
+        className={`text-5xl mt-10 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-200 tracking-tight`}
       >
         Talks & Guest lecture{" "}
       </h2>
@@ -141,9 +144,9 @@ const RecentActivities = () => {
   return (
     <div>
       <h2
-        className={`text-5xl mt-10 flex justify-center ${generalHeadings.className}`}
+        className={`text-5xl mt-10 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-200 tracking-tight`}
       >
-        Recent activities conducted from Placement cell of LDC
+        Recent activities conducted by the Placement cell
       </h2>
       <ul
         className={`px-32 text-justify mt-10 ${generalText.className} tracking-tight`}
@@ -174,37 +177,61 @@ const Process = () => {
   return (
     <div>
       <h2
-        className={`text-5xl mt-5 flex justify-center ${generalHeadings.className}`}
+        className={`text-5xl mt-5 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-200 tracking-tight`}
       >
         Placement Process
       </h2>
+
       <p
-        className={`text-lg px-32 text-center mt-7 ${generalText.className} tracking-tight`}
+        className={`font-medium text-orange-600 text-lg px-32 text-center mt-7 ${generalText.className} tracking-tight`}
       >
         All the students of the final year batch are eligible to apply for
         campus placements.
       </p>
+
       <ul
         className={`flex flex-col gap-3 px-32 justify-center mt-3 text-md ${generalText.className} tracking-tight`}
       >
-        <li>
-          Step 1: Registering for employability integrated training program with
-          placement cell
-        </li>
-        <li>
-          Step 2: Active participation and completion of assessments from the
-          training modules with 90% results & 75% of attendance in all the
-          placement activities will be the minimum eligibility to sit for campus
-          placements{" "}
-        </li>
-        <li>
-          Step 3: Submit a copy of training certificate with name and
-          registration number{" "}
-        </li>
-        <li className={`pb-4`}>
-          Step 4: Release of eligibility list of students to seat for campus
-          recruitment{" "}
-        </li>
+        <span className={`border-2 border-yellow-200 rounded-lg p-3`}>
+          <li className={`pb-2`}>
+            <span
+              className={`text-red-500 font-semibold uppercase whitespace-pre`}
+            >
+              Step 1:
+            </span>{" "}
+            Registering for employability integrated training program with
+            placement cell
+          </li>
+          <li className={`pb-2`}>
+            <span
+              className={`text-red-500 font-semibold uppercase whitespace-pre`}
+            >
+              Step 2:
+            </span>{" "}
+            Active participation and completion of assessments from the training
+            modules with 90% results & 75% of attendance in all the placement
+            activities will be the minimum eligibility to sit for campus
+            placements{" "}
+          </li>
+          <li className={`pb-2`}>
+            <span
+              className={`text-red-500 font-semibold uppercase whitespace-pre`}
+            >
+              Step 3:
+            </span>{" "}
+            Submit a copy of training certificate with name and registration
+            number{" "}
+          </li>
+          <li className={`pb-2`}>
+            <span
+              className={`text-red-500 font-semibold uppercase whitespace-pre`}
+            >
+              Step 4:
+            </span>{" "}
+            Release of eligibility list of students to seat for campus
+            recruitment{" "}
+          </li>
+        </span>
       </ul>
     </div>
   );
@@ -214,25 +241,26 @@ const Stats = () => {
   return (
     <div>
       <h2
-        className={`text-5xl mt-5 flex justify-center ${generalHeadings.className}`}
+        className={`text-5xl mt-5 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-200 tracking-tight`}
       >
-        Placement statistics{" "}
+        Placement Statistics{" "}
       </h2>
-      <p
-        className={`px-32 pb-5 text-center mt-7 ${generalText.className} tracking-tight`}
+      <ul
+        className={`flex flex-col justify-center gap-4 px-32 pb-5 text-center mt-7 ${generalText.className} tracking-tight`}
       >
-        The academic year 2020 - 2021 was momentous for the placement cell of
+        <li className={`text-left`}>The academic year 2020 - 2021 was momentous for the placement cell of
         the Loyola degree college. A total number of 86 students were
         successfully placed in esteemed companies with annual CTC of 2.5 lakhs
         to 3 lakhs. In the Academic year 2021 - 2022 more than 90% of the
         students have opted for higher studies and have admitted themselves for
-        post-graduation in commerce and arts. On Dec 21, 2023 campus recruitment
+        post-graduation in commerce and arts. </li>
+        <li className={`text-left`}>On Dec 21, 2023 campus recruitment
         drive was organised with L & T financial services and along with
         students of LDC other students from St. Joseph's university, Christ
         college, AMC college and Jain University addended the job drive and were
         placed with 3 lakhs CTC. Some of our esteemed recruiters are L&T, ASTER
-        Pharma, Edutech, HDFC bank, Capgemini and Nirvana and Navi finance.{" "}
-      </p>
+        Pharma, Edutech, HDFC bank, Capgemini and Nirvana and Navi finance.</li>
+      </ul>
     </div>
   );
 };
