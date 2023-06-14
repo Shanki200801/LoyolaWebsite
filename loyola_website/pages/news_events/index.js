@@ -16,7 +16,7 @@ const news_events = ({eventDataExport}) => {
     </>
   )
 }
-export async function getServerSideProps()    {
+export async function getServerSideProps()   {
   const url = 'http://localhost:3000/api/event-data'; 
   const res = await fetch(url);
   const eventDataExport = await res.json();
