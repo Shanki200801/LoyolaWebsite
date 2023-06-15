@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Logo from '../../Assets/logo.png';
+import Image from 'next/image';
 const CrestparaComponent = () => {
   const [isClient, setIsClient] = useState(false);
 
@@ -28,7 +29,7 @@ const CrestparaComponent = () => {
 
       {isClient && (
         <div  className='w-1/4'>
-          <img src= {Logo.src} alt="Logo"  />
+          <Image src= {Logo.src} width={200} height={200} alt="Logo"  />
         </div>    
       )}
 

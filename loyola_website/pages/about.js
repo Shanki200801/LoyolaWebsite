@@ -8,11 +8,10 @@ const App = () => {
   return (
     <div className="bg-slate-300">
       <div>
-        <ImageComponent />
-        <div className="grid place-items-center">
+      
           <ParagraphComponent />
           <VismisComponent/>
-        </div>
+       
       </div>
     </div>
   );

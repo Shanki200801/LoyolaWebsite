@@ -1,12 +1,15 @@
 import React from 'react';
+import Image from 'next/image';
+import cover from "@/Assets/loyolacover.jpg";
 
 const ImageComponent = () => {
   return (
-    <div style={{ position: 'relative', width: '100%', height: '0', paddingTop: '56.25%' }}>
-      <img
-        src="http://bjes.org/institutions/loyola_pu.JPG"
+    <div className='w-full'>
+      <Image
+        src={cover}
         alt="Top Image"
-        style={{ position: 'absolute', top: '-400px', left: '0', width: '100%', height: '100%' }}
+        fill='true'
+        className='w-full'
       />
     </div>
   );

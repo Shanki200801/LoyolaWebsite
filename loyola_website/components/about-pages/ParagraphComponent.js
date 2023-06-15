@@ -3,11 +3,11 @@ import React from 'react';
 const ParagraphComponent = () => {
   return (
     <div className="text-justify text-black mx-48 font-medium text-lg leading-relaxed">
-      <div>
-        <h1 className="text-3xl font-bold pb-5 text-indigo-900" style={{ marginTop: '-300px' }}>
+
+        <h1 className="text-3xl text-center font-bold pb-5 py-8 text-indigo-900" >
           <span className="font-bold text-yellow-600">ABOUT </span> THE UNIVERSITY
         </h1>
-      </div>
+
       <p>
         Loyola Degree College is a Jesuit university at the heart of Bengaluru, the Silicon city of India.
         Established in 1882 by Paris foreign Fathers, the management of the college was handed over to the

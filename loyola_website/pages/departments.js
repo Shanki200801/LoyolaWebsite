@@ -5,7 +5,7 @@ import CommerceStaff from '@/components/departments/CommerceStaff';
 import ManagementStaff from '@/components/departments/ManagementStaff';
 import LanguagesStaff from '@/components/departments/LanguagesStaff';
 import NonTeaching from '@/components/departments/NonTeaching';
-import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
+
 const departments = () => {
     const [departments, setDepartments] = useState('management');
   return (
