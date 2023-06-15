@@ -212,9 +212,9 @@ const NavNews = () => {
 const NavAdmissions = () => {
   return (
     <li>
-      <a className={`hover:bg-white uppercase font-black ${styles.admissionsBtn} ${styles.primaryLinks}`}>
+      <Link href="/admissions" className={`hover:bg-white uppercase font-black ${styles.admissionsBtn} ${styles.primaryLinks}`}>
         Admissions
-      </a>
+      </Link>
     </li>
   );
 };
