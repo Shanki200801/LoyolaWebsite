@@ -6,7 +6,7 @@ import VismisComponent from '@/components/about-pages/VismisComponent';
 
 const App = () => {
   return (
-    <body className="bg-slate-300">
+    <div className="bg-slate-300">
       <div>
         <ImageComponent />
         <div className="grid h-screen place-items-center">
@@ -14,7 +14,7 @@ const App = () => {
           <VismisComponent/>
         </div>
       </div>
-    </body>
+    </div>
   );
 };
 
