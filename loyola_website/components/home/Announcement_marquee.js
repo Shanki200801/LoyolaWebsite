@@ -24,7 +24,7 @@ const Announcement_marquee = () => {
 	}
 
 	const list_elements = content().map((item) => 
-	<li className="[style.inline-block] px-4">{item.text}</li>
+	<li key={item.index} className="[style.inline-block] px-4">{item.text}</li>
 	)
 
 	const numItems = content().length;

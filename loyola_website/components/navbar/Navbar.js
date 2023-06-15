@@ -73,7 +73,7 @@ const NavLinks = () => {
 const NavAbout = () => {
   return (
     <li tabIndex={0}>
-      <a className={`hover:underline hover:underline-offset-4 hover: decoration-white bg-transparent uppercase ${styles.primaryLinks}`}>
+      <a className={`hover:underline hover:underline-offset-4 hover:decoration-white bg-transparent uppercase ${styles.primaryLinks}`}>
         About
         <svg
           className="fill-current"
@@ -145,13 +145,13 @@ const StudentSubMenu = () => {
         <a>Note to parents</a>
       </li> */}
       <li>
-        <Link href="/student/associations">Associations</Link>
+        <Link href={`/student/associations`}>Associations</Link>
       </li>
       <li>
         <a>Scholarships</a>
       </li>
       <li>
-        <a>Placements</a>
+        <Link href={`/student/placements`}>Placements</Link>
       </li>
     </ul>
   );

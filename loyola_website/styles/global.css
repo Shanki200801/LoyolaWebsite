@@ -3,22 +3,40 @@
 @import 'tailwindcss/utilities';
 
 @layer utilities {
-    @variants responsive {
         .text-shadow {
           text-shadow: 2px 2px 4px black;
         }
+        
         .text-shadow-md {
           text-shadow: 4px 4px 8px black;
+        }
+
+        .text-shadow-white {
+          text-shadow: 1px 0.1px 4px rgba(255, 255, 255, 0.623);
         }
         
         .text-shadow-lg {
           text-shadow: 15px 15px 30px black;
         }
+        
         .text-shadow-none {
           text-shadow: none;
         }
+        
         .text-shadow-custom-blue {
             text-shadow: 1px 0.1px 5px #0ea5e9;
         }
+
+        
+        .box-shadow-custom-red {
+          box-shadow: 6px 7px 3px rgba(255, 2, 2, 0.486);
+        }
+
+        .box-shadow-custom-orange {
+          box-shadow: 1px 0.1px 35px rgba(255, 115, 0, 0.616);
+        }
+
+        .rounded-custom {
+          border-radius: 5px 7px;
+        }
     } 
-}
