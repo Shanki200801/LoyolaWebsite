@@ -9,7 +9,7 @@ const App = () => {
     <div className="bg-slate-300">
       <div>
         <ImageComponent />
-        <div className="grid h-screen place-items-center">
+        <div className="grid place-items-center">
           <ParagraphComponent />
           <VismisComponent/>
         </div>
