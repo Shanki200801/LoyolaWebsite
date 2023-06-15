@@ -7,8 +7,16 @@
           text-shadow: 2px 2px 4px black;
         }
         
+        .text-shadow-sm {
+          text-shadow: 2px 2px 2px rgb(35, 149, 255);
+        }
+
         .text-shadow-md {
           text-shadow: 4px 4px 8px black;
+        }
+
+        .text-shadow-black {
+          text-shadow: 1px 0.1px 2px rgba(0, 0, 0, 0.493);
         }
 
         .text-shadow-white {
@@ -26,11 +34,10 @@
         .text-shadow-custom-blue {
             text-shadow: 1px 0.1px 5px #0ea5e9;
         }
-
-        
+      
         .box-shadow-custom-red {
-          box-shadow: 6px 7px 3px rgba(255, 2, 2, 0.486);
-        }
+          box-shadow: 6px 7px 3px #ff02027c;
+        }#ff02027c
 
         .box-shadow-custom-orange {
           box-shadow: 1px 0.1px 35px rgba(255, 115, 0, 0.616);
@@ -39,4 +46,13 @@
         .rounded-custom {
           border-radius: 5px 7px;
         }
+
+        .custom-letter-spacing {
+          letter-spacing: 0.05rem;
+        }
+
+        .custom-letter-spacing-wider {
+          letter-spacing: 0.1rem;
+        }
+
     } 
