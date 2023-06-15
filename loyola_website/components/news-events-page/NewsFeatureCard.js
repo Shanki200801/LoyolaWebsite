@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 
 const NewsFeatureCard = ({id, image, title, description, longdescription, imagefolder, eventroute }) => {
-      console.log('id is '+ title);      
+          
       const eventlink = `/news_events/${id}`
         return (
           <div className= {`${styles.cardcontainer} my-4`}>
@@ -16,11 +16,11 @@ const NewsFeatureCard = ({id, image, title, description, longdescription, imagef
             
             {/* Content */}
             <div className={`${styles.eventinfo}` }>
-                <h3 className="text-xl font-bold mb-2">{title}</h3>
+                <h3 className="text-xl text-blue-700 text-center font-bold mb-2">{title}</h3>
                 <div className="text-gray-600">{description}
                 
                 </div>
-                <Link  href={`/news_events/${eventroute}`} className='relative  right-0 bottom-0'>read more..</Link>
+                <Link  href={`/news_events/${eventroute}`} className='relative  right-0 bottom-0 text-gray-600 font-semibold'>read more..</Link>
             </div>
           </div>
         );
