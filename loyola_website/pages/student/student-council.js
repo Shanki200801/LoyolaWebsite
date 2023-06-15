@@ -13,6 +13,7 @@ const StuCouncil = ()=>{
             They take responsibility for voicing the opinions and ideas of the general student body, as well as informing fellow students about current endeavors within the Student Council. In addition to planning events that contribute to college spirit, the student council is the voice of the student body. They help share student ideas, interests and concerns of the college community.
             </div>
             <table  >
+                <tbody>
                 <tr>
                     <td>CLASS</td>
                     <td>Students Profile</td>
@@ -48,6 +49,7 @@ const StuCouncil = ()=>{
                     <td>Mr Shreekanth R</td>
                     <td>Sport Secretary</td>
                 </tr>
+                </tbody>
             </table>
         </div>
     );
