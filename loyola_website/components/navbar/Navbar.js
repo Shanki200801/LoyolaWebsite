@@ -95,19 +95,13 @@ const AboutSubMenu = () => {
   return (
     <ul className={`bg-white text-black z-10 ${styles.subMenu}`}>
       <li>
-        <a>About University</a>
+        <Link href={`/about/about-uni`}>About University</Link>
       </li>
       <li>
-        <a>Vision & Mission</a>
+        <Link href={`/about/crest-anthem`}>Crest & Anthem</Link>
       </li>
       <li>
-        <a>Crest & Anthem</a>
-      </li>
-      <li>
-        <a>Core Values</a>
-      </li>
-      <li>
-        <a>Management</a>
+        <Link href={`/about/core-values`}>Core Values</Link>
       </li>
     </ul>
   );
@@ -138,17 +132,8 @@ const NavStudent = () => {
 const StudentSubMenu = () => {
   return (
     <ul className={`bg-white text-black z-10 ${styles.subMenu}`}>
-      {/* <li>
-        <a>Rules & Regulations</a>
-      </li>
-      <li>
-        <a>Note to parents</a>
-      </li> */}
       <li>
         <Link href={`/student/associations`}>Associations</Link>
-      </li>
-      <li>
-        <a>Scholarships</a>
       </li>
       <li>
         <Link href={`/student/placements`}>Placements</Link>
@@ -207,50 +192,8 @@ const NavDepts = () => {
     <li>
       <Link href={"/departments"}  className={`hover:underline hover:underline-offset-4 hover: decoration-white bg-transparent uppercase ${styles.primaryLinks}`}>
         Departments
-        {/* <svg
-          className="fill-current"
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-        >
-          <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
-        </svg> */}
       </Link>
-      {/* <DeptSubMenu /> */}
     </li>
-  );
-};
-
-//Navbar Departments Menu Component
-const DeptSubMenu = () => {
-  return (
-    <ul className={`bg-white text-black z-10 ${styles.subMenu} ${styles.deptMenu}`}>
-      <li>
-        <a>Department of Commerce</a>
-      </li>
-      <li>
-        <a>Department of English</a>
-      </li>
-      <li>
-        <a>Department of Kannada</a>
-      </li>
-      <li>
-        <a>Department of Hindi</a>
-      </li>
-      <li>
-        <a>Department of Physical Education</a>
-      </li>
-      <li>
-        <a>Department of Psychology</a>
-      </li>
-      <li>
-        <a>Department of Political Science</a>
-      </li>
-      <li>
-        <a>Department of Journalism</a>
-      </li>
-    </ul>
   );
 };
 
