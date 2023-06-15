@@ -11,16 +11,16 @@ const departments = ({staff_details}) => {
     const [departments, setDepartments] = useState('management');
   return (
     <>
-    <div className='flex flex-col justify-center bg-slate-300'>
-        <h1 className='text-4xl font-bold my-4 text-center text-slate-800 '>FACILITATORS</h1>
+    <div className='flex flex-col justify-center bg-gradient-to-tr from-slate-300 to-orange-50'>
+        <h1 className='text-2xl font-extrabold my-4 text-center text-slate-800 font-serif '>FACILITATORS</h1>
     <div className='flex flex-row'>
     <section className= 'w-1/4'>
-        <div className='w-full text-lg font-bold text mt-20 text-navbar-theme '>
-            <button onClick={() => setDepartments('management') } className={`mx-4 py-1 hover:underline rounded-lg px-2 my-2 ${departments == 'management' ? 'bg-navbar-theme text-white' : 'text-navbar-theme'}`}>Management</button><br/>
-            <button onClick={() => setDepartments('languages')} className={`mx-4 py-1 hover:underline rounded-lg px-2 my-2 ${departments == 'languages' ? 'bg-navbar-theme text-white' : 'text-navbar-theme'}`}>Department of Languages</button>
-            <button onClick={() => setDepartments('commerce')} className={`mx-4 py-1 hover:underline rounded-lg px-2 my-2 ${departments == 'commerce' ? 'bg-navbar-theme text-white' : 'text-navbar-theme'}`}>Department of Commerce</button><br/>
-            <button onClick={() => setDepartments('arts')} className={`mx-4 py-1 hover:underline rounded-lg px-2 my-2 ${departments == 'arts' ? 'bg-navbar-theme text-white' : 'text-navbar-theme'}`}>Department of Arts</button><br/>
-            <button onClick={() => setDepartments('nonteaching')} className={`mx-4 py-1 hover:underline rounded-lg px-2 my-2 ${departments == 'nonteaching' ? 'bg-navbar-theme text-white' : 'text-navbar-theme'}`}>Non-Teaching Staff</button><br/>
+        <div className='w-full text-lg font-bold text mt-20 mr-4 text-right text-navbar-theme '>
+            <button onClick={() => setDepartments('management') } className={`mx-2 py-1 hover:underline rounded-lg px-2  my-2 ${departments == 'management' ? 'bg-gradient-to-r from-navbar-theme to-blue-600 text-white bg-' : 'text-navbar-theme'}`}>Management</button><br/>
+            <button onClick={() => setDepartments('languages')} className={`mx-2 py-1 hover:underline rounded-lg px-2 my-2 ${departments == 'languages' ? 'bg-gradient-to-r from-navbar-theme to-blue-600 text-white' : 'text-navbar-theme'}`}>Department of Languages</button>
+            <button onClick={() => setDepartments('commerce')} className={`mx-2 py-1 hover:underline rounded-lg px-2 my-2 ${departments == 'commerce' ? 'bg-gradient-to-r from-navbar-theme to-blue-600 text-white' : 'text-navbar-theme'}`}>Department of Commerce</button><br/>
+            <button onClick={() => setDepartments('arts')} className={`mx-2 py-1 hover:underline rounded-lg px-2 my-2 ${departments == 'arts' ? 'bg-gradient-to-r from-navbar-theme to-blue-600 text-white' : 'text-navbar-theme'}`}>Department of Arts</button><br/>
+            <button onClick={() => setDepartments('nonteaching')} className={`mx-2 py-1 hover:underline rounded-lg px-2 my-2 ${departments == 'nonteaching' ? 'bg-gradient-to-r from-navbar-theme to-blue-600 text-white' : 'text-navbar-theme'}`}>Non-Teaching Staff</button><br/>
         </div>
     </section>
     

@@ -6,14 +6,14 @@ import CalenderComponent from '@/components/news-events-page/CalenderComponent'
 
 const news_events = ({eventDataExport}) => {
   return (
-    <>
-    <h1 className='bg-slate-300 text-navbar-theme text-3xl font-bold text-center py-6'>NEWS AND EVENTS</h1>
+    <div className='bg-gradient-to-tr from-slate-200 to-fuchsia-100'>
+    <h1 className='bg-slate-300 text-navbar-theme font-semibold  text-3xl font-serif text-center py-6'>NEWS AND EVENTS</h1>
     <div className='flex flex-row  justify-center'>
       <div className='w-full my-4px'><NewsList eventDataExport={eventDataExport}/></div>
       {/* <div className='w-1/4'><CalenderComponent/></div> */}
       
     </div>
-    </>
+    </div>
   )
 }
 export async function getServerSideProps()   {

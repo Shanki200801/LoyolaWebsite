@@ -26,11 +26,11 @@ const EventInfo = ({eventDataExport}) => {
 
     return (
         <div className='bg-slate-300 w-full'>
-          <h1 className='text-navbar-theme text-2xl font-bold text-center pt-6 pb-12'>{eventtitle}</h1>
+          <h1 className='text-navbar-theme text-2xl font-extrabold text-center pt-6 pb-12 font-serif'>{eventtitle}</h1>
           {longdescription.map((paragraph) => {
-            return <p className='text-gray-700 mx-16 pb-6 '>{paragraph}</p>
+            return <p className='text-gray-700 mx-24 text-justify pb-6 '>{paragraph}</p>
           })} 
-          <h1 className='text-navbar-theme text-lg font-bold text-center py-6 '>Images</h1>
+          <h1 className='text-navbar-theme text-lg font-bold text-center py-6 '>PHOTOS</h1>
           
           <div className= 'grid grid-cols-3 place-content-around place-items-center'>
               {photos.map((image) => {
