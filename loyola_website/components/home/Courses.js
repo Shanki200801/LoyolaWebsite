@@ -8,6 +8,7 @@ import Grid2 from '@mui/material/Unstable_Grid2'; // Grid version 2
 import Image from 'next/image';
 import { Grade } from '@mui/icons-material';
 import { Great_Vibes } from 'next/font/google';
+import Link from 'next/link';
 
 //Images
 import redBgImg from '../../Assets/coursesBgImage.webp'
@@ -43,32 +44,32 @@ const IconComponent = ()=>{
   return(
     <div style={{marginTop: '10vh', marginBottom: '10vh'}}>
        <Stack direction="row" spacing={10}>
-       <a href="http://www.loyolacollegeblr.com/ba.html">
+       <Link href="/academics/ba">
         <div className='grid place-items-center transition duration-300 ease-in hover:ease-in hover:scale-110'>
           <div className= "text-purple-100 font-semibold iconTxt text-3xl" style={{position: 'absolute', zIndex: 1, maxWidth: 200, textAlign: 'center', textShadow: '2px 0 5px #000'}}>
             Arts & Humanities
           </div>
           <Avatar className="opacity-95 "alt="Arts & Humanities" src={artsAndHumanities.src} sx={{width:200, height:200}}/>
         </div>
-       </a>
+       </Link>
 
-      <a href="http://www.loyolacollegeblr.com/bcom.html">
+      <Link href="/academics/bcom">
        <div className='grid place-items-center transition duration-300 ease-in hover:ease-in hover:scale-110'>
         <div className= "text-white font-semibold iconTxt text-3xl" style={{position: 'absolute', zIndex: 1, maxWidth: 200, textAlign: 'center', textShadow: '2px 0 5px #000'}}>
           Commerce
         </div>
         <Avatar className=" opacity-95" alt="Arts & Humanities" src={commerce.src} sx={{width:200, height:200}}/>
        </div>
-      </a>
+      </Link>
 
-      <a href="">
+      <Link href="/academics/certificate-courses">
        <div className='grid place-items-center transition duration-300 ease-in hover:ease-in hover:scale-110'>
         <div className= "text-white font-semibold iconTxt text-3xl" style={{position: 'absolute', zIndex: 1, maxWidth: 200, textAlign: 'center', textShadow: '2px 0 5px #000'}}>
           Certificate Courses
         </div>
         <Avatar className=" saturate-200 opacity-90" alt="Arts & Humanities" src={certificateCourses.src}  sx={{width:200, height:200}}/>
        </div>
-      </a>
+      </Link>
       </Stack>
     </div>
   )
