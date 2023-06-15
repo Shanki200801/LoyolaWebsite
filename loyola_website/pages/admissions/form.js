@@ -219,7 +219,7 @@ function handleReligionTypeChange(e) {
       <td><input className={styles.input} type="text" /></td>
       <td><input className={styles.input} type="text" /></td>
       <td><input className={styles.input} type="text" /></td>
-    </tr><br/>
+    </tr>
     
     <tr>
       <td>Total Marks Obtained</td>
