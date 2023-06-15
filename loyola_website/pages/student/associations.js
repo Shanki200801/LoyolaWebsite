@@ -1,10 +1,10 @@
 import * as React from "react";
 import Image from "next/image";
-import { Playfair_Display, Oswald, Inter } from "next/font/google";
+import { Lobster_Two, Oswald, Inter } from "next/font/google";
 import sunSvg from "../../public/associations/sun.svg";
 import bellSvg from "../../public/associations/bell.svg";
 
-const playfair = Playfair_Display({ subsets: ["latin"] });
+const lobster = Lobster_Two({ subsets: ["latin"], weight: "400" });
 const oswald = Oswald({ subsets: ["latin"] });
 const inter = Inter({ subsets: ["latin"] });
 const Block = ({ imageSrc, altText, header, para }) => {
@@ -35,10 +35,10 @@ export default function Associations() {
   return (
     <div className={`grid grid-rows-15 items-center bg-white text-black`}>
       <section id="header">
-        <div className={`py-5`}>
+        <div className={`pt-5 pb-3`}>
           <span className="flex items-center justify-center">
             <h1
-              className={`text-6xl text-center ${playfair.className} text-shadow-custom-blue`}
+              className={`custom-letter-spacing-wider text-6xl text-center ${lobster.className} text-shadow-custom-blue`}
             >
               Associations
             </h1>
