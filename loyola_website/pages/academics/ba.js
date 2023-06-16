@@ -1,18 +1,19 @@
 import * as React from 'react';
-import {Satisfy, Ruda} from 'next/font/google';
+import {Satisfy, Ruda, Inter, Oswald} from 'next/font/google';
 import journalism from '../../Assets/journalism.webp'
 import psychologyImg from '../../Assets/psychology.webp'
 import Image from 'next/image';
 import Link from 'next/link';
 
 const satisfy = Satisfy({ subsets: ['latin'], weight: '400' });
-const ruda = Ruda({subsets: ['latin']});
+const bodyText = Inter({subsets: ['latin']});
+const subheading = Oswald({subsets: ['latin']});    
 
 const BA = ()=>{
     return (
         <div className="bg-white" >
             <h1 className={`flex justify-center pt-10 text-black text-6xl ${satisfy.className}`}>Bachelor of Arts {"("}BA{")"}</h1>
-            <div className={`grid grid-cols-2 grid-rows-2 ${ruda.className} gap-12`}>
+            <div className={`grid grid-cols-2 grid-rows-2 gap-12`}>
                 <Eligibility/>
                 <Image src={journalism} className='h-60 w-4/5 object-cover mt-14 rounded-2xl'/>
                 <Image src={psychologyImg} className='h-60 w-4/5 object-cover mt-5 rounded-2xl justify-self-end'/>
@@ -23,15 +24,15 @@ const BA = ()=>{
                 <ApplyBtn/>
             </div>
                
-        </div>
+        </div>  
     )
 }
 
 const Eligibility = ()=>{
     return(
-        <div id="eligibility" className={`bg-gradient-to-br from-amber-400 to-amber-500 text-black text-lg ml-16 mt-14 w-4/5 row-span-1 text-center rounded-2xl h-60 py-5 px-14 ${ruda.className} justify-self-end`}>
-                <h2 className='text-3xl underline underline-offset-8'>ELIGIBILITY</h2>
-                <p className='mt-8'>A candidate for the BA degree course shall have passed the Pre
+        <div id="eligibility" className={`bg-gradient-to-br from-amber-400 to-amber-500 text-black text-lg ml-16 mt-14 w-4/5 row-span-1 text-center rounded-2xl h-60 py-5 px-14 justify-self-end`}>
+                <h2 className={`text-3xl underline underline-offset-8 ${subheading.className}`}>ELIGIBILITY</h2>
+                <p className={`mt-8 ${bodyText.className}`}>A candidate for the BA degree course shall have passed the Pre
                  – University examination with any combination of subjects, or equivalent 
                  in 12th standard examination of any other board. </p>
             </div>
@@ -42,8 +43,8 @@ const Offerings = ()=>{
 
     return (
         <div id="offerings" className=' bg-gradient-to-tl from-amber-400 to-amber-500 text-black text-lg mr-16 mt-5 w-4/5 row-span-1 flex items-center flex-col rounded-2xl h-60 py-5 px-14 justify-self-start'>
-            <h2 className='text-3xl underline underline-offset-8'>COURSES</h2>
-            <ul className='mt-8 pl-10 list-disc space-y-4'>
+            <h2 className={`text-3xl underline underline-offset-8 ${subheading.className}`}>COURSES</h2>
+            <ul className={`mt-8 pl-10 list-disc space-y-4 ${bodyText.className}`}>
                 <li>BA Journalism, Psychology</li>
                 <li>BA Journalism, Political Science</li>
             </ul>  

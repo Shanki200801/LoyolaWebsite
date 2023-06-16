@@ -5,7 +5,7 @@ import finGrowth from '../../Assets/finGrowth.webp';
 import excelLogo from '@/Assets/excelLogo.webp';
 import tally from '@/Assets/tally.webp';
 import photography from '@/public/academicsImg/photography.webp';
-import { Lobster_Two, Space_Mono } from 'next/font/google';
+import { Space_Mono, Economica, Oswald } from 'next/font/google';
 import smallA from '@/public/academicsImg/smallA.webp';
 import kannada from '@/public/academicsImg/kannada.webp';
 import hindi from '@/public/academicsImg/hindi.webp';
@@ -13,7 +13,7 @@ import telugu from '@/public/academicsImg/telugu.webp';
 import tamil from '@/public/academicsImg/tamil.webp';
 import Link from 'next/link';
 
-const kaushanScript = Lobster_Two({subsets: ['latin'], weight: '700'})
+const kaushanScript = Economica({subsets: ['latin'], weight: '700'})
 const novaCut = Space_Mono({subsets: ['latin'], weight: '400'})
 
 
