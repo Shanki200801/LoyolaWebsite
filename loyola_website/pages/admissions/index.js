@@ -1,9 +1,4 @@
-import Navbar from 'components/navbar/Navbar';
-import WelcomeImage from '@/components/home/WelcomeImage';
-import { Announcement } from '@mui/icons-material';
-import Announcement_marquee from '@/components/home/Announcement_marquee';
 import Link from 'next/link';
-import Form from './form';
 import styles from '../../styles/Form.module.css'
 const Admissions = () => {
     
