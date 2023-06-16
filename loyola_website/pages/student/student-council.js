@@ -6,6 +6,11 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails'; 
 import AddIcon from '@mui/icons-material/Add'; 
 import Button from '@mui/material/Button';
+import { Playfair_Display, Inter, Oswald } from 'next/font/google';
+
+const heading = Playfair_Display({subsets: ['latin']})
+const bodyText = Inter({ subsets: ["latin"] });
+const subheading = Oswald({ subsets: ["latin"] });
 
 const StuCouncil = ()=>{
 
@@ -25,31 +30,34 @@ const StuCouncil = ()=>{
 
     return (
         <div className='bg-white text-black px-6'>
-            <h1 className='flex justify-center text-4xl pt-5'>Student Council</h1>
-            <div className='text-justify mt-10'>
+            <h1 className={`${heading.className} flex justify-center text-4xl pt-5 lg:text-6xl`}>Student Council</h1>
+            <section className={` ${bodyText.className} text-justify mt-10 lg:px-32 lg:text-center lg:text-xl`}>
                 Student Councils the world over is student-led civic organizations designed to help promote College spirit and leadership among students. Students benefit immensely from being involved in student councils - they learn leadership skills, they have an opportunity to gain experience in public speaking, they learn organizational skills and cope with challenges beyond their everyday college life, they learn how to resolve conflict amicably and diplomatically.
-            </div>
-            <h2 className='flex justify-center text-xl my-5'>Council Members</h2>
-            {councilMembers.map((item,index)=>{
-                return (
-                    <div className='grid grid-cols-2 gap-8 h-48'>
-            <Card className='self-start h-5/6 text-center p-1 grid justify-center items-center'>
-                <CardContent>
-                <p>{item[0].role}</p>
-                <p>{item[0].name}</p>
-                <p>{item[0].class}</p>
-                </CardContent>
-            </Card>
-            <Card className='self-end h-5/6 text-center p-1 grid justify-center items-center'>
-                <CardContent>
-                <p>{item[1].role}</p>
-                <p>{item[1].name}</p>
-                <p>{item[1].class}</p>
-                </CardContent>
-            </Card>
-            </div>
-                );
-            })}
+            </section>
+            <h2 className={` ${subheading.className} flex justify-center text-xl my-5 lg:text-4xl underline underline-offset-8 lg:py-8`}>Council Members</h2>
+            <section className={`${bodyText.className} lg:mx-96 lg:text-xl`}>
+                {councilMembers.map((item,index)=>{
+                    return (
+                        <div className='grid grid-cols-2 gap-8 h-48'>
+                <Card className='self-start h-5/6 text-center p-1 grid justify-center items-center'>
+                    <CardContent>
+                    <p className={`lg:py-1`}>{item[0].role}</p>
+                    <p className={`lg:py-1`}>{item[0].name}</p>
+                    <p className={`lg:py-1`}>{item[0].class}</p>
+                    </CardContent>
+                </Card>
+                <Card className='self-end h-5/6 text-center p-1 grid justify-center items-center'>
+                    <CardContent>
+                    <p className={`lg:py-1`}>{item[1].role}</p>
+                    <p className={`lg:py-1`}>{item[1].name}</p>
+                    <p className={`lg:py-1`}>{item[1].class}</p>
+                    </CardContent>
+                </Card>
+                </div>
+                    );
+                })}
+            </section>
+            
             <section className='mt-16'>
                 <div>
                 <p>Students benefit immensely from being involved in student councils - they learn leadership skills, they have an opportunity to gain experience in public speaking, they learn organizational skills and cope with challenges beyond their everyday college life, they learn how to resolve conflict amicably and diplomatically.</p>
