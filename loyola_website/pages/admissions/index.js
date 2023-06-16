@@ -15,7 +15,7 @@ const Admissions = () => {
         <div className=' text-black to-blue-400 bg-white'>
           <h1 className={`${headingText.className} flex justify-center text-4xl lg:text-6xl pt-8`}>Admissions</h1>
           <EligibilitySub/>
-          <div className={`hidden lg:grid lg:grid-cols-2 lg:px-32 lg:mt-5 lg:gap-10 lg:py-10 lg:mx-32 bg-gradient-to-br from-amber-400 to-amber-500`}>
+          <div className={`hidden lg:grid lg:grid-cols-2 lg:px-10 lg:mt-5 lg:gap-10 lg:py-10 lg:mx-32 bg-gradient-to-br from-amber-400 to-amber-500`}>
             <Image src={admissionsImg} className='lg:w-auto lg:h-full lg:object-cover'/>
             <GenInstructionsSub/>
           </div>
@@ -37,7 +37,7 @@ const Admissions = () => {
 
 const EligibilitySub = ()=>{
   return (
-    <section className={`mt-10 px-6 lg:mt-16 lg:mx-32 lg:px-5 py-10 bg-gradient-to-tl from-emerald-800 to-emerald-600 text-white`}>
+    <section className={`mt-10 px-6 lg:mt-16 lg:mx-32 lg:px-10 py-10 bg-gradient-to-tl from-emerald-800 to-emerald-600 text-white`}>
       <h2 className={`${subheading.className} text-2xl lg:text-4xl underline underline-offset-8`}>ELIGIBILITY</h2>
               <div className={` ${bodyText.className} mt-5 lg:mt-10 lg:text-xl`}>
                 <ul className={`space-y-3 lg:text-xl lg:space-y-5`}>
