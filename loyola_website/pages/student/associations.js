@@ -1,8 +1,6 @@
 import * as React from "react";
 import Image from "next/image";
 import { Lobster_Two, Oswald, Inter } from "next/font/google";
-import sunSvg from "../../public/associations/sun.svg";
-import bellSvg from "../../public/associations/bell.svg";
 
 const lobster = Lobster_Two({ subsets: ["latin"], weight: "400" });
 const oswald = Oswald({ subsets: ["latin"] });
@@ -33,7 +31,7 @@ const Block = ({ imageSrc, altText, header, para }) => {
 
 export default function Associations() {
   return (
-    <div className={`grid grid-rows-15 items-center bg-white text-black`}>
+    <div className={`grid grid-rows-15 items-center bg-blue-100 text-black`}>
       <section id="header">
         <div className={`pt-5 pb-3`}>
           <span className="flex items-center justify-center">

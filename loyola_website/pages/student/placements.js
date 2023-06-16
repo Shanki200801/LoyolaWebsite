@@ -12,7 +12,7 @@ const generalHeadings = Oswald({ subsets: ["latin"] });
 
 const Placements = () => {
   return (
-    <div className="bg-white text-black">
+    <div className="bg-red-100 text-black">
       <PlacementHeader />
       <TrainingProg />
 

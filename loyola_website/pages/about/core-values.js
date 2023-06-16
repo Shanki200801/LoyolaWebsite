@@ -30,9 +30,9 @@ const ValueBox = ({ valueName, valueHeading, valuePara, boxStyles }) => {
 
 const CoreValues = () => {
   return (
-    <div className={`bg-white text-black`}>
+    <div className={`bg-blue-100 text-black`}>
       <h1
-        className={`custom-letter-spacing-wider py-5 text-6xl text-center ${mainHeading.className} text-shadow-sm`}
+        className={`custom-letter-spacing-wider py-5 text-6xl text-center ${mainHeading.className} text-shadow-sm-blue`}
       >
         Core Values
       </h1>
