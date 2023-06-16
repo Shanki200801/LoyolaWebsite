@@ -36,7 +36,7 @@ export default function Associations() {
         <div className={`pt-5 pb-3`}>
           <span className="flex items-center justify-center">
             <h1
-              className={`custom-letter-spacing-wider text-6xl text-center ${lobster.className} text-shadow-custom-blue`}
+              className={`custom-letter-spacing-wider text-6xl text-center ${lobster.className} text-shadow-sm-blue`}
             >
               Associations
             </h1>
