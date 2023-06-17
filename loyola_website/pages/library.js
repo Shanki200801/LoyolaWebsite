@@ -1,5 +1,7 @@
 import React from "react";
 import { Lobster_Two, Inter } from "next/font/google";
+import LibImg from "@/Assets/libraryImg.webp";
+import Image from "next/image";
 
 const lobster = Lobster_Two({ subsets: ["latin"], weight: "400" });
 const inter = Inter({ subsets: ["latin"], weight: "400" });
@@ -13,6 +15,14 @@ const library = ({ libraryResources }) => {
         Library
       </h1>
       <LibraryDesc />
+      <Image
+        src={LibImg}
+        alt="library"
+        width="100%"
+        height="100%"
+        className="my-8 rounded-2xl mx-auto"
+      />
+
       <LibraryStats libraryResources={libraryResources} />
     </div>
   );
@@ -27,26 +37,30 @@ const LibraryStats = ({ libraryResources }) => {
         Over the years the college library has a collection of large number of
         books and the statistics is tabulated below for reference
       </p>
-      <table className="mx-auto border border-white">
-        <thead className="">
-          <tr>
-            <th className={`border-2 border-white p-3`}>
-              Name of the resource
-            </th>
-            <th className={`border-2 border-white p-3`}>Numbers</th>
-          </tr>
-        </thead>
-        <tbody>
-          {Object.keys(libraryResources).map((libraryResource, i) => (
-            <tr key={i}>
-              <td className={`border-2 border-white p-3`}>{libraryResource}</td>
-              <td className={`border-2 border-white p-3`}>
-                {libraryResources[libraryResource]}
-              </td>
+      <div className="flex flex-col">
+        <table className="mx-auto border border-white">
+          <thead className="">
+            <tr>
+              <th className={`border-2 border-white p-3`}>
+                Name of the resource
+              </th>
+              <th className={`border-2 border-white p-3`}>Numbers</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {Object.keys(libraryResources).map((libraryResource, i) => (
+              <tr key={i}>
+                <td className={`border-2 border-white p-3`}>
+                  {libraryResource}
+                </td>
+                <td className={`border-2 border-white p-3`}>
+                  {libraryResources[libraryResource]}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
