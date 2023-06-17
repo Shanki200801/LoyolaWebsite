@@ -150,6 +150,9 @@ const StudentSubMenu = () => {
       <li>
         <Link href={`/student/grievences`}>Grievances</Link>
       </li>
+      <li>
+        <Link href={`/student/student-council`}>Student Council</Link>
+      </li>
     </ul>
   );
 };
