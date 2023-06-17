@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Playfair_Display, Inter, Oswald, Satisfy, Lobster_Two } from "next/font/google";
+import {Inter, Oswald, Satisfy, Lobster_Two } from "next/font/google";
 
 const mainHeading = Lobster_Two({ subsets: ["latin"], weight: "400" });
 const valueNames = Satisfy({ subsets: ["latin"], weight: "400" });
@@ -16,7 +16,7 @@ const ValueBox = ({ valueName, valueHeading, valuePara, boxStyles }) => {
           {valueName}
         </h2>
         <div className={`flex flex-col gap-2 px-5 py-2 col-start-3 col-end-11`}>
-          <h2 className={`text-xl ${generalHeaders.className} underline decoration-dotted underline-offset-4 decoration-red-200`}>
+          <h2 className={`text-xl ${generalHeaders.className} underline underline-offset-4 decoration-blue-300 decoration-dotted decoration-2`}>
             {valueHeading}
           </h2>
           <p className={`text-m ${generalText.className} tracking-tight`}>
@@ -30,9 +30,9 @@ const ValueBox = ({ valueName, valueHeading, valuePara, boxStyles }) => {
 
 const CoreValues = () => {
   return (
-    <div className={`bg-white text-black`}>
+    <div className={`bg-blue-100 text-black`}>
       <h1
-        className={`custom-letter-spacing-wider py-5 text-6xl text-center ${mainHeading.className} text-shadow-sm`}
+        className={`custom-letter-spacing-wider py-5 text-6xl text-center ${mainHeading.className} text-shadow-sm-blue`}
       >
         Core Values
       </h1>

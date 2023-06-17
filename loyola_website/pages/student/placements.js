@@ -12,7 +12,7 @@ const generalHeadings = Oswald({ subsets: ["latin"] });
 
 const Placements = () => {
   return (
-    <div className="bg-white text-black">
+    <div className="bg-red-100 text-black">
       <PlacementHeader />
       <TrainingProg />
 
@@ -96,7 +96,7 @@ const TrainingProg = () => {
         examinations such as UPSC, SSC and Bank PO.
       </p>
       <h3
-        className={`text-2xl px-32 mt-5 ${generalHeadings.className} underline decoration-wavy decoration-1 underline-offset-2 decoration-orange-500 `}
+        className={`text-2xl px-32 mt-5 ${generalHeadings.className} underline underline-offset-2 decoration-orange-200 `}
       >
         Recent training programs conducted
       </h3>

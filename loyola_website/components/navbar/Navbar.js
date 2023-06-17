@@ -102,6 +102,9 @@ const AboutSubMenu = () => {
         <Link href={`/about/about-uni`}>About University</Link>
       </li>
       <li>
+        <Link href={`/about/vision-mission`}>Vision & Mission</Link>
+      </li>
+      <li>
         <Link href={`/about/crest-anthem`}>Crest & Anthem</Link>
       </li>
       <li>
