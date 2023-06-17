@@ -6,6 +6,7 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails'; 
 import AddIcon from '@mui/icons-material/Add'; 
 import Button from '@mui/material/Button';
+import Link from 'next/link';
 import { Playfair_Display, Inter, Oswald } from 'next/font/google';
 
 const heading = Playfair_Display({subsets: ['latin']})
@@ -29,7 +30,7 @@ const StuCouncil = ()=>{
     class: "3rd B Com A"}]];
 
     return (
-        <div className='bg-white text-black px-6'>
+        <div className='bg-blue-100 text-black px-6'>
             <h1 className={`${heading.className} flex justify-center text-4xl pt-5 lg:text-6xl`}>Student Council</h1>
             <section className={` ${bodyText.className} text-justify mt-10 lg:px-32 lg:text-center lg:text-xl`}>
                 Student Councils the world over is student-led civic organizations designed to help promote College spirit and leadership among students. Students benefit immensely from being involved in student councils - they learn leadership skills, they have an opportunity to gain experience in public speaking, they learn organizational skills and cope with challenges beyond their everyday college life, they learn how to resolve conflict amicably and diplomatically.
@@ -92,7 +93,9 @@ const StuCouncil = ()=>{
                 </div>
             </section>
             <div className='flex justify-center'>
-                <Button variant="contained" color="primary"  className={` ${subheading.className} my-10 text-white bg-gradient-to-t from-purple-700 to-purple-500 lg:text-2xl lg:p-4`}>Student Council Election Report 2022</Button> 
+                <Button variant="contained" color="primary"  className={` ${subheading.className} my-10 text-white bg-gradient-to-t from-purple-700 to-purple-500 lg:text-2xl lg:p-4`}>
+                <Link href="/student/student-council-report-2022">Student Council Election Report 2022</Link>
+                </Button> 
             </div>
              
         </div>
