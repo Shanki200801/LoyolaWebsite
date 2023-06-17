@@ -93,9 +93,11 @@ const StuCouncil = ()=>{
                 </div>
             </section>
             <div className='flex justify-center'>
+            <Link href="/student/student-council-report-2022">
                 <Button variant="contained" color="primary"  className={` ${subheading.className} my-10 text-white bg-gradient-to-t from-purple-700 to-purple-500 lg:text-2xl lg:p-4`}>
-                <Link href="/student/student-council-report-2022">Student Council Election Report 2022</Link>
-                </Button> 
+                Student Council Election Report 2022
+                </Button>
+                </Link> 
             </div>
              
         </div>
