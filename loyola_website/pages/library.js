@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"], weight: "400" });
 
 const library = ({ libraryResources }) => {
   return (
-    <div className="bg-slate-300 pb-8">
+    <div className="bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-rose-100 to-teal-100 pb-8">
       <h1
         className={`text-black text-shadow-custom-blue text-6xl font-semibold font-serif text-center py-6 ${lobster.className}`}
       >
