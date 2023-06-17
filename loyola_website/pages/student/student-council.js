@@ -38,15 +38,15 @@ const StuCouncil = ()=>{
             <section className={`${bodyText.className} lg:mx-96 lg:text-xl`}>
                 {councilMembers.map((item,index)=>{
                     return (
-                        <div className='grid grid-cols-2 gap-8 h-48'>
-                <Card className='self-start h-5/6 text-center p-1 grid justify-center items-center'>
+                        <div className={`grid grid-cols-2 gap-8 h-48`}>
+                <Card className='self-start h-5/6 text-center p-1 grid justify-center items-center bg-gradient-to-r from-green-600 to-green-400'>
                     <CardContent>
                     <p className={`lg:py-1`}>{item[0].role}</p>
                     <p className={`lg:py-1`}>{item[0].name}</p>
                     <p className={`lg:py-1`}>{item[0].class}</p>
                     </CardContent>
                 </Card>
-                <Card className='self-end h-5/6 text-center p-1 grid justify-center items-center'>
+                <Card className='self-end h-5/6 text-center p-1 grid justify-center items-center bg-gradient-to-l from-sky-600 to-sky-400'>
                     <CardContent>
                     <p className={`lg:py-1`}>{item[1].role}</p>
                     <p className={`lg:py-1`}>{item[1].name}</p>
@@ -58,23 +58,24 @@ const StuCouncil = ()=>{
                 })}
             </section>
             
-            <section className='mt-16'>
+            <section className={` ${bodyText.className} mt-16 lg:mx-24 lg:px-8  lg:text-xl lg:py-5 bg-gradient-to-r from-green-400 to-blue-500`}>
                 <div>
                 <p>Students benefit immensely from being involved in student councils - they learn leadership skills, they have an opportunity to gain experience in public speaking, they learn organizational skills and cope with challenges beyond their everyday college life, they learn how to resolve conflict amicably and diplomatically.</p>
                 
                 <p className='mt-5'>Most of all they learn how to make a positive impact on the college and community environment.</p>
                 </div>
-                <div className='mt-5'>
+                <div className='mt-5 lg:mt-8'>
                     <Accordion>
                         <AccordionSummary
                         expandIcon={<AddIcon/>}
                         aria-controls="panel1a-content"
                         id="panel1a-header"
+                        className={`${subheading.className}`}
                         >
                         Benefits of Student Council
                         </AccordionSummary>
                         <AccordionDetails>
-                            <ul className='list-disc p-2 space-y-3'>
+                            <ul className='list-disc p-2 space-y-3 lg:px-8 lg:text-justify'>
                                 <li> It gives students a practical, first-hand understanding of how democracy functions by giving them a voice and a chance to contribute to the functioning of the college.</li>
                                 <li>A democratically elected student council allows students to practice leadership and decision-making skills as well as working hard for the benefit of their college community.</li>
                                 <li>Students have to think about and communicate to the electorate all the qualities that make them ideal candidates for the particular post they are interested in.</li>
@@ -91,7 +92,7 @@ const StuCouncil = ()=>{
                 </div>
             </section>
             <div className='flex justify-center'>
-                <Button variant="contained" color="primary"  className='my-10 text-white font-bold bg-gradient-to-tr from-purple-700 to-purple-500'>Student Council Election Report 2022</Button> 
+                <Button variant="contained" color="primary"  className={` ${subheading.className} my-10 text-white bg-gradient-to-t from-purple-700 to-purple-500 lg:text-2xl lg:p-4`}>Student Council Election Report 2022</Button> 
             </div>
              
         </div>
