@@ -1,18 +1,19 @@
 import * as React from 'react';
-import {Special_Elite, Ruda} from 'next/font/google';
+import {Special_Elite, Inter, Oswald} from 'next/font/google';
 import excel from '../../Assets/excel.webp'
 import finGrowth from '../../Assets/finGrowth.webp'
 import Image from 'next/image';
 import Link from 'next/link';
 
 const specialElite = Special_Elite({ subsets: ['latin'], weight: '400' });
-const ruda = Ruda({subsets: ['latin']});
+const bodyText = Inter({subsets: ['latin']});
+const subheading = Oswald({subsets: ['latin']}); 
 
 const BCom = ()=>{
     return (
         <div className="bg-white" >
             <h1 className={`flex justify-center pt-10 text-black text-6xl ${specialElite.className}`}>Bachelor of Commerce {"("}BCom{")"}</h1>
-            <div className={`grid grid-cols-2 grid-rows-2 ${ruda.className} gap-12`}>
+            <div className={`grid grid-cols-2 grid-rows-2 gap-12`}>
                 <Overview/>
                 <Image src={finGrowth} className='h-60 w-4/5 object-cover mt-14 rounded-2xl'/>
                 <Image src={excel} className='h-60 w-4/5 object-cover mt-5 rounded-2xl justify-self-end'/>
@@ -29,9 +30,9 @@ const BCom = ()=>{
 
 const Overview = ()=>{
     return(
-        <div id="overview" className={`bg-gradient-to-br from-green-600 to-green-700 text-white text-lg ml-16 mt-14 w-4/5 row-span-1 text-center rounded-2xl h-60 py-5 px-14 ${ruda.className} justify-self-end`}>
-                <h2 className='text-3xl underline underline-offset-8'>OVERVIEW</h2>
-            <p className='mt-6  '>B.Com or Bachelor of Commerce is an undergraduate 4-year full time degree program that
+        <div id="overview" className={`bg-gradient-to-br from-green-600 to-green-700 text-white text-lg ml-16 mt-14 w-4/5 row-span-1 text-center rounded-2xl h-60 py-5 px-14 justify-self-end`}>
+                <h2 className={`text-3xl underline underline-offset-8 ${subheading.className}`}>OVERVIEW</h2>
+            <p className={`mt-6 ${bodyText.className}`}>B.Com or Bachelor of Commerce is an undergraduate 4-year full time degree program that
              provides educational expertise in the commerce stream. </p>
             </div>
     );
@@ -42,8 +43,8 @@ const Eligibility = ()=>{
     return (
         <div id="eligibility" className=' bg-gradient-to-tl from-green-600 to-green-700 text-white text-lg mr-16 mt-5 w-4/5 row-span-1 flex items-center flex-col rounded-2xl h-60 py-5 px-14 justify-self-start'>
             
-             <h2 className='text-3xl underline underline-offset-8'>ELIGIBILITY</h2>
-                <p className='mt-6'>Students who studied commerce as the main subject in 12th standard of schooling can opt.
+             <h2 className={`text-3xl underline underline-offset-8 ${subheading.className}`}>ELIGIBILITY</h2>
+                <p className={`mt-6 ${bodyText.className}`}>Students who studied commerce as the main subject in 12th standard of schooling can opt.
                  Also students who have taken Business Studies and Accountancy in PUC or equivalent 12th std examinations are eligible to apply.
                   Science students with Mathematics are also eligible.  </p> 
             </div>

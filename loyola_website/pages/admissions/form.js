@@ -1,5 +1,11 @@
-import styles from "../../styles/Form.module.css";
-import { useState } from "react";
+
+import styles from '../../styles/Form.module.css'
+import { useState } from 'react';
+import { Allerta_Stencil, Inter, Oswald} from 'next/font/google';
+
+const headingText = Allerta_Stencil({subsets: ['latin'], weight: '400'})
+const bodyText = Inter({subsets: ['latin']});
+const subheading = Oswald({subsets: ['latin']});  
 
 const Form = () => {
   const [religion, setReligion] = useState("");
@@ -9,21 +15,14 @@ const Form = () => {
     console.log(religion);
   }
   // const testJSX = () => {<label className={styles.label} htmlFor="full-name"> <input className={styles.input} id="first-name" name="first-name" type="text" required /></label><br/>};
-  return (
-    <div className={styles.body}>
-      <h1 className={styles.h1}>
-        <br />
-        Admission Form 2023-24
-      </h1>
-      <br />
-      <br />
-      <p className={styles.p}>
-        Please fill out this form with the required information
-      </p>
-      <br />
-      <form className={styles.form} method="post" action="">
-        <label className={styles.label} htmlFor="course">
-          Course
+
+  return ( 
+        <div className={styles.body}>
+            <h1 className={`${styles.h1} ${headingText.className}`}><br/>Admission Form 2023-24</h1><br/><br/>
+    <p className={`${styles.p} ${subheading.className}`}>Please fill out this form with the required information</p><br/>
+    <form className={`${styles.form} ${bodyText.className}`} method="post" action=''>
+        <label className={styles.label} htmlFor="course">Course
+
           <select className={styles.select} id="course" name="course" required>
             <option value="">--Select--</option>
             <option value="1">B.Com</option>
