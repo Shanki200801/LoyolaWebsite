@@ -1,8 +1,6 @@
 import * as React from "react";
 import Image from "next/image";
 import { Lobster_Two, Oswald, Inter } from "next/font/google";
-import sunSvg from "../../public/associations/sun.svg";
-import bellSvg from "../../public/associations/bell.svg";
 
 const lobster = Lobster_Two({ subsets: ["latin"], weight: "400" });
 const oswald = Oswald({ subsets: ["latin"] });

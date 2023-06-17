@@ -9,33 +9,35 @@ import Link from "next/link";
 
 const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [visible, setVisible] = useState(true)
+  const [visible, setVisible] = useState(true);
 
   const handleScroll = () => {
-      const currentScrollPos = window.scrollY
+    const currentScrollPos = window.scrollY;
 
-      if(currentScrollPos > prevScrollPos){
-          setVisible(false)
-      }else{
-          setVisible(true)
-      }
+    if (currentScrollPos > prevScrollPos) {
+      setVisible(false);
+    } else {
+      setVisible(true);
+    }
 
-      setPrevScrollPos(currentScrollPos)
-      console.log(visible);
-  }
+    setPrevScrollPos(currentScrollPos);
+    console.log(visible);
+  };
 
-    useEffect( () => {
-        window.addEventListener('scroll', handleScroll);
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
 
-        return () => window.removeEventListener('scroll', handleScroll)
-    })
+    return () => window.removeEventListener("scroll", handleScroll);
+  });
 
   return (
-
-    <div className={`navbar bg-navbar-theme text-white sticky z-20 p-4   ${visible ? 'top-0': ''}`}>
+    <div
+      className={`navbar bg-navbar-theme text-white sticky z-20 p-4   ${
+        visible ? "top-0" : ""
+      }`}
+    >
       <NavLogoLink />
       <NavLinks />
-
     </div>
   );
 };
@@ -58,9 +60,9 @@ const NavLinks = () => {
   return (
     <div className="flex-none">
       <ul className="menu menu-horizontal px-1">
-        <NavAbout /> 
-        <NavStudent /> 
-        <NavAcads/> 
+        <NavAbout />
+        <NavStudent />
+        <NavAcads />
         <NavDepts />
         <NavNews />
         <NavAdmissions />
@@ -73,7 +75,9 @@ const NavLinks = () => {
 const NavAbout = () => {
   return (
     <li tabIndex={0}>
-      <a className={`hover:underline hover:underline-offset-4 hover:decoration-white bg-transparent uppercase ${styles.primaryLinks}`}>
+      <a
+        className={`hover:underline hover:underline-offset-4 hover:decoration-white bg-transparent uppercase ${styles.primaryLinks}`}
+      >
         About
         <svg
           className="fill-current"
@@ -111,7 +115,9 @@ const AboutSubMenu = () => {
 const NavStudent = () => {
   return (
     <li>
-      <a className={`hover:underline hover:underline-offset-4 hover: decoration-white bg-transparent uppercase ${styles.primaryLinks}`}>
+      <a
+        className={`hover:underline hover:underline-offset-4 hover: decoration-white bg-transparent uppercase ${styles.primaryLinks}`}
+      >
         Student
         <svg
           className="fill-current"
@@ -138,6 +144,9 @@ const StudentSubMenu = () => {
       <li>
         <Link href={`/student/placements`}>Placements</Link>
       </li>
+      <li>
+        <Link href={`/student/grievences`}>Grievances</Link>
+      </li>
     </ul>
   );
 };
@@ -146,7 +155,9 @@ const StudentSubMenu = () => {
 const NavAcads = () => {
   return (
     <li>
-      <a className={`hover:underline hover:underline-offset-4 hover: decoration-white bg-transparent uppercase ${styles.primaryLinks}`}>
+      <a
+        className={`hover:underline hover:underline-offset-4 hover: decoration-white bg-transparent uppercase ${styles.primaryLinks}`}
+      >
         Academics
         <svg
           className="fill-current"
@@ -166,7 +177,9 @@ const NavAcads = () => {
 //Navbar Academics Menu Component
 const AcadsSubMenu = () => {
   return (
-    <ul className={`bg-white text-black z-10 ${styles.subMenu} ${styles.acadsMenu}`}>
+    <ul
+      className={`bg-white text-black z-10 ${styles.subMenu} ${styles.acadsMenu}`}
+    >
       <li>
         <Link href={`/academics/ba`}>B.A.</Link>
       </li>
@@ -190,7 +203,10 @@ const AcadsSubMenu = () => {
 const NavDepts = () => {
   return (
     <li>
-      <Link href={"/departments"}  className={`hover:underline hover:underline-offset-4 hover: decoration-white bg-transparent uppercase ${styles.primaryLinks}`}>
+      <Link
+        href={"/departments"}
+        className={`hover:underline hover:underline-offset-4 hover: decoration-white bg-transparent uppercase ${styles.primaryLinks}`}
+      >
         Departments
       </Link>
     </li>
@@ -201,7 +217,10 @@ const NavDepts = () => {
 const NavNews = () => {
   return (
     <li>
-      <Link href={"/news_events"} className={`hover:underline hover:underline-offset-4 hover: decoration-white bg-transparent uppercase ${styles.primaryLinks}`}>
+      <Link
+        href={"/news_events"}
+        className={`hover:underline hover:underline-offset-4 hover: decoration-white bg-transparent uppercase ${styles.primaryLinks}`}
+      >
         News & Events
       </Link>
     </li>
@@ -212,7 +231,10 @@ const NavNews = () => {
 const NavAdmissions = () => {
   return (
     <li>
-      <Link href="/admissions" className={`hover:bg-white uppercase font-black ${styles.admissionsBtn} ${styles.primaryLinks}`}>
+      <Link
+        href="/admissions"
+        className={`hover:bg-white uppercase font-black ${styles.admissionsBtn} ${styles.primaryLinks}`}
+      >
         Admissions
       </Link>
     </li>
