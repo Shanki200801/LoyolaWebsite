@@ -153,6 +153,9 @@ const StudentSubMenu = () => {
       <li>
         <Link href={`/student/placements`}>Placements</Link>
       </li>
+      <li>
+        <Link href={`/student/student-council`}>Student Council</Link>
+      </li>
     </ul>
   );
 };
