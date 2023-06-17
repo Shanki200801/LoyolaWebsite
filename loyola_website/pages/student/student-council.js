@@ -34,23 +34,23 @@ const StuCouncil = ()=>{
             <section className={` ${bodyText.className} text-justify mt-10 lg:px-32 lg:text-center lg:text-xl`}>
                 Student Councils the world over is student-led civic organizations designed to help promote College spirit and leadership among students. Students benefit immensely from being involved in student councils - they learn leadership skills, they have an opportunity to gain experience in public speaking, they learn organizational skills and cope with challenges beyond their everyday college life, they learn how to resolve conflict amicably and diplomatically.
             </section>
-            <h2 className={` ${subheading.className} flex justify-center text-xl my-5 lg:text-4xl underline underline-offset-8 lg:py-8`}>Council Members</h2>
+            <h2 className={` ${subheading.className} flex justify-center text-2xl my-5 lg:text-4xl underline underline-offset-8 lg:py-8`}>Council Members</h2>
             <section className={`${bodyText.className} lg:mx-96 lg:text-xl`}>
                 {councilMembers.map((item,index)=>{
                     return (
-                        <div className={`grid grid-cols-2 gap-8 h-48`}>
+                        <div className={`grid grid-cols-2 gap-8 h-60 lg:h-48`}>
                 <Card className='self-start h-5/6 text-center p-1 grid justify-center items-center bg-gradient-to-r from-green-600 to-green-400'>
                     <CardContent>
-                    <p className={`lg:py-1`}>{item[0].role}</p>
-                    <p className={`lg:py-1`}>{item[0].name}</p>
-                    <p className={`lg:py-1`}>{item[0].class}</p>
+                    <p className={`py-1`}>{item[0].role}</p>
+                    <p className={`py-1`}>{item[0].name}</p>
+                    <p className={`py-1`}>{item[0].class}</p>
                     </CardContent>
                 </Card>
                 <Card className='self-end h-5/6 text-center p-1 grid justify-center items-center bg-gradient-to-l from-sky-600 to-sky-400'>
                     <CardContent>
-                    <p className={`lg:py-1`}>{item[1].role}</p>
-                    <p className={`lg:py-1`}>{item[1].name}</p>
-                    <p className={`lg:py-1`}>{item[1].class}</p>
+                    <p className={`py-1`}>{item[1].role}</p>
+                    <p className={`py-1`}>{item[1].name}</p>
+                    <p className={`py-1`}>{item[1].class}</p>
                     </CardContent>
                 </Card>
                 </div>
@@ -58,7 +58,7 @@ const StuCouncil = ()=>{
                 })}
             </section>
             
-            <section className={` ${bodyText.className} mt-16 lg:mx-24 lg:px-8  lg:text-xl lg:py-5 bg-gradient-to-r from-green-400 to-blue-500`}>
+            <section className={` ${bodyText.className} mt-16 p-5 lg:mx-24 lg:px-8  lg:text-xl lg:py-5 bg-gradient-to-r from-green-400 to-blue-500`}>
                 <div>
                 <p>Students benefit immensely from being involved in student councils - they learn leadership skills, they have an opportunity to gain experience in public speaking, they learn organizational skills and cope with challenges beyond their everyday college life, they learn how to resolve conflict amicably and diplomatically.</p>
                 
