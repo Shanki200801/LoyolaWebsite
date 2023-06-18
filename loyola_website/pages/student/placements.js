@@ -4,6 +4,9 @@ import Image from "next/image";
 import imageOne from "../../public/placements/imageOne.webp";
 import imageTwo from "../../public/placements/imageTwo.webp";
 import imageThree from "../../public/placements/imageThree.webp";
+import joshuaD from "@/public/placements/joshuaD.webp";
+import EmailIcon from '@mui/icons-material/Email';
+import PhoneIcon from '@mui/icons-material/Phone';
 
 const placementHead = Aclonica({ subsets: ["latin"], weight: "400" });
 const overviewBody = Josefin_Sans({ subsets: ["latin"] });
@@ -13,7 +16,7 @@ const generalHeadings = Oswald({ subsets: ["latin"] });
 const Placements = () => {
   return (
     <div className="bg-red-100 text-black">
-      <PlacementHeader />
+      {/* <PlacementHeader />
       <TrainingProg />
 
       <div className="grid grid-cols-3 mt-10">
@@ -33,7 +36,8 @@ const Placements = () => {
       <Talks />
       <RecentActivities />
       <Process />
-      <Stats />
+      <Stats /> */}
+      <PlacementDir/>
     </div>
   );
 };
@@ -290,5 +294,29 @@ const Stats = () => {
     </div>
   );
 };
+
+const PlacementDir = () =>{
+  return (
+    <section>
+      <h2
+        className={`text-5xl mt-5 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-200 tracking-tight`}
+      >
+        Connect{" "}
+        <span className={`text-red-800 whitespace-pre`}> With Us </span>
+      </h2>
+      <div className={`flex justify-center mt-10`}>
+        <Image src={joshuaD} className={`w-1/2 h-auto rounded shadow-xl`}/>
+      </div>
+      <div className={` ${generalText.className} text-center mt-5 pb-10 text-sm`}>
+        <p className={`${generalHeadings.className} text-2xl`}>Placement Officer</p>
+        <p className={`${generalHeadings.className} text-xl my-2`}>Mr. D Joshua </p>
+        <p className={`my-1`}>MCom, PhD {`(Pursuing)`}</p>
+        <p className={`my-1`}><EmailIcon/> loyoladegreeplacement@gmail.com</p>
+        <p className={`my-1`}><PhoneIcon/> 7760072442</p>
+      </div>
+      
+    </section>
+  );
+}
 
 export default Placements;
