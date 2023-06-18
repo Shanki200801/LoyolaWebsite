@@ -110,6 +110,9 @@ const AboutSubMenu = () => {
       <li>
         <Link href={`/about/core-values`}>Core Values</Link>
       </li>
+      <li>
+        <Link href={`/about/management`}>Management</Link>
+      </li>
     </ul>
   );
 };
