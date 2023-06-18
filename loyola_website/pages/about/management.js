@@ -86,7 +86,7 @@ const Management = ()=>{
     return(
         <main className={`bg-white pb-10`}>
             <h1
-        className={`text-black row-span-4 custom-letter-spacing-wider py-5 text-5xl text-center ${mainHeading.className} sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl xl:pb-0`}
+        className={`text-black row-span-4 custom-letter-spacing-wider py-5 text-5xl text-center ${mainHeading.className} sm:text-5xl lg:text-6xl  xl:text-7xl xl:pb-0`}
       >
         Management
       </h1>
@@ -122,19 +122,19 @@ const AdminTable = ()=>{
     },]
 
     return(
-        <section className={` px-3 md:mx-32 md:grid md:grid-cols-2 md:mt-16 md:p-5 md:rounded-xl md:gap-5 bg-gradient-to-tl md:from-green-500 md:to-emerald-800`}>
-            <div className={`${generalHeaders.className} underline underline-offset-auto md:no-underline text-center text-3xl md:text-8xl md:justify-self-center md:self-center text-black md:text-white`}>Administration</div>
-            <div className={` ${generalText.className} mt-5 md:mt-0 relative overflow-x-auto shadow-md rounded-lg`}>
-                <table className="w-full text-xs md:text-base text-left text-white ">
-                    <thead className="text-xs md:text-base text-white uppercase bg-indigo-700">
+        <section className={` px-3 lg:mx-32 lg:grid lg:grid-cols-2 lg:mt-16 lg:p-5 lg:rounded-xl lg:gap-5 bg-gradient-to-tl lg:from-green-500 lg:to-emerald-800`}>
+            <div className={`${generalHeaders.className} underline underline-offset-auto lg:no-underline text-center text-3xl lg:text-7xl xl:text-8xl lg:justify-self-center lg:self-center text-black lg:text-white`}>Administration</div>
+            <div className={` ${generalText.className} mt-5 lg:mt-0 relative overflow-x-auto shadow-md rounded-lg`}>
+                <table className="w-full text-xs xl:text-base text-left text-white ">
+                    <thead className="text-xs xl:text-base text-white uppercase bg-indigo-700">
                         <tr>
-                            <th scope="col" className="px-4 md:px-6 py-3">
+                            <th scope="col" className="px-4 lg:px-6 py-3">
                                 Name
                             </th>
-                            <th scope="col" className="px-4 md:px-6 py-3">
+                            <th scope="col" className="px-4 lg:px-6 py-3">
                                 Qaulification
                             </th>
-                            <th scope="col" className="px-4 md:px-6 py-3">
+                            <th scope="col" className="px-4 lg:px-6 py-3">
                                 Designation
                             </th>
                         </tr>
@@ -143,13 +143,13 @@ const AdminTable = ()=>{
                     {adminMembers.map((item, index)=>{
                         return (
                             <tr className=" border-b bg-gray-800 border-gray-700 hover:bg-gray-600">
-                                <td scope="row" className="px-4 md:px-6 py-4 font-medium text-white">
+                                <td scope="row" className="px-4 lg:px-6 py-4 font-medium text-white">
                                     {item.name}
                                 </td>
-                                <td className="px-4 md:px-6 py-4">
+                                <td className="px-4 lg:px-6 py-4">
                                     {item.qualification}
                                 </td>
-                                <td className="px-4 md:px-6 py-4">
+                                <td className="px-4 lg:px-6 py-4">
                                     {item.designation}
                                 </td>
                             </tr>
@@ -165,17 +165,17 @@ const AdminTable = ()=>{
 
 const StaffMinistryTable = (props)=>{
     return (
-        <section className={` px-3 md:mx-32 md:grid md:grid-cols-2 md:mt-16 md:p-5 md:rounded-xl md:gap-5 bg-gradient-to-${props.topRight ? `tr` : `tl`} md:from-green-500 md:to-emerald-800 text-black md:text-white`}>
-            {props.left && <div className={`${generalHeaders.className} hidden md:block md:text-8xl md:justify-self-center md:self-center md:text-center `}><p>Campus</p><p>Ministry</p></div>}
-            <div className={`${generalHeaders.className} mt-5 underline underline-offset-auto text-center text-3xl text-black md:hidden`}>{props.heading}</div>
-            <div className={` ${generalText.className} mt-5 md:mt-0 relative overflow-x-auto shadow-md rounded-lg`}>
-                <table className="w-full text-xs md:text-base text-left text-white ">
-                    <thead className="text-xs md:text-base text-white uppercase bg-indigo-700 ">
+        <section className={` px-3 lg:mx-32 lg:grid lg:grid-cols-2 lg:mt-16 lg:p-5 lg:rounded-xl lg:gap-5 bg-gradient-to-${props.topRight ? `tr` : `tl`} lg:from-green-500 lg:to-emerald-800 text-black lg:text-white`}>
+            {props.left && <div className={`${generalHeaders.className} hidden lg:block lg:text-8xl lg:justify-self-center lg:self-center lg:text-center `}><p>Campus</p><p>Ministry</p></div>}
+            <div className={`${generalHeaders.className} mt-5 underline underline-offset-auto text-center text-3xl text-black lg:hidden`}>{props.heading}</div>
+            <div className={` ${generalText.className} mt-5 lg:mt-0 relative overflow-x-auto shadow-md rounded-lg`}>
+                <table className="w-full text-xs xl:text-base text-left text-white ">
+                    <thead className="text-xs xl:text-base text-white uppercase bg-indigo-700 ">
                         <tr>
-                            <th scope="col" className="px-4 md:px-6 py-3">
+                            <th scope="col" className="px-4 lg:px-6 py-3">
                                 Designation
                             </th>
-                            <th scope="col" className="px-4 md:px-6 py-3">
+                            <th scope="col" className="px-4 lg:px-6 py-3">
                                 Name
                             </th>
                         </tr>
@@ -184,10 +184,10 @@ const StaffMinistryTable = (props)=>{
                     {props.details.map((item, index)=>{
                         return (
                             <tr className=" border-b bg-gray-800 border-gray-700 hover:bg-gray-600">
-                                <td scope="row" className="px-4 md:px-6 py-4 font-medium text-white">
+                                <td scope="row" className="px-4 lg:px-6 py-4 font-medium text-white">
                                     {item.designation}
                                 </td>
-                                <td className="px-4 md:px-6 py-4">
+                                <td className="px-4 lg:px-6 py-4">
                                     {item.name}
                                 </td>
                             </tr>
@@ -196,7 +196,7 @@ const StaffMinistryTable = (props)=>{
                     </tbody>
                 </table>
             </div>
-            {props.right && <div className={`${generalHeaders.className} hidden md:block md:text-8xl md:justify-self-center md:self-center md:text-center`}><p>The Staff</p><p>Council</p></div>}
+            {props.right && <div className={`${generalHeaders.className} hidden lg:block lg:text-8xl lg:justify-self-center lg:self-center lg:text-center`}><p>The Staff</p><p>Council</p></div>}
         </section>
     );
 }
