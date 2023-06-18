@@ -16,7 +16,7 @@ const generalHeadings = Oswald({ subsets: ["latin"] });
 const Placements = () => {
   return (
     <div className="bg-red-100 text-black">
-      {/* <PlacementHeader />
+      <PlacementHeader />
       <TrainingProg />
 
       <div className="grid grid-cols-3 mt-10">
@@ -36,7 +36,7 @@ const Placements = () => {
       <Talks />
       <RecentActivities />
       <Process />
-      <Stats /> */}
+      <Stats />
       <PlacementDir/>
     </div>
   );
@@ -304,17 +304,18 @@ const PlacementDir = () =>{
         Connect{" "}
         <span className={`text-red-800 whitespace-pre`}> With Us </span>
       </h2>
-      <div className={`flex justify-center mt-10`}>
-        <Image src={joshuaD} className={`w-1/2 h-auto rounded shadow-xl`}/>
+      <div className={`lg:grid lg:grid-cols-2 lg:py-10 lg:gap-10 `}>
+        <div className={`flex justify-center mt-10 lg:mt-0 lg:justify-self-end `}>
+          <Image src={joshuaD} className={`w-1/2 h-auto lg:w-52 lg:h-auto rounded shadow-xl`}/>
+        </div>
+        <div className={` ${generalText.className} text-center mt-5 lg:mt-0 text-sm lg:text-left lg:text-base lg:justify-self-start`}>
+          <p className={`${generalHeadings.className} text-2xl lg:text-4xl`}>Placement Officer</p>
+          <p className={`${generalHeadings.className} text-xl my-2 lg:text-3xl lg:mt-4`}>Mr. D Joshua </p>
+          <p className={`my-1 lg:my-2`}>MCom, PhD {`(Pursuing)`}</p>
+          <p className={`my-1 lg:my-2`}><EmailIcon/> loyoladegreeplacement@gmail.com</p>
+          <p className={`my-1 lg:my-2`}><PhoneIcon/> 7760072442</p>
+        </div>
       </div>
-      <div className={` ${generalText.className} text-center mt-5 pb-10 text-sm`}>
-        <p className={`${generalHeadings.className} text-2xl`}>Placement Officer</p>
-        <p className={`${generalHeadings.className} text-xl my-2`}>Mr. D Joshua </p>
-        <p className={`my-1`}>MCom, PhD {`(Pursuing)`}</p>
-        <p className={`my-1`}><EmailIcon/> loyoladegreeplacement@gmail.com</p>
-        <p className={`my-1`}><PhoneIcon/> 7760072442</p>
-      </div>
-      
     </section>
   );
 }
