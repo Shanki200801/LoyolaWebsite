@@ -4,6 +4,9 @@ import Image from "next/image";
 import imageOne from "../../public/placements/imageOne.webp";
 import imageTwo from "../../public/placements/imageTwo.webp";
 import imageThree from "../../public/placements/imageThree.webp";
+import joshuaD from "@/public/placements/joshuaD.webp";
+import EmailIcon from '@mui/icons-material/Email';
+import PhoneIcon from '@mui/icons-material/Phone';
 
 const placementHead = Aclonica({ subsets: ["latin"], weight: "400" });
 const overviewBody = Josefin_Sans({ subsets: ["latin"] });
@@ -34,6 +37,7 @@ const Placements = () => {
       <RecentActivities />
       <Process />
       <Stats />
+      <PlacementDir/>
     </div>
   );
 };
@@ -290,5 +294,30 @@ const Stats = () => {
     </div>
   );
 };
+
+const PlacementDir = () =>{
+  return (
+    <section>
+      <h2
+        className={`text-5xl mt-5 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-200 tracking-tight`}
+      >
+        Connect{" "}
+        <span className={`text-red-800 whitespace-pre`}> With Us </span>
+      </h2>
+      <div className={`lg:grid lg:grid-cols-2 lg:py-10 lg:gap-10 `}>
+        <div className={`flex justify-center mt-10 lg:mt-0 lg:justify-self-end `}>
+          <Image src={joshuaD} className={`w-1/2 h-auto lg:w-52 lg:h-auto rounded shadow-xl`}/>
+        </div>
+        <div className={` ${generalText.className} text-center mt-5 lg:mt-0 text-sm lg:text-left lg:text-base lg:justify-self-start`}>
+          <p className={`${generalHeadings.className} text-2xl lg:text-4xl`}>Placement Officer</p>
+          <p className={`${generalHeadings.className} text-xl my-2 lg:text-3xl lg:mt-4`}>Mr. D Joshua </p>
+          <p className={`my-1 lg:my-2`}>MCom, PhD {`(Pursuing)`}</p>
+          <p className={`my-1 lg:my-2`}><EmailIcon/> loyoladegreeplacement@gmail.com</p>
+          <p className={`my-1 lg:my-2`}><PhoneIcon/> 7760072442</p>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export default Placements;
