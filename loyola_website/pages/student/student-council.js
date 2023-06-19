@@ -7,9 +7,9 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import AddIcon from '@mui/icons-material/Add'; 
 import Button from '@mui/material/Button';
 import Link from 'next/link';
-import { Playfair_Display, Inter, Oswald } from 'next/font/google';
+import { Lobster_Two, Inter, Oswald } from 'next/font/google';
 
-const heading = Playfair_Display({subsets: ['latin']})
+const heading = Lobster_Two({ subsets: ["latin"], weight: "400" });
 const bodyText = Inter({ subsets: ["latin"] });
 const subheading = Oswald({ subsets: ["latin"] });
 
