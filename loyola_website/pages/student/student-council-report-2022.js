@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { Playfair_Display, Inter, Oswald } from 'next/font/google';
+import { Lobster_Two, Inter, Oswald } from 'next/font/google';
 
-const heading = Playfair_Display({subsets: ['latin']})
+const heading = Lobster_Two({ subsets: ["latin"], weight: "400" });
 const bodyText = Inter({ subsets: ["latin"] });
 const subheading = Oswald({ subsets: ["latin"] });
 
