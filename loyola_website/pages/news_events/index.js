@@ -22,7 +22,7 @@ const news_events = ({ eventDataExport }) => {
   );
 };
 export async function getServerSideProps() {
-  const url = "http://${process.env.NEXT_PUBLIC_HOST}/api/event-data";
+  const url = "/api/event-data";
   const res = await fetch(url);
   const eventDataExport = await res.json();
   return { props: { eventDataExport } };

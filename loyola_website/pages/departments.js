@@ -114,9 +114,7 @@ export async function getServerSideProps() {
     "nonteaching-staff": "",
   };
   for (let key in staff_details) {
-    staff_details[key] = await fetch(
-      `http://${process.env.NEXT_PUBLIC_HOST}/api/${key}`
-    );
+    staff_details[key] = await fetch(`/api/${key}`);
     staff_details[key] = await staff_details[key].json();
   }
 
