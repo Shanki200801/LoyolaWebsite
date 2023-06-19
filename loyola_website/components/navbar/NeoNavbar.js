@@ -37,12 +37,19 @@ const NeoNavbar = ()=>{
 
     const closeNavbar = ()=>{
         sethDrawer(CLOSE_DRAWER);
+        setHAboutLink(CLOSE_LINK);
+        setHStuLink(CLOSE_LINK);
+        setHAcadLink(CLOSE_LINK);
     }
 
     //to close the navbar on clicking backbutton on mobile
     useEffect(() => {
-        const handleBackButton = () => {
+        const handleBackButton = (event) => {
+            event.preventDefault();
             sethDrawer(CLOSE_DRAWER);
+            setHAboutLink(CLOSE_LINK);
+            setHStuLink(CLOSE_LINK);
+            setHAcadLink(CLOSE_LINK);
         };
     
         window.addEventListener('popstate', handleBackButton);
