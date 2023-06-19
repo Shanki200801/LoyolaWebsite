@@ -96,7 +96,7 @@ const LibraryDesc = () => {
 };
 
 export async function getServerSideProps() {
-  const url = "http://${process.env.NEXT_PUBLIC_HOST}/api/library-resources";
+  const url = "/api/library-resources";
   const res = await fetch(url);
   const libraryResources = await res.json();
   return { props: { libraryResources } };
