@@ -29,7 +29,7 @@ const staffAchievements = ({ achievements }) => {
 export default staffAchievements;
 
 export async function getServerSideProps() {
-  const url = "http://localhost:3000/api/staff-achievement";
+  const url = "http://${process.env.NEXT_PUBLIC_HOST}/api/staff-achievement";
   const res = await fetch(url);
   const achievements = await res.json();
   return { props: { achievements } };

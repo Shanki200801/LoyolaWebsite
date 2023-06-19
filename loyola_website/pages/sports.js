@@ -75,7 +75,7 @@ const EventDescription = ({ desc }) => {
   );
 };
 export async function getServerSideProps() {
-  const url = "http://localhost:3000/api/sports-data";
+  const url = "http://${process.env.NEXT_PUBLIC_HOST}/api/sports-data";
   const res = await fetch(url);
   const sportsData = await res.json();
   return { props: { sportsData } };

@@ -29,8 +29,9 @@ const Form = () => {
   const renderInputField = (tab, field) => {
     const fieldLabel = field.split("@")[0].split("*")[0].split("(")[0].trim();
     const isRequired = field.includes("*");
-    const fieldType = field.includes("!") ? "checkbox" : "text";
+    let fieldType = field.includes("!") ? "checkbox" : "text";
     const dropdownValues = field.split("@")[1]?.split(",") || [];
+    fieldType = field === "Date of Birth" ? "date" : fieldType;
 
     const handleChange = (e) => {
       const value =
@@ -83,7 +84,7 @@ const Form = () => {
   const renderSubmitButton = () => {
     if (activeTab === "course-details") {
       return (
-        <div className="   flex justify-center">
+        <div className="  flex justify-center">
           <button
             type="submit"
             className="py-2 px-4 bg-blue-500 text-white rounded"
@@ -200,7 +201,7 @@ const Form = () => {
               "Are you specially abled?!",
               showWhatDisability && "if yes, specify type*",
               "Are you an NRI or Foreigner?!",
-              showWhatCountry && "what-country*",
+              showWhatCountry && "Country*",
             ]
               .filter(Boolean)
               .map((field) => renderInputField("personal-tab-section", field))}
@@ -228,7 +229,7 @@ const Form = () => {
             }`}
           >
             {[
-              "Fathe's Name",
+              "Father's Name",
               "Father's Phone number",
               "Father's Occupation",
               "Mother's Name",
@@ -250,20 +251,58 @@ const Form = () => {
               "Place of previous college",
               "Year and month of passing",
               "Previous Register number",
-              "which-board(with options of cbse, isc, state)",
+              "Board@CBSE,ICSE,SSC",
               "extracurriculer-activities",
-              "Subject, marks obtained, max marks",
+
               "total marks",
               "percent/cgpa",
             ].map((field) => renderInputField("education-details", field))}
           </div>
-
+          {activeTab === "education-details" && (
+            <div className="">
+              <p>Enter marks obtained</p>
+              <div className="lg:mx-48">
+                <table cellPadding={2} cellSpacing={2}>
+                  <thead>
+                    <tr>
+                      <th>Subject</th>
+                      <th>Marks obtained</th>
+                      <th>Max marks</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      "languauge1",
+                      "language2",
+                      "core1",
+                      "core2",
+                      "core3",
+                      "core4",
+                      "core5",
+                    ].map((field) => (
+                      <tr key={field}>
+                        <td>
+                          <input type="text" className="w-30"></input>
+                        </td>
+                        <td className="w-6">
+                          <input type="number" size={6}></input>
+                        </td>
+                        <td className="w-8">
+                          <input type="number" size={6}></input>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
           <div
             className={`${activeTab === "course-details" ? "block" : "hidden"}`}
           >
             {[
-              "course@BCOM, BA - journalism, political science, BA-psychology, journalism",
-              "second-language@hindi,kannada,add-eng",
+              "course@BCOM, BA - Journalism and Political science, BA-Journalism and Psychology ",
+              "second-language@Hindi,Kannada,Addition English",
             ].map((field) => renderInputField("course-details", field))}
           </div>
 
