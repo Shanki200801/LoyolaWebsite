@@ -3,28 +3,36 @@ import Image from "next/image";
 import styles from "../../styles/news-events-page.module.css";
 import Link from "next/link";
 import { Inter } from "next/font/google";
+import { useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 const NewsFeatureCard = ({
   id,
-  image,
+  thumbnail,
   title,
   description,
   longdescription,
-  imagefolder,
+  photos,
   eventroute,
 }) => {
-  const eventlink = `/news_events/${id}`;
+  const [hasThumbnail, setHasThumbnail] =
+    thumbnail == "" ? useState(false) : useState(true);
+
+  // const eventlink = `/news_events/${id}`;
   return (
     <div className={`${styles.cardcontainer} my-4`}>
       {/* Image */}
-      <div className={`${styles.eventimage} odd:float-right`}>
-        <Image
-          src={image}
-          alt="News"
-          className={`${styles.image} rounded-lg`}
-        />
-      </div>
+      {hasThumbnail && (
+        <div className={`${styles.eventimage} odd:float-right`}>
+          <Image
+            src={thumbnail}
+            alt="News"
+            className={`${styles.image} rounded-lg`}
+            width={400}
+            height={400}
+          />
+        </div>
+      )}
 
       {/* Content */}
       <div className={`${styles.eventinfo} rounded-2xl ${inter.className}`}>

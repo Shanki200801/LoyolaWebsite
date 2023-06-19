@@ -3,8 +3,7 @@ import FacilityCard from "@/components/infrastructure/FacilityCard";
 import { Lobster_Two, Oswald, Inter } from "next/font/google";
 
 const lobster = Lobster_Two({ subsets: ["latin"], weight: "400" });
-const oswald = Oswald({ subsets: ["latin"] });
-const inter = Inter({ subsets: ["latin"] });
+
 const infrastructure = () => {
   return (
     <>
