@@ -115,7 +115,7 @@ export async function getServerSideProps() {
   };
   for (let key in staff_details) {
     staff_details[key] = await fetch(
-      `https://${process.env.NEXT_PUBLIC_HOST}/api/${key}`
+      `http://${process.env.NEXT_PUBLIC_HOST}/api/${key}`
     );
     staff_details[key] = await staff_details[key].json();
   }
