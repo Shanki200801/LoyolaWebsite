@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import NavLogo from "./NavLogo";
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
+import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded';
 
 const NeoNavbar = ()=>{
 
@@ -77,7 +78,7 @@ const NeoNavbar = ()=>{
 const NavAbout = ({hDrawer, hAboutLink, toggleAboutLink, closeNavbar})=>{
     return(
         <div>
-            <p onClick={toggleAboutLink} className={`cursor-pointer`}>About</p>
+            <p onClick={toggleAboutLink} className={`cursor-pointer`}>About<KeyboardArrowDownRoundedIcon/></p>
             <ul className={`${hAboutLink} overflow-hidden bg-white text-black z-10`}>
                 <li>
                 <Link href={`/about/about-uni`} onClick={closeNavbar}>About University</Link>
@@ -100,7 +101,7 @@ const NavAbout = ({hDrawer, hAboutLink, toggleAboutLink, closeNavbar})=>{
 const NavStudent = ({hDrawer, hStuLink, toggleStuLink, closeNavbar}) => {
     return (
         <div>
-            <p onClick={toggleStuLink} className={`cursor-pointer`} >Student</p>
+            <p onClick={toggleStuLink} className={`cursor-pointer`} >Student<KeyboardArrowDownRoundedIcon/></p>
             <ul className={`${hStuLink} overflow-hidden bg-white text-black`}>
                 <li>
                 <Link href={`/student/associations`} onClick={closeNavbar}>Associations</Link>
@@ -120,7 +121,7 @@ const NavStudent = ({hDrawer, hStuLink, toggleStuLink, closeNavbar}) => {
 const NavAcads = ({hDrawer, hAcadLink, toggleAcadLink, closeNavbar}) => {
     return (
         <div>
-            <p onClick={toggleAcadLink} className={`cursor-pointer`} >Academics</p>
+            <p onClick={toggleAcadLink} className={`cursor-pointer`} >Academics<KeyboardArrowDownRoundedIcon/></p>
             <ul
                 className={`${hAcadLink} overflow-hidden bg-white text-black`}
             >
