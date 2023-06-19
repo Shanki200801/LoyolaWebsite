@@ -6,14 +6,32 @@ import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 
 const NeoNavbar = ()=>{
 
-    const OPEN_DRAWER = `h-screen duration-700`;
-    const CLOSE_DRAWER = 'h-0 duration-700';
+    const OPEN_DRAWER = 'max-h-screen trasition-all ease duration-700';
+    const CLOSE_DRAWER = 'max-h-0 trasition-all ease duration-700';
+
+    const CLOSE_LINK = 'max-h-0 trasition-all ease duration-700';
+    const OPEN_LINK = 'max-h-52 trasition-all ease duration-700';
 
     const [hDrawer, sethDrawer] = useState(CLOSE_DRAWER);
+    const [hAboutLink, setHAboutLink] = useState(CLOSE_LINK);
+    const [hStuLink, setHStuLink] = useState(CLOSE_LINK);
+    const [hAcadLink, setHAcadLink] = useState(CLOSE_LINK);
 
     const toggleDrawer = ()=>{
         //to toggle between close and open
         sethDrawer(hDrawer == CLOSE_DRAWER ? OPEN_DRAWER:CLOSE_DRAWER);
+    };
+
+    const toggleAboutLink = ()=>{
+        setHAboutLink(hAboutLink == CLOSE_LINK?OPEN_LINK:CLOSE_LINK);
+    };
+
+    const toggleStuLink = ()=>{
+        setHStuLink(hStuLink == CLOSE_LINK?OPEN_LINK:CLOSE_LINK);
+    };
+
+    const toggleAcadLink = ()=>{
+        setHAcadLink(hAcadLink == CLOSE_LINK?OPEN_LINK:CLOSE_LINK);
     };
 
     const closeNavbar = ()=>{
@@ -44,11 +62,11 @@ const NeoNavbar = ()=>{
             </nav>
             <div id="nav-extension" className={`${hDrawer} overflow-hidden bg-white lg:hidden`}>
                 <ul>
-                    <NavAbout hDrawer={hDrawer} closeNavbar={closeNavbar}/>
-                    <NavStudent hDrawer={hDrawer} closeNavbar={closeNavbar}/>
-                    <NavAcads hDrawer={hDrawer} closeNavbar={closeNavbar}/>
-                    <NavDepts hDrawer={hDrawer} closeNavbar={closeNavbar}/>
-                    <NavNews hDrawer={hDrawer} closeNavbar={closeNavbar}/>
+                    <NavAbout hDrawer={hDrawer} closeNavbar={closeNavbar} hAboutLink={hAboutLink} toggleAboutLink={toggleAboutLink}/>
+                    <NavStudent hDrawer={hDrawer} closeNavbar={closeNavbar} hStuLink={hStuLink} toggleStuLink={toggleStuLink}/>
+                    <NavAcads hDrawer={hDrawer} closeNavbar={closeNavbar} hAcadLink={hAcadLink} toggleAcadLink={toggleAcadLink}/>
+                    <NavDepts hDrawer={hDrawer} closeNavbar={closeNavbar} />
+                    <NavNews hDrawer={hDrawer} closeNavbar={closeNavbar} />
                     <NavAdmissions hDrawer={hDrawer} closeNavbar={closeNavbar}/>
                 </ul>
             </div>
@@ -56,11 +74,11 @@ const NeoNavbar = ()=>{
     );
 }
 
-const NavAbout = ({hDrawer, closeNavbar})=>{
+const NavAbout = ({hDrawer, hAboutLink, toggleAboutLink, closeNavbar})=>{
     return(
         <div>
-            About
-            <ul className={`bg-white text-black z-10`}>
+            <p onClick={toggleAboutLink} className={`cursor-pointer`}>About</p>
+            <ul className={`${hAboutLink} overflow-hidden bg-white text-black z-10`}>
                 <li>
                 <Link href={`/about/about-uni`} onClick={closeNavbar}>About University</Link>
                 </li>
@@ -79,11 +97,11 @@ const NavAbout = ({hDrawer, closeNavbar})=>{
 }
 
 //Navbar Student Component
-const NavStudent = ({hDrawer, closeNavbar}) => {
+const NavStudent = ({hDrawer, hStuLink, toggleStuLink, closeNavbar}) => {
     return (
         <div>
-            Student
-            <ul className={`bg-white text-black`}>
+            <p onClick={toggleStuLink} className={`cursor-pointer`} >Student</p>
+            <ul className={`${hStuLink} overflow-hidden bg-white text-black`}>
                 <li>
                 <Link href={`/student/associations`} onClick={closeNavbar}>Associations</Link>
                 </li>
@@ -99,12 +117,12 @@ const NavStudent = ({hDrawer, closeNavbar}) => {
 }
 
 //Navbar Academics Component
-const NavAcads = ({hDrawer, closeNavbar}) => {
+const NavAcads = ({hDrawer, hAcadLink, toggleAcadLink, closeNavbar}) => {
     return (
         <div>
-            Academics
+            <p onClick={toggleAcadLink} className={`cursor-pointer`} >Academics</p>
             <ul
-                className={`bg-white text-black`}
+                className={`${hAcadLink} overflow-hidden bg-white text-black`}
             >
                 <li>
                 <Link href={`/academics/ba`} onClick={closeNavbar}>B.A.</Link>
