@@ -1,16 +1,19 @@
 import React from 'react';
-import Logo from '../../Assets/logo.png';
+import Logo from '../../public/about/ldcLogo.webp';
 import Image from 'next/image';
 import styles from "../../styles/navbar.module.css";
 import "../../styles/navbar.module.css";
+import { Grenze_Gotisch, Pirata_One, Playfair_Display } from 'next/font/google';
 
+const headerFont = Pirata_One({subsets: ['latin'], weight: '400'})
+const smolheadFont = Playfair_Display({subsets: ['latin']})
 const NavLogo = () => {
   return (
-    <div className="flex flex-row items-center font-playfair">
-      <Image src={Logo} height={30} width={70}/>
-      <div className="flex flex-col items-center">
-        <h1 className={`text-xl font-bold px-2 uppercase ${styles.logoLink}`}>Loyola Degree College</h1>
-        <h2 className={`text-m font-light px-2 ${styles.logoLink}`}>Affiliated to Bangalore University</h2>
+    <div className="flex flex-row items-center text-white">
+      <Image src={Logo} className={`h-auto w-[12%] lg:w-[10%]`}/>
+      <div className={`hidden md:flex md:flex-col md:items-center`}>
+        <h1 className={`text-3xl font-bold px-2 ${headerFont.className}`}>Loyola Degree College</h1>
+        <h2 className={`text-sm font-light px-2 ${smolheadFont.className}`}>Affiliated to Bangalore University</h2>
       </div>
     </div>
   )
