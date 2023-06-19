@@ -96,7 +96,7 @@ const LibraryDesc = () => {
 };
 
 export async function getServerSideProps() {
-  const url = "/api/library-resources";
+  const url = "https://loyola-website.vercel.app/api/library-resources";
   const res = await fetch(url);
   const libraryResources = await res.json();
   return { props: { libraryResources } };

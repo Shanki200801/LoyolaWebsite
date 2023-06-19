@@ -75,7 +75,7 @@ const EventDescription = ({ desc }) => {
   );
 };
 export async function getServerSideProps() {
-  const url = "/api/sports-data";
+  const url = "https://loyola-website.vercel.app/api/sports-data";
   const res = await fetch(url);
   const sportsData = await res.json();
   return { props: { sportsData } };

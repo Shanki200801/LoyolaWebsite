@@ -55,7 +55,7 @@ export default EventInfo;
 
 //SSP
 export async function getServerSideProps() {
-  const url = "/api/event-data";
+  const url = "https://loyola-website.vercel.app/api/event-data";
   const res = await fetch(url);
   const eventDataExport = await res.json();
   return {

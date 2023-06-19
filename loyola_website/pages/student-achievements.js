@@ -60,7 +60,7 @@ const studentAchievements = ({ achievements }) => {
 export default studentAchievements;
 
 export async function getServerSideProps() {
-  const url = "/api/student-achievement";
+  const url = "https://loyola-website.vercel.app/api/student-achievement";
   const res = await fetch(url);
   const achievements = await res.json();
   return { props: { achievements } };
