@@ -15,7 +15,7 @@ const generalHeadings = Oswald({ subsets: ["latin"] });
 
 const Placements = () => {
   return (
-    <div className="bg-red-100 text-black">
+    <div className="bg-yellow-50 text-black">
       <PlacementHeader />
       <TrainingProg />
 
@@ -78,7 +78,7 @@ const TrainingProg = () => {
   return (
     <div>
       <h2
-        className={`text-5xl mt-10 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-200 tracking-tight`}
+        className={`text-5xl mt-10 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-300 tracking-tight`}
       >
         Training{" "}
         <span className={`text-red-800 whitespace-pre`}> Programs</span>
@@ -100,7 +100,7 @@ const TrainingProg = () => {
         examinations such as UPSC, SSC and Bank PO.
       </p>
       <h3
-        className={`text-2xl px-32 mt-5 ${generalHeadings.className} underline underline-offset-2 decoration-orange-200 `}
+        className={`text-2xl px-32 mt-5 ${generalHeadings.className} underline underline-offset-2 decoration-orange-300 `}
       >
         Recent training programs conducted
       </h3>
@@ -128,7 +128,7 @@ const Talks = () => {
   return (
     <div>
       <h2
-        className={`text-5xl mt-10 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-200 tracking-tight`}
+        className={`text-5xl mt-10 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-300 tracking-tight`}
       >
         Talks &{" "}
         <span className={`text-red-800 whitespace-pre`}> Guest Lectures </span>
@@ -153,7 +153,7 @@ const RecentActivities = () => {
   return (
     <div>
       <h2
-        className={`text-5xl mt-10 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-200 tracking-tight`}
+        className={`text-5xl mt-10 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-300 tracking-tight`}
       >
         <span className={`text-red-800 whitespace-pre`}>
           Recent activities{" "}
@@ -198,7 +198,7 @@ const Process = () => {
   return (
     <div>
       <h2
-        className={`text-5xl mt-5 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-200 tracking-tight`}
+        className={`text-5xl mt-5 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-300 tracking-tight`}
       >
         Placement{" "}
         <span className={`text-red-800 whitespace-pre`}> Process </span>
@@ -263,7 +263,7 @@ const Stats = () => {
   return (
     <div>
       <h2
-        className={`text-5xl mt-5 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-200 tracking-tight`}
+        className={`text-5xl mt-5 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-300 tracking-tight`}
       >
         Placement{" "}
         <span className={`text-red-800 whitespace-pre`}> Statistics </span>
@@ -299,7 +299,7 @@ const PlacementDir = () =>{
   return (
     <section>
       <h2
-        className={`text-5xl mt-5 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-200 tracking-tight`}
+        className={`text-5xl mt-5 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-300 tracking-tight`}
       >
         Connect{" "}
         <span className={`text-red-800 whitespace-pre`}> With Us </span>

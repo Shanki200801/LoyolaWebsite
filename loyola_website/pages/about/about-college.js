@@ -90,7 +90,7 @@ const AboutUni = () => {
       <h1
         className={`row-span-4 custom-letter-spacing-wider py-5 text-5xl text-center ${mainHeading.className} text-shadow-sm-red sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl xl:pb-0`}
       >
-        About University
+        About College
       </h1>
       <Founder />
       <History />

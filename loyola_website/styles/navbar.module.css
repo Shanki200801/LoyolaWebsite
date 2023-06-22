@@ -28,7 +28,7 @@ done- Font families
 /* NavBar Primary Links */
 .primaryLinks {
     font-family: 'Slabo 27px', serif;
-    font-size: clamp(0.5rem, 3rem, 1.1rem);
+    font-size: clamp(0.5rem, 2rem, 1rem);
 }
 
 /* NavBar Sub Menu */
