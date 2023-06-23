@@ -9,7 +9,9 @@ const generalText = Inter({ subsets: ["latin"] });
 const Crest = () => {
   return (
     <div className={`py-3 px-12`}>
-      <h2 className={`uppercase text-xl pb-2 ${generalHeaders.className} underline underline-offset-4 decoration-blue-400 decoration-dotted decoration-2`}>
+      <h2
+        className={`uppercase text-xl pb-2 ${generalHeaders.className} underline underline-offset-4 decoration-blue-400 decoration-dotted decoration-2`}
+      >
         College <span className={`text-cyan-800 whitespace-pre`}>Crest</span>
       </h2>
       <ul
@@ -43,7 +45,9 @@ const Crest = () => {
 const Anthem = () => {
   return (
     <div className={`py-3 px-12`}>
-      <h2 className={`uppercase text-xl pb-2 ${generalHeaders.className} underline underline-offset-4 decoration-blue-400 decoration-dotted decoration-2`}>
+      <h2
+        className={`uppercase text-xl pb-2 ${generalHeaders.className} underline underline-offset-4 decoration-blue-400 decoration-dotted decoration-2`}
+      >
         College <span className={`text-cyan-800 whitespace-pre`}>Anthem</span>
       </h2>
       <p className={`text-l ${generalText.className} whitespace-pre`}>
@@ -68,7 +72,9 @@ Oh! Ignatius of Loyola`}
 const AnthemCredits = () => {
   return (
     <div className={`py-3 px-12`}>
-      <h2 className={`uppercase text-xl pb-2 ${generalHeaders.className} underline underline-offset-4 decoration-blue-400 decoration-dotted decoration-2`}>
+      <h2
+        className={`uppercase text-xl pb-2 ${generalHeaders.className} underline underline-offset-4 decoration-blue-400 decoration-dotted decoration-2`}
+      >
         Anthem <span className={`text-cyan-800 whitespace-pre`}>Credits</span>
       </h2>
       <p
@@ -82,15 +88,19 @@ Music Composed in 2019 by Dr Vincent A (Vice Principal)`}</p>
 
 const CrestAnthem = () => {
   return (
-    <div className={`bg-blue-100 text-black`}>
-      <h1
-        className={`custom-letter-spacing-wider py-5 text-5xl text-center ${mainHeading.className} text-shadow-sm-blue sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl xl:pb-0`}
-      >
-        College Crest & College Anthem
-      </h1>
-      <Crest />
-      <Anthem />
-      <AnthemCredits />
+    <div
+      className={`bg-blue-100 text-black bg-cover bg-[url('~/public/about/bgFive.webp')] bg-center bg-fixed`}
+    >
+      <div className={`bg-blue-200/90`}>
+        <h1
+          className={`custom-letter-spacing-wider py-5 text-5xl text-center ${mainHeading.className} text-shadow-sm-blue sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl xl:pb-0`}
+        >
+          College Crest & College Anthem
+        </h1>
+        <Crest />
+        <Anthem />
+        <AnthemCredits />
+      </div>
     </div>
   );
 };

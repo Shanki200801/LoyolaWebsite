@@ -19,7 +19,11 @@ const Founder = () => {
       <div
         className={`flex flex-col gap-2 px-5 py-2 col-start-1 col-end-10 md:col-start-3 md:col-end-10 lg:col-start-3 lg:col-end-10 xl:col-start-3 xl:col-end-10 xl:pl-0 xl:pr-9`}
       >
-        <h2 className={`text-xl ${generalHeaders.className} uppercase font-medium underline underline-offset-2 decoration-dotted decoration-red-300`}>Founder</h2>
+        <h2
+          className={`text-xl ${generalHeaders.className} uppercase font-medium underline underline-offset-2 decoration-dotted decoration-red-400`}
+        >
+          Founder
+        </h2>
         <p className={`text-m ${generalText.className} tracking-tight`}>
           St Ignatius Loyola is the founder of the Jesuit Order that runs
           thousands of Educational Institutions all over the world. Born in
@@ -47,7 +51,11 @@ const History = () => {
       <div
         className={`flex flex-col gap-2 px-5 py-2 col-start-1 col-end-10 md:col-start-3 md:col-end-10 lg:col-start-3 lg:col-end-10 xl:col-start-3 xl:col-end-10 xl:pl-0 xl:pr-9`}
       >
-        <h2 className={`text-xl ${generalHeaders.className} uppercase font-medium underline underline-offset-2 decoration-dotted decoration-red-300`}>History</h2>
+        <h2
+          className={`text-xl ${generalHeaders.className} uppercase font-medium underline underline-offset-2 decoration-dotted decoration-red-400`}
+        >
+          History
+        </h2>
         <ul
           className={`text-m ${generalText.className} tracking-tight grid grid-rows-2 gap-5 pb-5`}
         >
@@ -85,15 +93,17 @@ const History = () => {
 const AboutUni = () => {
   return (
     <div
-      className={`grid grid-rows-15 items-center justify-center bg-red-100 text-black xl:gap-7`}
+      className={`grid grid-rows-15 items-center justify-center bg-[url('~/public/about/bgTwo.webp')] bg-cover bg-center bg-fixed text-black xl:gap-7`}
     >
-      <h1
-        className={`row-span-4 custom-letter-spacing-wider py-5 text-5xl text-center ${mainHeading.className} text-shadow-sm-red sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl xl:pb-0`}
-      >
-        About College
-      </h1>
-      <Founder />
-      <History />
+      <div className={`bg-red-50/80`}>
+        <h1
+          className={`row-span-4 custom-letter-spacing-wider py-5 text-5xl text-center ${mainHeading.className} text-shadow-sm-red sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl xl:pb-0`}
+        >
+          About College
+        </h1>
+        <Founder />
+        <History />
+      </div>
     </div>
   );
 };
