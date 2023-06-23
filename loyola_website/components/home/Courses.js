@@ -80,8 +80,7 @@ const DeptBtnComponent = () => {
       <Button className=" font-mono bg-white text-deptBtnColor rounded-sm transition-colors-background-color transition-colors-color hover:bg-deptBtnColor hover:text-white"
        variant="contained"
         color="success"
-        href="http://www.loyolacollegeblr.com/Teaching-Staff.html"
-        style={{fontSize: '1.25rem', fontWeight: '500', borderRadius: '2px', padding: '8px 25px 12px'}}>Departments and Majors</Button>
+        style={{fontSize: '1.25rem', fontWeight: '500', borderRadius: '2px', padding: '8px 25px 12px'}}><Link href="/departments">Departments</Link></Button>
   )  
 }
 
