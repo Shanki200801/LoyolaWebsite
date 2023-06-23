@@ -1,10 +1,12 @@
 import React from "react";
-import { Lobster_Two, Inter } from "next/font/google";
+import { Lobster_Two, Inter, Oswald } from "next/font/google";
 import LibImg from "@/Assets/libraryImg.webp";
+import LibImg2 from "@/Assets/libraryImg4.webp";
 import Image from "next/image";
 
 const lobster = Lobster_Two({ subsets: ["latin"], weight: "400" });
 const inter = Inter({ subsets: ["latin"], weight: "400" });
+const oswald = Oswald({ subsets: ["latin"], weight: "400" });
 
 const library = ({ libraryResources }) => {
   return (
@@ -24,6 +26,9 @@ const library = ({ libraryResources }) => {
       />
 
       <LibraryStats libraryResources={libraryResources} />
+      <RulesAndRegulations />
+      <LibraryPeople />
+      <LibraryTiming />
     </div>
   );
 };
@@ -69,10 +74,16 @@ const LibraryDesc = () => {
   return (
     <div className="bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-blue-700 via-blue-800 to-gray-900 text-white w-3/4 mx-32 my-6 p-8 rounded-xl">
       <p className={`${inter.className} pb-4 `}>
-        Loyola Degree college library is a new library and 5 years old. It
-        regularly subscribes to five national journals and three international
-        journals, periodical/magazines and eight daily newspapers. It caters to
-        the needs of more than 510 graduate students and 30 staff.
+        Loyola Degree College has a well equipped The Department of Library
+        Information and Centre established in the year 2017, that caters to 510
+        students and 32 staff. The library currently has over thousands of books
+        and journals. It also subscribes to e- resources in association with the
+        St Joseph’s University. The library has about 5 systems for students to
+        access e- resources. It also provides Wi-Fi enabling students to use
+        their laptops in the Library. Library subscribes to newspapers which
+        include English and Kannada, national journals and international
+        journals, periodical, magazines, etc. The library follows the Dewey
+        Decimal Scheme of Classification.
       </p>
       <p className={`${inter.className} pb-4 `}>
         The library follows the Dewey Decimal Scheme of Classification. Books
@@ -80,21 +91,230 @@ const LibraryDesc = () => {
         wise. The Library is open from 8.30 a.m. to 4.00 p.m.
       </p>
       <p className={`${inter.className} pb-4 `}>
+        Library subscribes to newspapers which include English and Kannada,
+        national journals and international journals, periodical, magazines,
+        etc. The library follows the Dewey Decimal Scheme of Classification.
+      </p>
+      <p className={`${inter.className} pb-4 `}>
+        Loyola Degree College Library Committee conducts Library Orientation
+        programme every academic year in the month of August for all the
+        first-year students of UG. The students are familiarized with the
+        library facilities.
+      </p>
+      <p className="pt-6">
         The library can accommodate over 25 students at a time. Additional
-        services provided by the library are as follows:
+        services provided by the library are as follows:{" "}
       </p>
       <ol className={`${inter.className} pb-4 list-decimal mx-12 `}>
-        <li>Internet and Wi-Fi service</li>
-        <li>E-newspaper service</li>
-        <li>Reprographic service</li>
-        <li>SC/ST Book Bank Service</li>
-        <li>Lending service and</li>
-        <li>Old question papers service</li>
+        <li>Circulation Service</li>
+        <li>Reference Service</li>
+        <li>News Paper Clipping Service</li>
+        <li>Renewal Service </li>
+        <li>Book reservation service </li>
+        <li>E-Library Service</li>
+      </ol>
+      <p>Facilities offered by the library are as follows:</p>
+      <ol className={`${inter.className} pb-4 list-decimal mx-12 `}>
+        <li>Wi-Fi connectivity</li>
+        <li>Reprographic facilities</li>
+        <li>Old question papers facilities</li>
+        <li>SC/ST Book bank facilities</li>
       </ol>
     </div>
   );
 };
 
+const RulesAndRegulations = () => {
+  return (
+    <div className="bg-gradient-to-tl from-amber-200 via-violet-600 to-sky-900 text-white w-3/4 mx-32 my-6 p-8 rounded-xl">
+      <p className={`${inter.className} font-bold `}>
+        General Rules and Regulations:
+      </p>
+      <ul className={`${inter.className} pb-4 list-decimal mx-12 `}>
+        {[
+          "Loyola Library is NO-MOBILE ZONE.",
+          "Students must wear ID card at all times",
+          "Maintain strict silence in the Reading Room and other areas",
+          "DO NOT enter the reading or lending section with your baggage. Keep them in the wooden shelves at the Gate Counter",
+          "DO NOT crowd around any counter, but stand in queue and wait for your turn",
+          "ID card is NON-TRANSFERRABLE. Using someone else’s ID is a punishable offence",
+          "Kindly cooperate and interact gently with library staff.",
+          "In case of any difficulty library users can approach the Librarian.",
+          "Only present students and staff of the College can use the Library. No ex-student or outsiders are allowed to use the Library.",
+          "Any indiscipline in the Library will lead to cancellation of membership and/or serious disciplinary actions.",
+          "Students should clear all library dues in time to obtain Hall Ticket/Admit Card before Semester Exam.",
+          "Students and Staff members must settle all library dues to obtain Clearance Certificate from the Library Office on completion of studies or duty.",
+          "Sleeping, eating and having refreshments inside the Library are strictly prohibited.",
+          "Do take care of library books and journals.",
+        ].map((item, i) => (
+          <li key={i}>{item}</li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+const committe_members = [
+  {
+    SlNo: 1,
+    name: "Fr. Alphonse Fernandes S J",
+    department: "Principal",
+    position: "Chairperson",
+  },
+  {
+    SlNo: 2,
+    name: "Mr. K R Kumar",
+    department: "Librarian",
+    position: "Secretary",
+  },
+  {
+    SlNo: 3,
+    name: "Fr. Pratap Chandru S J",
+    department: "Department of Psychology",
+    position: "Member",
+  },
+  {
+    SlNo: 4,
+    name: "Mr. Swetha",
+    department: "Department of Commerce",
+    position: "Member ",
+  },
+  {
+    SlNo: 5,
+    name: "Ms. Rowena",
+    department: "Department of English",
+    position: "Member",
+  },
+  {
+    SlNo: 6,
+    name: "Dr. Kumarswamy",
+    department: "Department of Kannada",
+    position: "Member",
+  },
+  {
+    SlNo: 7,
+    name: "Dr. Tara Nair",
+    department: "Department of Hindi",
+    position: "Member",
+  },
+  {
+    SlNo: 8,
+    name: "Mr. Lazarus",
+    department: "Department of Journalism",
+    position: "Member",
+  },
+  {
+    SlNo: 9,
+    name: "Mr. Vignesh ",
+    department: "Department of Political Science",
+    position: "Member",
+  },
+  {
+    SlNo: 10,
+    name: "Nominated from UG Student",
+    department: "Nominated Student",
+    position: "Member",
+  },
+];
+const LibraryPeople = () => {
+  return (
+    <div className="bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-blue-700 via-blue-800 to-gray-900 text-white w-3/4 mx-32 my-6 p-8 rounded-xl ">
+      <p
+        className={`py-4 font-semibold text-lg text-center ${oswald.className}`}
+      >
+        Library Advisory Committee
+      </p>
+      <table className="mx-auto w-3/4 border border-white text-white">
+        <thead>
+          <tr>
+            <th className={`border-2 border-white p-3`}>Sl No.</th>
+            <th className={`border-2 border-white p-3`}>Members</th>
+            <th className={`border-2 border-white p-3`}>Department</th>
+            <th className={`border-2 border-white p-3`}>
+              Position in the committee
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {committe_members.map((item, i) => (
+            <tr key={i}>
+              <td className={`border-2 border-white p-3`}>{item.SlNo}</td>
+              <td className={`border-2 border-white p-3`}>{item.name}</td>
+              <td className={`border-2 border-white p-3`}>{item.department}</td>
+              <td className={`border-2 border-white p-3`}>{item.position}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <p
+        className={`py-4 pt-6 font-semibold text-lg text-center ${oswald.className}`}
+      >
+        Library staff profile:
+      </p>
+      <table className="mx-auto w-3/4 border border-white text-white">
+        <thead>
+          <tr>
+            <th className={`border-2 border-white p-3`}>Name</th>
+            <th className={`border-2 border-white p-3`}>Qualification</th>
+            <th className={`border-2 border-white p-3`}>Designation</th>
+            <th className={`border-2 border-white p-3`}>Date of joining</th>
+            <th className={`border-2 border-white p-3`}>Experience</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className={`border-2 border-white p-3`}>Mr. K R KUMAR</td>
+            <td className={`border-2 border-white p-3`}>M.lisc</td>
+            <td className={`border-2 border-white p-3`}>Librarian</td>
+            <td className={`border-2 border-white p-3`}>02.06.2018</td>
+            <td className={`border-2 border-white p-3`}>8 years</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  );
+};
+
+const LibraryTiming = () => {
+  return (
+    <div className="flex flex-row py-4 items-center translate-x-1/2 rounded-2xl justify-center bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900 to-indigo-500 w-1/2">
+      <Image
+        src={LibImg2}
+        width={200}
+        height={200}
+        className="bg-transparent rounded-xl"
+        alt="Library"
+      />
+      <div className="mx-4 text-white">
+        <p
+          className={`py-4 font-semibold text-lg text-left ${oswald.className}`}
+        >
+          Library timings:
+        </p>
+        <p className={`font-light ${inter.className}`}>
+          Monday to Friday 9:00 am to 4:30 pm
+        </p>
+        <p className={`font-light ${inter.className}`}>
+          Saturday 9:00 am to 1:00 pm
+        </p>
+        <p
+          className={`py-4 font-semibold text-lg text-left ${oswald.className}`}
+        >
+          E-Library Details:
+        </p>
+        <p className={`font-light ${inter.className}`}>
+          Website: sjc.knimbus.com
+        </p>
+        <p className={`font-light ${inter.className}`}>
+          User ID: student email
+        </p>
+        <p className={`font-light ${inter.className}`}>
+          Password: user@knimbus
+        </p>
+      </div>
+    </div>
+  );
+};
 export async function getServerSideProps() {
   const url = "https://loyola-website.vercel.app/api/library-resources";
   const res = await fetch(url);
