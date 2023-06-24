@@ -63,6 +63,7 @@ const NavLinks = () => {
         <NavAbout />
         <NavStudent />
         <NavAcads />
+        <NavInfra />
         <NavDepts />
         <NavNews />
         <NavAdmissions />
@@ -99,7 +100,7 @@ const AboutSubMenu = () => {
   return (
     <ul className={`bg-white text-black z-10 ${styles.subMenu}`}>
       <li>
-        <Link href={`/about/about-uni`}>About University</Link>
+        <Link href={`/about/about-college`}>About College</Link>
       </li>
       <li>
         <Link href={`/about/vision-mission`}>Vision & Mission</Link>
@@ -156,6 +157,9 @@ const StudentSubMenu = () => {
       <li>
         <Link href={`/student/student-council`}>Student Council</Link>
       </li>
+      <li>
+        <Link href={`/student/student-achievements`}>Student Achievements</Link>
+      </li>
     </ul>
   );
 };
@@ -203,6 +207,46 @@ const AcadsSubMenu = () => {
       </li>
       <li>
         <Link href={`/academics/exam-results`}>Examination Results</Link>
+      </li>
+    </ul>
+  );
+};
+
+const NavInfra = () => {
+  return (
+    <li>
+      <a
+        className={`hover:underline hover:underline-offset-4 hover: decoration-white bg-transparent uppercase ${styles.primaryLinks}`}
+      >
+        Infrastructure
+        <svg
+          className="fill-current"
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+        >
+          <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+        </svg>
+      </a>
+      <InfraSubMenu />
+    </li>
+  );
+};
+
+const InfraSubMenu = () => {
+  return (
+    <ul
+      className={`bg-white text-black z-10 ${styles.subMenu} ${styles.acadsMenu}`}
+    >
+      <li>
+        <Link href={"/infrastructure/facilities"}>Facilities</Link>
+      </li>
+      <li>
+        <Link href={"/infrastructure/library"}>Library</Link>
+      </li>
+      <li>
+        <Link href={"/infrastructure/sports"}>Sports</Link>
       </li>
     </ul>
   );

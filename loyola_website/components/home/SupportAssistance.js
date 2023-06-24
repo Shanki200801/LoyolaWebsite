@@ -52,16 +52,16 @@ const NavGrid = () => {
     },
     {
       key: 5,
-      name: "Councilling",
+      name: "Counselling",
       icon: Councilling,
-      link: "/student/grievences",
+      link: "/student/grievances",
     },
 
     {
       key: 6,
       name: "Student Council",
       icon: Student_council,
-      link: "/",
+      link: "/student/student-council",
     },
   ];
 
