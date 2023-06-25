@@ -85,8 +85,8 @@ const libraryQP = ({ qp_details }) => {
 
 export default libraryQP;
 export async function getServerSideProps() {
-  const url = "http://localhost:3000/api/qp-details";
-  // const url = "https://loyola-website.vercel.app/api/staff-achievement";
+  // const url = "http://localhost:3000/api/qp-details";
+  const url = "https://loyola-website.vercel.app/api/staff-achievement";
 
   const res = await fetch(url);
   const qp_details = await res.json();
