@@ -3,6 +3,10 @@ import { Lobster_Two, Inter, Oswald } from "next/font/google";
 import LibImg from "@/Assets/libraryImg.webp";
 import LibImg2 from "@/Assets/libraryImg4.webp";
 import Image from "next/image";
+import LibraryCommitteeImg from "@/Assets/Library_Advisory_Committee.png";
+import QPimage from "@/Assets/question_paper.png";
+import SyllabusImg from "@/Assets/syllabus.png";
+import Link from "next/link";
 
 const lobster = Lobster_Two({ subsets: ["latin"], weight: "400" });
 const inter = Inter({ subsets: ["latin"], weight: "400" });
@@ -27,8 +31,13 @@ const library = ({ libraryResources }) => {
 
       <LibraryStats libraryResources={libraryResources} />
       <RulesAndRegulations />
-      <LibraryPeople />
       <LibraryTiming />
+      <h2
+        className={`text-black text-shadow-custom-blue text-3xl font-semibold font-serif text-center py-6 pt-12 ${lobster.className}`}
+      >
+        Services
+      </h2>
+      <LibNavigator />
     </div>
   );
 };
@@ -126,7 +135,7 @@ const LibraryDesc = () => {
 
 const RulesAndRegulations = () => {
   return (
-    <div className="bg-gradient-to-tl from-amber-200 via-violet-600 to-sky-900 text-white w-3/4 mx-32 my-6 p-8 rounded-xl">
+    <div className="bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-blue-700 via-blue-800 to-gray-900 text-white w-3/4 mx-32 my-6 p-8 rounded-xl">
       <p className={`${inter.className} font-bold `}>
         General Rules and Regulations:
       </p>
@@ -150,127 +159,6 @@ const RulesAndRegulations = () => {
           <li key={i}>{item}</li>
         ))}
       </ul>
-    </div>
-  );
-};
-
-const committe_members = [
-  {
-    SlNo: 1,
-    name: "Fr. Alphonse Fernandes S J",
-    department: "Principal",
-    position: "Chairperson",
-  },
-  {
-    SlNo: 2,
-    name: "Mr. K R Kumar",
-    department: "Librarian",
-    position: "Secretary",
-  },
-  {
-    SlNo: 3,
-    name: "Fr. Pratap Chandru S J",
-    department: "Department of Psychology",
-    position: "Member",
-  },
-  {
-    SlNo: 4,
-    name: "Mr. Swetha",
-    department: "Department of Commerce",
-    position: "Member ",
-  },
-  {
-    SlNo: 5,
-    name: "Ms. Rowena",
-    department: "Department of English",
-    position: "Member",
-  },
-  {
-    SlNo: 6,
-    name: "Dr. Kumarswamy",
-    department: "Department of Kannada",
-    position: "Member",
-  },
-  {
-    SlNo: 7,
-    name: "Dr. Tara Nair",
-    department: "Department of Hindi",
-    position: "Member",
-  },
-  {
-    SlNo: 8,
-    name: "Mr. Lazarus",
-    department: "Department of Journalism",
-    position: "Member",
-  },
-  {
-    SlNo: 9,
-    name: "Mr. Vignesh ",
-    department: "Department of Political Science",
-    position: "Member",
-  },
-  {
-    SlNo: 10,
-    name: "Nominated from UG Student",
-    department: "Nominated Student",
-    position: "Member",
-  },
-];
-const LibraryPeople = () => {
-  return (
-    <div className="bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-blue-700 via-blue-800 to-gray-900 text-white w-3/4 mx-32 my-6 p-8 rounded-xl ">
-      <p
-        className={`py-4 font-semibold text-lg text-center ${oswald.className}`}
-      >
-        Library Advisory Committee
-      </p>
-      <table className="mx-auto w-3/4 border border-white text-white">
-        <thead>
-          <tr>
-            <th className={`border-2 border-white p-3`}>Sl No.</th>
-            <th className={`border-2 border-white p-3`}>Members</th>
-            <th className={`border-2 border-white p-3`}>Department</th>
-            <th className={`border-2 border-white p-3`}>
-              Position in the committee
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {committe_members.map((item, i) => (
-            <tr key={i}>
-              <td className={`border-2 border-white p-3`}>{item.SlNo}</td>
-              <td className={`border-2 border-white p-3`}>{item.name}</td>
-              <td className={`border-2 border-white p-3`}>{item.department}</td>
-              <td className={`border-2 border-white p-3`}>{item.position}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-      <p
-        className={`py-4 pt-6 font-semibold text-lg text-center ${oswald.className}`}
-      >
-        Library staff profile:
-      </p>
-      <table className="mx-auto w-3/4 border border-white text-white">
-        <thead>
-          <tr>
-            <th className={`border-2 border-white p-3`}>Name</th>
-            <th className={`border-2 border-white p-3`}>Qualification</th>
-            <th className={`border-2 border-white p-3`}>Designation</th>
-            <th className={`border-2 border-white p-3`}>Date of joining</th>
-            <th className={`border-2 border-white p-3`}>Experience</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td className={`border-2 border-white p-3`}>Mr. K R KUMAR</td>
-            <td className={`border-2 border-white p-3`}>M.lisc</td>
-            <td className={`border-2 border-white p-3`}>Librarian</td>
-            <td className={`border-2 border-white p-3`}>02.06.2018</td>
-            <td className={`border-2 border-white p-3`}>8 years</td>
-          </tr>
-        </tbody>
-      </table>
     </div>
   );
 };
@@ -312,6 +200,38 @@ const LibraryTiming = () => {
           Password: user@knimbus
         </p>
       </div>
+    </div>
+  );
+};
+
+const LibNavigator = () => {
+  return (
+    <div className="flex flex-row justify-around pt-4 text-black">
+      <Link
+        className="flex flex-col w-30 hover:-translate-y-2 transition-all"
+        href="/infrastructure/library-committee"
+      >
+        <Image src={LibraryCommitteeImg} width={100} height={100} />
+        <div className={`${inter.className} pb-4 text-ellipsis `}>
+          Committee
+        </div>
+      </Link>
+      <Link
+        className="flex flex-col w-30 hover:-translate-y-2 transition-all"
+        href="/infrastructure/libraryQP"
+      >
+        <Image src={QPimage} width={100} height={100} />
+        <div className={`${inter.className} pb-4 text-ellipsis`}>
+          Question Papers
+        </div>
+      </Link>
+      <Link
+        className="flex flex-col w-30 justify-center items-center hover:-translate-y-2 transition-all"
+        href="/academics/ba"
+      >
+        <Image src={SyllabusImg} width={100} height={100} />
+        <div className={`${inter.className} pb-4 text-ellipsis `}>Syllabus</div>
+      </Link>
     </div>
   );
 };
