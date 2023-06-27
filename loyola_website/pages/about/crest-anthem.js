@@ -89,7 +89,7 @@ Music Composed in 2019 by Dr Vincent A (Vice Principal)`}</p>
 const CrestAnthem = () => {
   return (
     <div
-      className={`bg-blue-100 text-black bg-cover bg-[url('~/public/about/bgFive.webp')] bg-center bg-fixed`}
+      className={`bg-blue-100 text-black bg-cover bg-[url('~/public/backgrounds/bgFive.webp')] bg-center bg-fixed`}
     >
       <div className={`bg-blue-200/90`}>
         <h1

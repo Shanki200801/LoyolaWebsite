@@ -8,13 +8,17 @@ const oswald = Oswald({ subsets: ["latin"], weight: "400" });
 
 const library_commitee = () => {
   return (
-    <div className="bg-slate-300 py-6">
-      <h1
-        className={`py-4 font-extrabold text-2xl text-center ${oswald.className} text-black`}
-      >
-        Library Advisory Committee
-      </h1>
-      <CommitteeMembers />
+    <div
+      className={`bg-cover bg-[url('~/public/backgrounds/bgFour.webp')] bg-center bg-fixed`}
+    >
+      <div className={`bg-sky-100/90 pb-8`}>
+        <h1
+          className={`py-4 font-extrabold text-2xl text-center ${oswald.className} text-black`}
+        >
+          Library Advisory Committee
+        </h1>
+        <CommitteeMembers />
+      </div>
     </div>
   );
 };

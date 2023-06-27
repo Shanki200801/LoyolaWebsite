@@ -7,14 +7,18 @@ const lobster = Lobster_Two({ subsets: ["latin"], weight: "400" });
 const infrastructure = () => {
   return (
     <>
-      <div className="py-4 bg-slate-300">
-        <div
-          className={`custom-letter-spacing-wider text-7xl py-6 text-center text-shadow-custom-blue text-black ${lobster.className}`}
-        >
-          Our Infrastructure
-        </div>
-        <div className="">
-          <InfraList />
+      <div
+        className={`bg-slate-300 bg-cover bg-[url('~/public/backgrounds/bgTwo.webp')] bg-center bg-fixed`}
+      >
+        <div className={`bg-sky-100/90 py-4`}>
+          <div
+            className={`custom-letter-spacing-wider text-7xl py-6 text-center text-shadow-custom-blue text-black ${lobster.className}`}
+          >
+            Our Infrastructure
+          </div>
+          <div className="">
+            <InfraList />
+          </div>
         </div>
       </div>
     </>

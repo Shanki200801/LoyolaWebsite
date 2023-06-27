@@ -5,8 +5,8 @@ import imageOne from "../../public/placements/imageOne.webp";
 import imageTwo from "../../public/placements/imageTwo.webp";
 import imageThree from "../../public/placements/imageThree.webp";
 import joshuaD from "@/public/placements/joshuaD.webp";
-import EmailIcon from '@mui/icons-material/Email';
-import PhoneIcon from '@mui/icons-material/Phone';
+import EmailIcon from "@mui/icons-material/Email";
+import PhoneIcon from "@mui/icons-material/Phone";
 
 const placementHead = Aclonica({ subsets: ["latin"], weight: "400" });
 const overviewBody = Josefin_Sans({ subsets: ["latin"] });
@@ -15,29 +15,33 @@ const generalHeadings = Oswald({ subsets: ["latin"] });
 
 const Placements = () => {
   return (
-    <div className="bg-yellow-50 text-black">
-      <PlacementHeader />
-      <TrainingProg />
+    <div
+      className={`text-black bg-cover bg-[url('~/public/backgrounds/bgFour.webp')] bg-bottom bg-fixed`}
+    >
+      <div className={`bg-yellow-100/90`}>
+        <PlacementHeader />
+        <TrainingProg />
 
-      <div className="grid grid-cols-3 mt-10">
-        <TrainingCards
-          body="In association with TNS India foundation - Future skills program LMS - Ms. Mary"
-          className="justify-self-end"
-        />
-        <TrainingCards
-          body="In association with Magic bus foundation - Ms. Soumya, Ms. Prathyusha, Mr. Naveen and Mr. Chandra Mohan"
-          className="justify-self-center"
-        />
-        <TrainingCards
-          body="In association Hope foundation - Sis Jessy and Mr. Manjunath "
-          className="justify-self-start"
-        />
+        <div className={`grid grid-cols-3 mt-10`}>
+          <TrainingCards
+            body="In association with TNS India foundation - Future skills program LMS - Ms. Mary"
+            className={`justify-self-end`}
+          />
+          <TrainingCards
+            body="In association with Magic bus foundation - Ms. Soumya, Ms. Prathyusha, Mr. Naveen and Mr. Chandra Mohan"
+            className={`justify-self-center`}
+          />
+          <TrainingCards
+            body="In association Hope foundation - Sis Jessy and Mr. Manjunath "
+            className={`justify-self-start`}
+          />
+        </div>
+        <Talks />
+        <RecentActivities />
+        <Process />
+        <Stats />
+        <PlacementDir />
       </div>
-      <Talks />
-      <RecentActivities />
-      <Process />
-      <Stats />
-      <PlacementDir/>
     </div>
   );
 };
@@ -78,7 +82,7 @@ const TrainingProg = () => {
   return (
     <div>
       <h2
-        className={`text-5xl mt-10 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-300 tracking-tight`}
+        className={`text-5xl mt-10 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-400 tracking-tight`}
       >
         Training{" "}
         <span className={`text-red-800 whitespace-pre`}> Programs</span>
@@ -100,7 +104,7 @@ const TrainingProg = () => {
         examinations such as UPSC, SSC and Bank PO.
       </p>
       <h3
-        className={`text-2xl px-32 mt-5 ${generalHeadings.className} underline underline-offset-2 decoration-orange-300 `}
+        className={`text-2xl px-32 mt-5 ${generalHeadings.className} underline underline-offset-2 decoration-orange-400 `}
       >
         Recent training programs conducted
       </h3>
@@ -128,7 +132,7 @@ const Talks = () => {
   return (
     <div>
       <h2
-        className={`text-5xl mt-10 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-300 tracking-tight`}
+        className={`text-5xl mt-10 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-400 tracking-tight`}
       >
         Talks &{" "}
         <span className={`text-red-800 whitespace-pre`}> Guest Lectures </span>
@@ -153,7 +157,7 @@ const RecentActivities = () => {
   return (
     <div>
       <h2
-        className={`text-5xl mt-10 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-300 tracking-tight`}
+        className={`text-5xl mt-10 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-400 tracking-tight`}
       >
         <span className={`text-red-800 whitespace-pre`}>
           Recent activities{" "}
@@ -176,7 +180,7 @@ const RecentActivities = () => {
           of business, St Joseph's University.{" "}
         </li>
         <li>
-          <Image src={imageOne} className={`bg-yellow-100 rounded-xl`}/>
+          <Image src={imageOne} className={`bg-yellow-100 rounded-xl`} />
         </li>
         <li>
           Vijay Karnataka the largest read daily in Karnataka in association
@@ -187,7 +191,7 @@ const RecentActivities = () => {
           Chandni.
         </li>
         <li>
-          <Image src={imageTwo} className={`bg-yellow-100 rounded-xl`}/>
+          <Image src={imageTwo} className={`bg-yellow-100 rounded-xl`} />
         </li>
       </ul>
     </div>
@@ -198,14 +202,14 @@ const Process = () => {
   return (
     <div>
       <h2
-        className={`text-5xl mt-5 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-300 tracking-tight`}
+        className={`text-5xl mt-5 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-400 tracking-tight`}
       >
         Placement{" "}
         <span className={`text-red-800 whitespace-pre`}> Process </span>
       </h2>
 
       <p
-        className={`font-medium text-orange-600 text-lg px-32 text-center mt-7 ${generalText.className} tracking-tight`}
+        className={`font-medium text-red-600 text-lg px-32 text-center mt-7 ${generalText.className} tracking-tight`}
       >
         All the students of the final year batch are eligible to apply for
         campus placements.
@@ -214,10 +218,12 @@ const Process = () => {
       <ul
         className={`flex flex-col gap-3 px-32 justify-center mt-3 text-md ${generalText.className} tracking-tight`}
       >
-        <span className={`border-2 border-yellow-200 rounded-lg p-3 bg-yellow-100`}>
+        <span
+          className={`border-2 border-amber-600 rounded-lg p-3 bg-amber-300`}
+        >
           <li className={`pb-2`}>
             <span
-              className={`text-red-500 font-semibold uppercase whitespace-pre`}
+              className={`text-red-600 font-semibold uppercase whitespace-pre`}
             >
               Step 1:
             </span>{" "}
@@ -226,7 +232,7 @@ const Process = () => {
           </li>
           <li className={`pb-2`}>
             <span
-              className={`text-red-500 font-semibold uppercase whitespace-pre`}
+              className={`text-red-600 font-semibold uppercase whitespace-pre`}
             >
               Step 2:
             </span>{" "}
@@ -237,7 +243,7 @@ const Process = () => {
           </li>
           <li className={`pb-2`}>
             <span
-              className={`text-red-500 font-semibold uppercase whitespace-pre`}
+              className={`text-red-600 font-semibold uppercase whitespace-pre`}
             >
               Step 3:
             </span>{" "}
@@ -246,7 +252,7 @@ const Process = () => {
           </li>
           <li className={`pb-2`}>
             <span
-              className={`text-red-500 font-semibold uppercase whitespace-pre`}
+              className={`text-red-600 font-semibold uppercase whitespace-pre`}
             >
               Step 4:
             </span>{" "}
@@ -263,7 +269,7 @@ const Stats = () => {
   return (
     <div>
       <h2
-        className={`text-5xl mt-5 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-300 tracking-tight`}
+        className={`text-5xl mt-5 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-400 tracking-tight`}
       >
         Placement{" "}
         <span className={`text-red-800 whitespace-pre`}> Statistics </span>
@@ -288,36 +294,52 @@ const Stats = () => {
           bank, Capgemini and Nirvana and Navi finance.
         </li>
         <li>
-          <Image src={imageThree} className={`bg-yellow-100 rounded-xl`}/>
+          <Image src={imageThree} className={`bg-yellow-100 rounded-xl`} />
         </li>
       </ul>
     </div>
   );
 };
 
-const PlacementDir = () =>{
+const PlacementDir = () => {
   return (
     <section>
       <h2
-        className={`text-5xl mt-5 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-300 tracking-tight`}
+        className={`text-5xl mt-5 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-400 tracking-tight`}
       >
-        Connect{" "}
-        <span className={`text-red-800 whitespace-pre`}> With Us </span>
+        Connect <span className={`text-red-800 whitespace-pre`}> With Us </span>
       </h2>
       <div className={`lg:grid lg:grid-cols-2 lg:py-10 lg:gap-10 `}>
-        <div className={`flex justify-center mt-10 lg:mt-0 lg:justify-self-end `}>
-          <Image src={joshuaD} className={`w-1/2 h-auto lg:w-52 lg:h-auto rounded shadow-xl`}/>
+        <div
+          className={`flex justify-center mt-10 lg:mt-0 lg:justify-self-end `}
+        >
+          <Image
+            src={joshuaD}
+            className={`w-1/2 h-auto lg:w-52 lg:h-auto rounded shadow-xl`}
+          />
         </div>
-        <div className={` ${generalText.className} text-center mt-5 lg:mt-0 text-sm lg:text-left lg:text-base lg:justify-self-start`}>
-          <p className={`${generalHeadings.className} text-2xl lg:text-4xl`}>Placement Officer</p>
-          <p className={`${generalHeadings.className} text-xl my-2 lg:text-3xl lg:mt-4`}>Mr. D Joshua </p>
+        <div
+          className={` ${generalText.className} text-center mt-5 lg:mt-0 text-sm lg:text-left lg:text-base lg:justify-self-start`}
+        >
+          <p className={`${generalHeadings.className} text-2xl lg:text-4xl`}>
+            Placement Officer
+          </p>
+          <p
+            className={`${generalHeadings.className} text-xl my-2 lg:text-3xl lg:mt-4`}
+          >
+            Mr. D Joshua{" "}
+          </p>
           <p className={`my-1 lg:my-2`}>MCom, PhD {`(Pursuing)`}</p>
-          <p className={`my-1 lg:my-2`}><EmailIcon/> loyoladegreeplacement@gmail.com</p>
-          <p className={`my-1 lg:my-2`}><PhoneIcon/> 7760072442</p>
+          <p className={`my-1 lg:my-2`}>
+            <EmailIcon /> loyoladegreeplacement@gmail.com
+          </p>
+          <p className={`my-1 lg:my-2`}>
+            <PhoneIcon /> 7760072442
+          </p>
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default Placements;

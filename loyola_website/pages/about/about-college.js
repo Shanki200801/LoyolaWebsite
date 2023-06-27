@@ -93,7 +93,7 @@ const History = () => {
 const AboutUni = () => {
   return (
     <div
-      className={`grid grid-rows-15 items-center justify-center bg-[url('~/public/about/bgTwo.webp')] bg-cover bg-center bg-fixed text-black xl:gap-7`}
+      className={`grid grid-rows-15 items-center justify-center bg-[url('~/public/backgrounds/bgTwo.webp')] bg-cover bg-center bg-fixed text-black xl:gap-7`}
     >
       <div className={`bg-red-50/80`}>
         <h1

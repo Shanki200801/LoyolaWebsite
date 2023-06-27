@@ -1,30 +1,39 @@
-import * as React from 'react';
-import InfoIcon from '@mui/icons-material/Info';
-import { Inter, Economica} from 'next/font/google';
+import * as React from "react";
+import InfoIcon from "@mui/icons-material/Info";
+import { Inter, Economica } from "next/font/google";
 
-const raleway = Economica({subsets:['latin'], weight: '700'});
-const bodyText = Inter({subsets:['latin']})
+const raleway = Economica({ subsets: ["latin"], weight: "700" });
+const bodyText = Inter({ subsets: ["latin"] });
 
-const Exam = ()=>{
-    return(
-        <div className='bg-white'>
-            <h1 className={`text-black text-6xl p-6 ${raleway.className} font-bold flex justify-center`}>Examination Results</h1>
-            <div id="examBody" className='flex justify-center items-center h-96'>
-                <NoResAlrt msg="No results to display. Please check back later!"/>
-            </div> 
+const Exam = () => {
+  return (
+    <div
+      className={`bg-cover bg-[url('~/public/backgrounds/bgTwo.webp')] bg-center bg-fixed`}
+    >
+      <div className={`bg-sky-100/90`}>
+        <h1
+          className={`text-black text-6xl p-6 ${raleway.className} font-bold flex justify-center`}
+        >
+          Examination Results
+        </h1>
+        <div id="examBody" className="flex justify-center items-center h-96">
+          <NoResAlrt msg="No results to display. Please check back later!" />
         </div>
-    );
-}
+      </div>
+    </div>
+  );
+};
 
-const NoResAlrt = (props)=>{
-    return(
-        <div className={`flex p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400 w-3/5 h-1/3 items-center ${bodyText.className}`} role="alert">
-            <InfoIcon style={{fontSize: '2.5rem'}}/>
-            <div className='text-4xl ml-4'>
-                {props.msg}
-            </div>
-        </div>
-    );
-}
+const NoResAlrt = (props) => {
+  return (
+    <div
+      className={`flex p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400 w-3/5 h-1/3 items-center ${bodyText.className}`}
+      role="alert"
+    >
+      <InfoIcon style={{ fontSize: "2.5rem" }} />
+      <div className="text-4xl ml-4">{props.msg}</div>
+    </div>
+  );
+};
 
 export default Exam;
