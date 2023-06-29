@@ -35,7 +35,7 @@ const ValueBox = ({ valueName, valueHeading, valuePara, boxStyles }) => {
 const CoreValues = () => {
   return (
     <div
-      className={`bg-blue-100 text-black bg-cover bg-[url('~/public/about/bgFour.webp')] bg-center bg-fixed`}
+      className={`bg-blue-100 text-black bg-cover bg-[url('~/public/backgrounds/bgFour.webp')] bg-center bg-fixed`}
     >
       <div className={`bg-blue-200/90`}>
         <h1

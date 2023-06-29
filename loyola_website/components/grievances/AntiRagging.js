@@ -13,7 +13,7 @@ const AntiRagging = () => {
       >
         Anti-Ragging Cell
       </h1>
-      <div className="max-w-xl text-black mx-auto bg-gradient-to-t from-violet-300 to-violet-400 p-6 text-justify rounded-lg">
+      <div className="max-w-xl text-black mx-auto bg-gradient-to-b from-violet-300 to-violet-500 p-6 text-justify rounded-lg">
         To root out ragging in all its forms from the institution, an
         anti-ragging cell has been established as per the guidelines of UGC.
         Ragging in any form is totally banned in the entire institution and

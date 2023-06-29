@@ -8,57 +8,61 @@ const oswald = Oswald({ subsets: ["latin"], weight: "400" });
 
 const sports = ({ sportsData }) => {
   return (
-    <div className="bg-gradient-to-r from-teal-200 to-lime-200 pb-12">
-      <h1
-        className={`${lobster.className} text-black text-shadow-custom-blue text-6xl font-semibold text-center py-6`}
-      >
-        Sports
-      </h1>
-
-      {sportsData.map((sport_event) => (
-        <div
-          key={sport_event.id}
-          className=" bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-sky-400 to-indigo-900 mx-24  p-6 my-12 rounded-lg"
+    <div
+      className={`bg-cover bg-[url('~/public/backgrounds/bgFive.webp')] bg-right bg-fixed`}
+    >
+      <div className={`bg-sky-200/80 py-6`}>
+        <h1
+          className={`${lobster.className} text-black text-shadow-custom-blue text-6xl font-semibold text-center`}
         >
-          <h2
-            className={`${oswald.className} text-xl text-center text-zinc-100 py-2`}
+          Sports
+        </h1>
+
+        {sportsData.map((sport_event) => (
+          <div
+            key={sport_event.id}
+            className=" bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-sky-400 to-indigo-900 mx-24 p-6 my-12 rounded-lg"
           >
-            {sport_event.title}
-          </h2>
-          <EventDescription desc={sport_event.description} />
-          {sport_event.table && (
-            <table className="mx-auto border-2  my-4 text-center text-zinc-100">
-              <thead>
-                <tr className="border-2">
-                  <th className="  p-3">Sports</th>
-                  <th className="  p-3">Date</th>
-                  <th className="  p-3">Semifinals</th>
-                  <th className="  p-3">Finals</th>
-                  <th className="  p-3">Winner</th>
-                </tr>
-              </thead>
-              {sport_event.table && (
-                <tbody>
-                  {sport_event.table.map((table) => (
-                    <tr key={table.id}>
-                      <td className=" p-3">{table.Sport}</td>
-                      <td className=" p-3">{table.date}</td>
-                      <td className=" p-3">
-                        <ul>
-                          <li>{table.semifinals[0]}</li>
-                          <li>{table.semifinals[1]}</li>
-                        </ul>
-                      </td>
-                      <td className=" p-3">{table.finals}</td>
-                      <td className=" p-3">{table.winner}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              )}
-            </table>
-          )}
-        </div>
-      ))}
+            <h2
+              className={`${oswald.className} text-xl text-center text-zinc-100 py-2`}
+            >
+              {sport_event.title}
+            </h2>
+            <EventDescription desc={sport_event.description} />
+            {sport_event.table && (
+              <table className="mx-auto border-2 my-4 text-center text-zinc-100">
+                <thead>
+                  <tr className="border-2">
+                    <th className="  p-3">Sports</th>
+                    <th className="  p-3">Date</th>
+                    <th className="  p-3">Semifinals</th>
+                    <th className="  p-3">Finals</th>
+                    <th className="  p-3">Winner</th>
+                  </tr>
+                </thead>
+                {sport_event.table && (
+                  <tbody>
+                    {sport_event.table.map((table) => (
+                      <tr key={table.id}>
+                        <td className=" p-3">{table.Sport}</td>
+                        <td className=" p-3">{table.date}</td>
+                        <td className=" p-3">
+                          <ul>
+                            <li>{table.semifinals[0]}</li>
+                            <li>{table.semifinals[1]}</li>
+                          </ul>
+                        </td>
+                        <td className=" p-3">{table.finals}</td>
+                        <td className=" p-3">{table.winner}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                )}
+              </table>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

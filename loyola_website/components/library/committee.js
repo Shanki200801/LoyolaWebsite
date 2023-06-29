@@ -70,7 +70,7 @@ const committee_members = [
 ];
 const LibraryPeople = () => {
   return (
-    <div className="bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-blue-700 via-blue-800 to-gray-900 text-white w-3/4 mx-32  p-8 rounded-xl  ">
+    <div className="bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-blue-700 via-blue-800 to-gray-900 text-white w-3/4 mx-32 p-8 rounded-xl">
       <p className={`${inter.className} font-medium text-lg py-8`}>
         The Library advisory committee has representatives from every department
         who facilitate the smooth functioning of the library, safeguard the

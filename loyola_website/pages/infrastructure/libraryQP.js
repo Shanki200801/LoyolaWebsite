@@ -12,72 +12,76 @@ const libraryQP = ({ qp_details }) => {
   const [course, setCourse] = useState("BA");
   const [semester, setSemester] = useState("Semester 1");
   return (
-    <div className="bg-gradient-to-r from-rose-100 to-teal-100 py-6">
-      <h1
-        className={`text-4xl text-center text-black shadow-blue-800 ${lobster.className}`}
-      >
-        Previous year Question papers
-      </h1>
-      {/* Course selector */}
-      <div className="flex flex-row justify-around py-4">
-        <button
-          className={`p-2 rounded-2xl ${
-            course === "BA"
-              ? "bg-blue-600 text-white"
-              : "text-blue-700 bg-inherit"
-          } `}
-          onClick={() => setCourse("BA")}
+    <div
+      className={`bg-cover bg-[url('~/public/backgrounds/bgTwo.webp')] bg-center bg-fixed`}
+    >
+      <div className={`bg-blue-100/90 py-8`}>
+        <h1
+          className={`text-4xl text-center text-black shadow-blue-800 ${lobster.className}`}
         >
-          Bachelors of Arts
-        </button>
-        <button
-          className={`p-2 rounded-2xl ${
-            course === "BCOM"
-              ? "bg-blue-600 text-white"
-              : "text-blue-700 bg-inherit"
-          }`}
-          onClick={() => setCourse("BCOM")}
-        >
-          Bachelors of Commerce
-        </button>
-      </div>
-      {/* Course heading */}
-      <h2 className={`text-center text-2xl text-black ${oswald.className}`}>
-        {course === "BA" ? "Bachelors of Arts" : "Bachelors of Commerce"}
-      </h2>
-      {/* semester selector */}
-      <div className="flex flex-row justify-center py-4">
-        {["Semester 1", "Semester 2", "Semester 3", "Semester 4"].map(
-          (item, i) => (
-            <button
-              key={i}
-              className={`p-2 rounded-2xl mx-4   ${
-                semester === item
-                  ? "bg-blue-600 text-white"
-                  : "text-blue-700 bg-inherit"
-              }`}
-              onClick={() => setSemester(item)}
-            >
-              {item}
-            </button>
-          )
-        )}
-      </div>
-      {/* Content holder */}
-      <div className={` text-blue-500 ${inter.className}  `}>
-        <ul>
-          {qp_details[course][semester].map((item, i) => (
-            <li key={i} className="py-2 px-32 ">
-              <a
-                href={item}
-                className="visited:text-indigo-800 text-black"
-                target="_blank"
+          Previous Year Question papers
+        </h1>
+        {/* Course selector */}
+        <div className="flex flex-row justify-around py-4">
+          <button
+            className={`p-2 rounded-2xl ${
+              course === "BA"
+                ? "bg-sky-600 text-white"
+                : "text-sky-800 bg-inherit"
+            } `}
+            onClick={() => setCourse("BA")}
+          >
+            Bachelors of Arts
+          </button>
+          <button
+            className={`p-2 rounded-2xl ${
+              course === "BCOM"
+                ? "bg-sky-600 text-white"
+                : "text-sky-800 bg-inherit"
+            }`}
+            onClick={() => setCourse("BCOM")}
+          >
+            Bachelors of Commerce
+          </button>
+        </div>
+        {/* Course heading */}
+        <h2 className={`text-center text-2xl text-black ${oswald.className}`}>
+          {course === "BA" ? "Bachelors of Arts" : "Bachelors of Commerce"}
+        </h2>
+        {/* semester selector */}
+        <div className="flex flex-row justify-center py-4">
+          {["Semester 1", "Semester 2", "Semester 3", "Semester 4"].map(
+            (item, i) => (
+              <button
+                key={i}
+                className={`p-2 rounded-2xl mx-4   ${
+                  semester === item
+                    ? "bg-sky-600 text-white"
+                    : "text-sky-800 bg-inherit"
+                }`}
+                onClick={() => setSemester(item)}
               >
-                {item.split("/")[3]}
-              </a>
-            </li>
-          ))}
-        </ul>
+                {item}
+              </button>
+            )
+          )}
+        </div>
+        {/* Content holder */}
+        <div className={` text-blue-500 ${inter.className}  `}>
+          <ul>
+            {qp_details[course][semester].map((item, i) => (
+              <li key={i} className="py-2 px-32 ">
+                <a
+                  href={item}
+                  className="visited:text-blue-800 text-black hover:underline underline-offset-2 decoration-sky-800 hover:font-semibold hover:text-sky-900"
+                  target="_blank"
+                >
+                  {item.split("/")[3]}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );

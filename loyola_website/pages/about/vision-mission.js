@@ -53,7 +53,7 @@ const Mission = () => {
 const VisionMission = () => {
   return (
     <div
-      className={`grid grid-rows-15 bg-red-100 text-black xl:gap-7 bg-cover bg-[url('~/public/about/bgFour.webp')] bg-bottom bg-fixed`}
+      className={`grid grid-rows-15 bg-red-100 text-black xl:gap-7 bg-cover bg-[url('~/public/backgrounds/bgFour.webp')] bg-bottom bg-fixed`}
     >
       <div className={`bg-red-50/90`}>
         <h1

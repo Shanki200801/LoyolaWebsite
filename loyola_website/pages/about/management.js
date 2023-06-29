@@ -110,7 +110,7 @@ const Management = () => {
 
   return (
     <main
-      className={`bg-white pb-10 bg-cover bg-[url('~/public/about/bgTwo.webp')] bg-center bg-fixed`}
+      className={`bg-white pb-10 bg-cover bg-[url('~/public/backgrounds/bgTwo.webp')] bg-center bg-fixed`}
     >
       <div className={`bg-green-200/80`}>
         <h1

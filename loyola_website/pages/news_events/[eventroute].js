@@ -26,26 +26,37 @@ const EventInfo = ({ eventDataExport }) => {
   }, [router.query.eventroute, router.isReady]);
 
   return (
-    <div className="bg-slate-300 w-full">
-      <h1 className="text-navbar-theme text-2xl font-extrabold text-center pt-6 pb-12 font-serif">
-        {eventtitle}
-      </h1>
-      {longdescription.map((paragraph) => {
-        return (
-          <p className="text-gray-700 mx-24 text-justify pb-6 ">{paragraph}</p>
-        );
-      })}
-      {hasPhotos && (
-        <h1 className="text-navbar-theme text-lg font-bold text-center py-6 ">
-          PHOTOS
+    <div
+      className={`bg-cover bg-[url('~/public/backgrounds/bgTwo.webp')] bg-bottom bg-fixed w-full`}
+    >
+      <div className={`bg-blue-100/90`}>
+        <h1 className="text-navbar-theme text-2xl font-extrabold text-center pt-6 pb-12 font-serif">
+          {eventtitle}
         </h1>
-      )}
-      <div className="grid grid-cols-3 place-content-around place-items-center py-6">
-        {photos.map((image) => {
+        {longdescription.map((paragraph) => {
           return (
-            <Image src={image} width={400} height={400} className="my-4 mx-8" />
+            <p className="text-gray-700 mx-24 text-justify pb-6 ">
+              {paragraph}
+            </p>
           );
         })}
+        {hasPhotos && (
+          <h1 className="text-navbar-theme text-lg font-bold text-center py-6 ">
+            PHOTOS
+          </h1>
+        )}
+        <div className="grid grid-cols-3 place-content-around place-items-center py-6">
+          {photos.map((image) => {
+            return (
+              <Image
+                src={image}
+                width={400}
+                height={400}
+                className="my-4 mx-8"
+              />
+            );
+          })}
+        </div>
       </div>
     </div>
   );

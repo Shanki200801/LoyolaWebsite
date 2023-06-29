@@ -3,9 +3,13 @@ import Counsilors from "@/components/grievances/Counsilors";
 import AntiRagging from "@/components/grievances/AntiRagging";
 const grievences = () => {
   return (
-    <div className="bg-gradient-to-tr from-slate-300 to-amber-50 pb-6 ">
-      <Counsilors />
-      <AntiRagging />
+    <div
+      className={`bg-cover bg-[url('~/public/backgrounds/bgFive.webp')] bg-right bg-fixed`}
+    >
+      <div className={`bg-fuchsia-100/90`}>
+        <Counsilors />
+        <AntiRagging />
+      </div>
     </div>
   );
 };

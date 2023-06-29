@@ -14,30 +14,34 @@ const oswald = Oswald({ subsets: ["latin"], weight: "400" });
 
 const library = ({ libraryResources }) => {
   return (
-    <div className="bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-rose-100 to-teal-100 pb-8">
-      <h1
-        className={`text-black text-shadow-custom-blue text-6xl font-semibold font-serif text-center py-6 ${lobster.className}`}
-      >
-        Library
-      </h1>
-      <LibraryDesc />
-      <Image
-        src={LibImg}
-        alt="library"
-        width="100%"
-        height="100%"
-        className="my-8 rounded-2xl mx-auto"
-      />
+    <div
+      className={`bg-cover bg-[url('~/public/backgrounds/bgFour.webp')] bg-center bg-fixed`}
+    >
+      <div className={`bg-blue-100/90`}>
+        <h1
+          className={`text-black text-shadow-custom-blue text-6xl font-semibold font-serif text-center py-6 ${lobster.className}`}
+        >
+          Library
+        </h1>
+        <LibraryDesc />
+        <Image
+          src={LibImg}
+          alt="library"
+          width="100%"
+          height="100%"
+          className="my-8 rounded-2xl mx-auto"
+        />
 
-      <LibraryStats libraryResources={libraryResources} />
-      <RulesAndRegulations />
-      <LibraryTiming />
-      <h2
-        className={`text-black text-shadow-custom-blue text-3xl font-semibold font-serif text-center py-6 pt-12 ${lobster.className}`}
-      >
-        Services
-      </h2>
-      <LibNavigator />
+        <LibraryStats libraryResources={libraryResources} />
+        <RulesAndRegulations />
+        <LibraryTiming />
+        <h2
+          className={`text-black text-shadow-custom-blue text-3xl font-semibold font-serif text-center py-6 pt-12 ${lobster.className}`}
+        >
+          Services
+        </h2>
+        <LibNavigator />
+      </div>
     </div>
   );
 };
@@ -81,7 +85,7 @@ const LibraryStats = ({ libraryResources }) => {
 
 const LibraryDesc = () => {
   return (
-    <div className="bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-blue-700 via-blue-800 to-gray-900 text-white w-3/4 mx-32 my-6 p-8 rounded-xl">
+      <div className="bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-blue-700 via-blue-800 to-gray-900 text-white w-3/4 mx-32 my-6 p-8 rounded-xl">
       <p className={`${inter.className} pb-4 `}>
         Loyola Degree College has a well equipped The Department of Library
         Information and Centre established in the year 2017, that caters to 510
