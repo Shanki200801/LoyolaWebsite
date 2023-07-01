@@ -11,7 +11,7 @@ const lobster = Lobster_Two({ subsets: ["latin"], weight: "400" });
 
 const departments = ({ staff_details }) => {
   // console.log(staff_details);
-  const [departments, setDepartments] = useState("management");
+  const [departments, setDepartments] = useState("commerce");
   return (
     <>
       <div
@@ -26,7 +26,7 @@ const departments = ({ staff_details }) => {
           <div className="flex flex-row mx-6">
             <section className="w-1/5">
               <div className="w-full text-base font-bold text mt-20  text-right text-navbar-theme ">
-                <button
+                {/* <button
                   onClick={() => setDepartments("management")}
                   className={` py-1 hover:underline rounded-l-lg  px-4  my-2 ${
                     departments == "management"
@@ -35,18 +35,8 @@ const departments = ({ staff_details }) => {
                   }`}
                 >
                   Management
-                </button>
-                <br />
-                <button
-                  onClick={() => setDepartments("languages")}
-                  className={` py-1 hover:underline rounded-l-lg px-4 my-2 ${
-                    departments == "languages"
-                      ? "bg-gradient-to-r from-blue-600 via-blue-500 to-blue-300 text-white"
-                      : "text-navbar-theme"
-                  }`}
-                >
-                  Department of Languages
-                </button>
+                </button> */}
+                {/* <br /> */}
                 <button
                   onClick={() => setDepartments("commerce")}
                   className={`py-1 hover:underline rounded-l-lg px-4 my-2 ${
@@ -70,6 +60,17 @@ const departments = ({ staff_details }) => {
                 </button>
                 <br />
                 <button
+                  onClick={() => setDepartments("languages")}
+                  className={` py-1 hover:underline rounded-l-lg px-4 my-2 ${
+                    departments == "languages"
+                      ? "bg-gradient-to-r from-blue-600 via-blue-500 to-blue-300 text-white"
+                      : "text-navbar-theme"
+                  }`}
+                >
+                  Department of Languages
+                </button>
+                <br />
+                <button
                   onClick={() => setDepartments("nonteaching")}
                   className={` py-1 hover:underline rounded-l-lg px-4 my-2 ${
                     departments == "nonteaching"
@@ -84,9 +85,9 @@ const departments = ({ staff_details }) => {
             </section>
 
             <section className="mx-auto bg-gradient-to-r from-blue-500 via-blue-200 to-blue-500 rounded-2xl">
-              {departments == "management" && (
+              {/* {departments == "management" && (
                 <ManagementStaff data={staff_details["management-staff"]} />
-              )}
+              )} */}
               {departments == "languages" && (
                 <LanguagesStaff data={staff_details["language-staff"]} />
               )}
