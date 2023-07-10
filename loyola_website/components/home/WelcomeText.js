@@ -1,13 +1,17 @@
 import React from "react";
+import { Oswald, Inter } from "next/font/google";
 
+const OswaldBold = Oswald({ weight: "700", subsets: ["latin"] });
+const inter = Inter({ weight: "500", subsets: ["latin"] });
 const WelcomeText = () => {
   return (
-    <div className=" grid h-screen place-items-center bg-slate-300">
-     
-      <div className=" text-justify text-black mx-48 font-medium text-lg leading-relaxed ">
-        <div className=" text-center">
-          <WelcomeTitle />
-        </div>
+    <div className=" text-justify text-black lg:px-48 px-8 py-8 font-medium text-lg leading-relaxed bg-slate-300 ">
+      <h1
+        className={`text-center text-5xl font-bold pb-5 text-navbar-theme ${OswaldBold.className}`}
+      >
+        WELCOME TO LOYOLA COLLEGE, BENGALURU, INDIA
+      </h1>
+      <p className={`${inter.className} text-justify pt-2 pb-4 font-semibold`}>
         In the campus of Mount St Joseph, the first educational institution was
         Loyola School in 1982 for the economically poor students of the
         neighbourhood. In 1989 Loyola Primary and Higher Primary school were
@@ -19,30 +23,18 @@ const WelcomeText = () => {
         School was upgraded to Loyola Composite Pre-University College. Today
         the Pre-University College has a strength of 600 students with Science,
         Commerce and Arts streams.
-        <br></br>
-        <br></br>
-        After several years of discernments and discussions the Jesuits
-        of Karnataka Jesuit Province finally decided to start a degree College
-        in the name of their Founder, St Ignatius Loyola. The Loyola Degree
-        College started functioning from the academic year 2017-18 with B. Com
-        and BA (Journalism,Communicative Englishand Psychology) courses. The
-        College is affiliated to Bangalore University. The College is a unit of
-        BANGLORE JESUIT EDUCATIONAL SOCIETY, Jesuit Nivas, Museum Road,
-        Bengaluru-560025. The Campus has a spacious building, a large playground
-        with facilities for cricket, basketball, volley ball and other sports
-        and games.
-      </div>
-    </div>
-  );
-};
-
-const WelcomeTitle = () => {
-  return (
-    <div className="">
-      <h1 className="  text-2xl font-bold pb-5 text-indigo-900">
-        <span className=" font-bold text-yellow-600">WELCOME TO</span> LOYOLA COLLEGE,
-        BENGALURU, INDIA
-      </h1>
+      </p>
+      <p className={`${inter.className} text-justify py-4 font-semibold`}>
+        After several years of discernments and discussions the Jesuits of
+        Karnataka Jesuit Province finally decided to start a degree College in
+        the name of their Founder, St Ignatius Loyola. The Loyola Degree College
+        started functioning from the academic year 2017-18 with B. Com and BA
+        (Journalism,Communicative Englishand Psychology) courses. The College is
+        affiliated to Bangalore University. The College is a unit of BANGLORE
+        JESUIT EDUCATIONAL SOCIETY, Jesuit Nivas, Museum Road, Bengaluru-560025.
+        The Campus has a spacious building, a large playground with facilities
+        for cricket, basketball, volley ball and other sports and games.
+      </p>
     </div>
   );
 };

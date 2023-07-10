@@ -10,10 +10,10 @@ import Link from "next/link";
 const SupportAssistance = () => {
   return (
     <div className=" bg-[url('http://loyolacollegeblr.com/images/bgg.png')] bg-cover py-4 text-white">
-      <h2 className="text-2xl font-bold mb-4 text-center">
+      <h2 className="text-2xl font-bold my-2 text-center">
         <span className="text-yellow-600">Support</span> and Assistance
       </h2>
-      <h3 className="text-m font-thin mb-4 px-40 text-center">
+      <h3 className="text-m font-thin mb-2 lg:px-40 px-8 text-center">
         Loyola degree college is sensitive to the changing needs of the student
         body and the teaching faculty. The encouragement of holistic development
         in students is echoed in the infrastructural facilities provided by the
