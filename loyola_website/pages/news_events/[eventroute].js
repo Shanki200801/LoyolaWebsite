@@ -29,13 +29,13 @@ const EventInfo = ({ eventDataExport }) => {
     <div
       className={`bg-cover bg-[url('~/public/backgrounds/bgTwo.webp')] bg-bottom bg-fixed w-full`}
     >
-      <div className={`bg-blue-100/90`}>
+      <div className={`bg-blue-100/90 px-4`}>
         <h1 className="text-navbar-theme text-2xl font-extrabold text-center pt-6 pb-12 font-serif">
           {eventtitle}
         </h1>
         {longdescription.map((paragraph) => {
           return (
-            <p className="text-gray-700 mx-24 text-justify pb-6 ">
+            <p className="text-gray-700 lg:mx-24 text-justify pb-6 ">
               {paragraph}
             </p>
           );
@@ -45,14 +45,14 @@ const EventInfo = ({ eventDataExport }) => {
             PHOTOS
           </h1>
         )}
-        <div className="grid grid-cols-3 place-content-around place-items-center py-6">
+        <div className="grid lg:grid-cols-3 grid-cols-2 gap-4 lg:place-content-around place-items-center py-2 lg:py-6">
           {photos.map((image) => {
             return (
               <Image
                 src={image}
                 width={400}
                 height={400}
-                className="my-4 mx-8"
+                className="lg:my-4 mx-8"
               />
             );
           })}

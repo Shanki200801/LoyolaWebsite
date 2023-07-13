@@ -19,7 +19,7 @@ const library = ({ libraryResources }) => {
     >
       <div className={`bg-blue-100/90`}>
         <h1
-          className={`text-black text-shadow-custom-blue text-6xl font-semibold font-serif text-center py-6 ${lobster.className}`}
+          className={`text-black text-shadow-custom-blue lg:text-6xl text-5xl font-semibold font-serif text-center py-6 ${lobster.className}`}
         >
           Library
         </h1>
@@ -29,7 +29,14 @@ const library = ({ libraryResources }) => {
           alt="library"
           width="100%"
           height="100%"
-          className="my-8 rounded-2xl mx-auto"
+          className="hidden lg:block my-8 rounded-2xl mx-auto"
+        />
+        <Image
+          src={LibImg}
+          alt="library"
+          width="300"
+          height="200"
+          className="block lg:hidden my-8 rounded-2xl mx-auto"
         />
 
         <LibraryStats libraryResources={libraryResources} />
@@ -50,7 +57,7 @@ export default library;
 
 const LibraryStats = ({ libraryResources }) => {
   return (
-    <div className="mx-32 bg-gradient-to-b from-gray-900 via-purple-900 to-violet-600 text-white rounded-xl w-3/4  p-8">
+    <div className="lg:mx-32 mx-8 bg-gradient-to-b from-gray-900 via-purple-900 to-violet-600 text-white rounded-xl   p-8">
       <p className={`${inter.className} pb-4 text-justify `}>
         Over the years the college library has a collection of large number of
         books and the statistics is tabulated below for reference
@@ -85,7 +92,7 @@ const LibraryStats = ({ libraryResources }) => {
 
 const LibraryDesc = () => {
   return (
-      <div className="bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-blue-700 via-blue-800 to-gray-900 text-white w-3/4 mx-32 my-6 p-8 rounded-xl">
+    <div className="bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-blue-700 via-blue-800 to-gray-900 text-white lg:w-3/4 lg:mx-32 my-6 mx-8 lg:p-8 p-3 rounded-xl">
       <p className={`${inter.className} pb-4 `}>
         Loyola Degree College has a well equipped The Department of Library
         Information and Centre established in the year 2017, that caters to 510
@@ -139,11 +146,11 @@ const LibraryDesc = () => {
 
 const RulesAndRegulations = () => {
   return (
-    <div className="bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-blue-700 via-blue-800 to-gray-900 text-white w-3/4 mx-32 my-6 p-8 rounded-xl">
+    <div className="bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-blue-700 via-blue-800 to-gray-900 text-white  lg:mx-32 mx-8 my-6 p-8 rounded-xl">
       <p className={`${inter.className} font-bold `}>
         General Rules and Regulations:
       </p>
-      <ul className={`${inter.className} pb-4 list-decimal mx-12 `}>
+      <ul className={`${inter.className} pb-4 list-decimal lg:mx-12 mx-2 `}>
         {[
           "Loyola Library is NO-MOBILE ZONE.",
           "Students must wear ID card at all times",
@@ -169,12 +176,19 @@ const RulesAndRegulations = () => {
 
 const LibraryTiming = () => {
   return (
-    <div className="flex flex-row py-4 items-center translate-x-1/2 rounded-2xl justify-center bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900 to-indigo-500 w-1/2">
+    <div className="flex flex-col lg:flex-row py-4 items-center rounded-2xl justify-around bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900 to-indigo-500 lg:mx-48 mx-16">
+      <Image
+        src={LibImg2}
+        width={300}
+        height={200}
+        className="hidden lg:block bg-transparent rounded-xl"
+        alt="Library"
+      />
       <Image
         src={LibImg2}
         width={200}
-        height={200}
-        className="bg-transparent rounded-xl"
+        height={1500}
+        className="lg:hidden bg-transparent rounded-xl"
         alt="Library"
       />
       <div className="mx-4 text-white">

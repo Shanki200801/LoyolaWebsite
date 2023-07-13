@@ -12,7 +12,7 @@ const infrastructure = () => {
       >
         <div className={`bg-sky-100/90 py-4`}>
           <div
-            className={`custom-letter-spacing-wider text-7xl py-6 text-center text-shadow-custom-blue text-black ${lobster.className}`}
+            className={`custom-letter-spacing-wider lg:text-7xl text-5xl py-6 text-center text-shadow-custom-blue text-black ${lobster.className}`}
           >
             Our Infrastructure
           </div>

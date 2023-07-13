@@ -13,7 +13,7 @@ const library_commitee = () => {
     >
       <div className={`bg-sky-100/90 pb-8`}>
         <h1
-          className={`py-4 font-extrabold text-2xl text-center ${oswald.className} text-black`}
+          className={`py-4 font-extrabold text-4xl  text-center ${oswald.className} text-black`}
         >
           Library Advisory Committee
         </h1>

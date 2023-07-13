@@ -41,6 +41,3 @@
     
 }
 
-.news-events-page_pagecontainer > :nth-child(2n) > .news-events-page_cardcontainer > .news-events-page_eventimage> .news-events-page_image{
-    float: right;
-}

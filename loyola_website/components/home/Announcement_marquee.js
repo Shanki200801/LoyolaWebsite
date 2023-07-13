@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
 import styles from "../../styles/announcement_style.module.css";
+import { Inter, Oswald } from "next/font/google";
 
+const oswald = Oswald({ subsets: ["latin"], weight: "400" });
+const inter = Inter({ subsets: ["latin"], weight: "400" });
 const Announcement_marquee = () => {
   const content = () => {
     return [
@@ -36,12 +39,17 @@ const Announcement_marquee = () => {
   });
 
   return (
-    <div className="flex flex-row items-center bg-slate-300 py-2">
-      <button className="btn btn-default w-1/8 mx-4 border-0 hover:bg-navbar-theme hover:text-white bg-yellow-600 text-indigo-900">
+    <div className="flex flex-row items-center bg-slate-300 lg:px-4 sm:px-3 py-2">
+      <button
+        className={` ${oswald.className} px-4 py-2 mx-1 rounded-xl text-lg lg:w-1/8 w-32 border-0 hover:bg-navbar-theme hover:text-white bg-yellow-600 text-indigo-900`}
+      >
         Announcements
       </button>
       <div className={styles.marqueecontainer}>
-        <ul id="marquee_list" className={`${styles.marquee} text-black`}>
+        <ul
+          id="marquee_list"
+          className={`${styles.marquee} ${inter.className} text-black`}
+        >
           {list_elements}
         </ul>
       </div>

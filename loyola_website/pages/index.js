@@ -11,9 +11,9 @@ export default function Home() {
       <WelcomeImage />
       <Announcement_marquee />
       <WelcomeText />
-      <Gallery />
       <Courses />
       <SupportAssistance />
+      <Gallery />
     </>
   );
 }

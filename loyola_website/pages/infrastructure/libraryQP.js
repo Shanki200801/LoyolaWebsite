@@ -49,7 +49,7 @@ const libraryQP = ({ qp_details }) => {
           {course === "BA" ? "Bachelors of Arts" : "Bachelors of Commerce"}
         </h2>
         {/* semester selector */}
-        <div className="flex flex-row justify-center py-4">
+        <div className="flex flex-row justify-center py-4 px-2">
           {["Semester 1", "Semester 2", "Semester 3", "Semester 4"].map(
             (item, i) => (
               <button
@@ -70,7 +70,7 @@ const libraryQP = ({ qp_details }) => {
         <div className={` text-blue-500 ${inter.className}  `}>
           <ul>
             {qp_details[course][semester].map((item, i) => (
-              <li key={i} className="py-2 px-32 ">
+              <li key={i} className="py-2 lg:px-32 px-8 ">
                 <a
                   href={item}
                   className="visited:text-blue-800 text-black hover:underline underline-offset-2 decoration-sky-800 hover:font-semibold hover:text-sky-900"
