@@ -10,10 +10,10 @@ const ValueBox = ({ valueName, valueHeading, valuePara, boxStyles }) => {
   return (
     <div>
       <li
-        className={`grid grid-cols-10 gap-0 items-center justify-center pl-5`}
+        className={`lg:grid lg:grid-cols-10 lg:gap-0 flex flex-col items-center justify-center pl-5`}
       >
         <h2
-          className={`text-shadow-black shadow-lg custom-letter-spacing text-3xl ${valueNames.className} col-span-2 text-center border p-7 rounded-tl-lg rounded-br-lg rounded-tr-sm rounded-bl-sm ${boxStyles}`}
+          className={`text-shadow-black shadow-lg custom-letter-spacing text-3xl ${valueNames.className} col-span-2 text-center border lg:p-7 px-5 py-3 rounded-tl-lg rounded-br-lg rounded-tr-sm rounded-bl-sm ${boxStyles}`}
         >
           {valueName}
         </h2>

@@ -38,7 +38,7 @@ const StaffCard = ({
             <p className="mt-2 px-4 text-gray-800 text-sm font-medium">
               {education}
             </p>
-            <p className="mt-2 text-gray-600 text-justify text-sm font-normal px-4">
+            <p className="mt-2 text-gray-600 lg:text-justify text-sm font-normal lg:px-4 px-2">
               {description}
             </p>
           </div>
