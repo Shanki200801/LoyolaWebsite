@@ -322,7 +322,7 @@ const PlacementDir = () => {
           />
         </div>
         <div
-          className={` ${generalText.className} text-center mt-5 lg:mt-0 text-sm lg:text-left lg:text-base lg:justify-self-start`}
+          className={` ${generalText.className} text-center mt-5 pb-4 lg:mt-0 text-sm lg:text-left lg:text-base lg:justify-self-start`}
         >
           <p className={`${generalHeadings.className} text-2xl lg:text-4xl`}>
             Placement Officer

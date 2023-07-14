@@ -12,7 +12,7 @@ const Exam = () => {
     >
       <div className={`bg-sky-100/90`}>
         <h1
-          className={`text-black text-6xl p-6 ${raleway.className} font-bold flex justify-center`}
+          className={`text-black lg:text-6xl text-5xl p-6 ${raleway.className} font-bold flex justify-center`}
         >
           Examination Results
         </h1>
@@ -27,7 +27,7 @@ const Exam = () => {
 const NoResAlrt = (props) => {
   return (
     <div
-      className={`flex p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400 w-3/5 h-1/3 items-center ${bodyText.className}`}
+      className={`flex p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400 lg:w-3/5 lg:h-1/3 w-4/5 items-center ${bodyText.className}`}
       role="alert"
     >
       <InfoIcon style={{ fontSize: "2.5rem" }} />
