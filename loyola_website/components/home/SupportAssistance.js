@@ -5,11 +5,15 @@ import Clubs_association from "../../Assets/clubs.png";
 import Scholarship from "../../Assets/scholarship.jpg";
 import Mdmeals from "../../Assets/middaymeals.jpg";
 import Student_council from "../../Assets/studentCouncil.jpg";
+
 import Image from "next/image";
 import Link from "next/link";
 const SupportAssistance = () => {
   return (
-    <div className=" bg-[url('http://loyolacollegeblr.com/images/bgg.png')] bg-cover py-4 text-white">
+    // <div className=" bg-[url('http://loyolacollegeblr.com/images/bgg.png')] bg-cover py-4 text-white">
+    <div className=" bg-[url('/public/backgrounds/bgg.png')] bg-cover py-4 text-white">
+      {" "}
+      */
       <h2 className="text-2xl font-bold my-2 text-center">
         <span className="text-yellow-600">Support</span> and Assistance
       </h2>
