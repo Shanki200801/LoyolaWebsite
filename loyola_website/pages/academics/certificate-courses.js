@@ -27,7 +27,10 @@ const Certificate = () => {
         >
           Certificate Courses
         </h2>
-        <div id="courses-group" className="grid grid-cols-3 mt-10">
+        <div
+          id="courses-group"
+          className="grid lg:grid-cols-3 grid-cols-2  mt-10"
+        >
           <CertCard
             courseName="Tally ERP 9"
             className="justify-self-end"
@@ -42,10 +45,15 @@ const Certificate = () => {
           />
           <CertCard
             courseName="Photography"
-            className="justify-self-start"
+            className="lg:justify-self-start justify-self-end overflow-auto lg:block hidden"
             src={photography}
             bgGrad="bg-gradient-to-tr from-fuchsia-800 to-fuchsia-700"
           />
+          <div className="lg:hidden flex content-center h-48 w-64 justify-self-start mx-20 justify-center rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] group-touch-manipulation:[transform:rotateY(180deg)] place-content-center bg-gradient-to-tr from-fuchsia-800 to-fuchsia-700">
+            <span className={`text-white text-4xl my-20 ${novaCut.className}`}>
+              Photography
+            </span>
+          </div>
         </div>
 
         <h2
@@ -54,7 +62,7 @@ const Certificate = () => {
           Study of Languages
         </h2>
         <div id="grid-container" className="mt-10">
-          <div className={`grid grid-cols-3`}>
+          <div className={`grid lg:grid-cols-3 grid-cols-2`}>
             <LangCard
               lang="English"
               className="justify-self-end"
@@ -69,12 +77,12 @@ const Certificate = () => {
             />
             <LangCard
               lang="Hindi"
-              className="justify-self-start"
+              className="justify-self-start mx-28 lg:mx-0"
               src={hindi}
               bgGrad="bg-gradient-to-tr from-blue-700 to-blue-500"
             />
           </div>
-          <div className={`grid grid-cols-2 gap-48 mt-10`}>
+          <div className={`grid grid-cols-2 lg:gap-48 gap-6 lg:mt-10 mt-1 `}>
             <LangCard
               lang="Tamil"
               className="justify-self-end"
@@ -99,8 +107,10 @@ const Certificate = () => {
 
 const CertCard = (props) => {
   return (
-    <div className={`group h-72 w-72 [perspective:1000px] ${props.className}`}>
-      <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div
+      className={`group lg:h-72 lg:w-72 w-48 h-44 my-2 [perspective:1000px] ${props.className}`}
+    >
+      <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] group-touch-manipulation:[transform:rotateY(180deg)]">
         <div
           className={`absolute inset-0 h-full w-full rounded-xl ${props.bgGrad} px-12 text-center text-slate-200`}
         >
@@ -124,7 +134,7 @@ const CertCard = (props) => {
 
 const LangCard = (props) => {
   return (
-    <div class={`h-72 w-72 relative mb-5 ${props.className}`}>
+    <div class={`lg:h-72 lg:w-72 w-44 h-44 relative mb-5 ${props.className}`}>
       <div class="absolute inset-0 bg-white opacity-25 rounded-lg shadow-2xl"></div>
       <div class="absolute inset-0 transform hover:skew-y-12 transition duration-300">
         <div class={`h-full w-full ${props.bgGrad} rounded-lg shadow-2xl`}>
