@@ -8,7 +8,7 @@ import Gallery from "../components/home/Gallery";
 export default function Home() {
   return (
     <>
-      <WelcomeImage />
+      {/* <WelcomeImage /> */}
       <Announcement_marquee />
       <WelcomeText />
       <Courses />
