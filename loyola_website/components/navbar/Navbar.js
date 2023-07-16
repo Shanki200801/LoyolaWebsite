@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import NavLogo from "./NavLogo";
-
+import MenuIcon from "@mui/icons-material/Menu";
+import MenuOpenIcon from "@mui/icons-material/MenuOpen";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import Link from "next/link";
 import styles from "../../styles/navbar.module.css";
 import "../../styles/navbar.module.css";
-import Link from "next/link";
 
 // Main Navbar Component
 
@@ -31,14 +34,31 @@ const Navbar = () => {
   });
 
   return (
-    <div
-      className={`navbar bg-navbar-theme text-white sticky z-20 p-4   ${
-        visible ? "top-0" : ""
-      }`}
-    >
-      <NavLogoLink />
-      <NavLinks />
-    </div>
+    <>
+      {/* // laptop navbar */}
+      <div
+        className={`navbar bg-navbar-theme text-white sticky z-20 p-4 hidden lg:flex  ${
+          visible ? "top-0" : ""
+        }`}
+      >
+        <NavLogoLink />
+        <NavLinks />
+      </div>
+
+      {/* Mobile nav bar  */}
+      <div
+        className={`flex items-center justify-center bg-navbar-theme text-white fixed w-full ${
+          visible ? "top-0" : ""
+        } z-20 p-4 lg:hidden  `}
+      >
+        <a href="/">
+          <NavLogo />
+        </a>
+        <div className="absolute left-2">
+          <SideBar />
+        </div>
+      </div>
+    </>
   );
 };
 
@@ -47,7 +67,7 @@ const Navbar = () => {
 //Navbar Logo Component
 const NavLogoLink = () => {
   return (
-    <div className="flex-1">
+    <div className="lg:flex-1">
       <Link href={"/"}>
         <NavLogo />
       </Link>
@@ -291,6 +311,171 @@ const NavAdmissions = () => {
         Admissions
       </Link>
     </li>
+  );
+};
+
+const SideBar = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [AboutSidebarOpen, setAboutSidebarOpen] = useState(false);
+  const [StudentSidebarOpen, setStudentSidebarOpen] = useState(false);
+  const [AcademicsSidebarOpen, setAcademicsSidebarOpen] = useState(false);
+  const [InfraSidebarOpen, setInfraSidebarOpen] = useState(false);
+  return (
+    <div>
+      {/* open sidebar button  */}
+      <button onClick={() => setSidebarOpen(!sidebarOpen)}>
+        <MenuIcon />
+      </button>
+
+      <div
+        className={`${
+          sidebarOpen ? "absolute" : "hidden"
+        } -left-2 -top-7  z-20 w-screen`}
+      >
+        <div className="flex flex-col w-1/2 h-screen fixed bg-navbar-theme">
+          {/* close menu button inside the sidebar  */}
+          <button onClick={() => setSidebarOpen(!sidebarOpen)} className="">
+            <MenuOpenIcon />
+          </button>
+          {/* About menu inside the sidebar */}
+          <div
+            className="flex justify-between px-5 py-2 border-b-1 border-blue-400 border-solid "
+            onClick={() => setAboutSidebarOpen(!AboutSidebarOpen)}
+          >
+            <span>About</span>
+            {AboutSidebarOpen ? (
+              <KeyboardArrowDownIcon />
+            ) : (
+              <KeyboardArrowRightIcon />
+            )}
+          </div>
+          {/* Submenu of about  */}
+          {AboutSidebarOpen && (
+            <div className="flex flex-col px-7">
+              <Link href="/about/about-college" className="py-1">
+                About College
+              </Link>
+              <Link href="/about/vision-mission" className="py-1">
+                Vision and Mission
+              </Link>
+              <Link href="/about/crest-anthem" className="py-1">
+                Crest and Anthem
+              </Link>
+              <Link href="/about/core-values" className="py-1">
+                Core Values
+              </Link>
+              <Link href="/about/management" className="py-1">
+                Management
+              </Link>
+            </div>
+          )}
+          {/* Student menu inside the sidebar */}
+          <div
+            className="flex justify-between px-5 py-2 "
+            onClick={() => setStudentSidebarOpen(!StudentSidebarOpen)}
+          >
+            <span>Student</span>
+            {StudentSidebarOpen ? (
+              <KeyboardArrowDownIcon />
+            ) : (
+              <KeyboardArrowRightIcon />
+            )}
+          </div>
+          {/* Submenu of Student  */}
+          {StudentSidebarOpen && (
+            <div className="flex flex-col px-7">
+              <Link href="/student/associations" className="py-1">
+                Associations
+              </Link>
+              <Link href="/student/placements" className="py-1">
+                Placements
+              </Link>
+              <Link href="/student/grievances" className="py-1">
+                Grievances
+              </Link>
+              <Link href="/student/student-council" className="py-1">
+                Student Council
+              </Link>
+              <Link href="/student/student-achievements" className="py-1">
+                Student Achievements
+              </Link>
+            </div>
+          )}{" "}
+          {/* Academics menu inside the sidebar */}
+          <div
+            className="flex justify-between px-5 py-2 "
+            onClick={() => setAcademicsSidebarOpen(!AcademicsSidebarOpen)}
+          >
+            <span>Academics</span>
+            {AcademicsSidebarOpen ? (
+              <KeyboardArrowDownIcon />
+            ) : (
+              <KeyboardArrowRightIcon />
+            )}
+          </div>
+          {/* Submenu of academics  */}
+          {AcademicsSidebarOpen && (
+            <div className="flex flex-col px-7">
+              <Link href="/academics/ba" className="py-1">
+                B.A.
+              </Link>
+              <Link href="/academics/bcom" className="py-1">
+                B. Com
+              </Link>
+              <Link href="/academics/certificate-courses" className="py-1">
+                Study of Languages
+              </Link>
+              <Link href="/academics/certificate-courses" className="py-1">
+                Certificate Courses
+              </Link>
+              <Link href="/academics/exam-results" className="py-1">
+                Examination results
+              </Link>
+            </div>
+          )}{" "}
+          {/* Infrastructure menu inside the sidebar */}
+          <div
+            className="flex justify-between px-5 py-2 "
+            onClick={() => setInfraSidebarOpen(!InfraSidebarOpen)}
+          >
+            <span>Infrastructure</span>
+            {InfraSidebarOpen ? (
+              <KeyboardArrowDownIcon />
+            ) : (
+              <KeyboardArrowRightIcon />
+            )}
+          </div>
+          {/* Submenu of Infrastructure  */}
+          {InfraSidebarOpen && (
+            <div className="flex flex-col px-7">
+              <Link href="/infrastructure/facilities" className="py-1">
+                Facilities
+              </Link>
+              <Link href="/infrastructure/library" className="py-1">
+                Library
+              </Link>
+              <Link href="/infrastructure/sports" className="py-1">
+                Sports
+              </Link>
+            </div>
+          )}
+          {/* Departments menu inside the sidebar */}
+          <div className="flex justify-between px-5 py-2 ">
+            <Link href="/departments">Departments</Link>
+          </div>
+          {/* News and events menu inside the sidebar */}
+          <div className="flex justify-between px-5 py-2 ">
+            <Link href="/news-events">News and events</Link>
+          </div>
+          {/* Admissions menu inside the sidebar */}
+          <div className="flex justify-between px-5 py-2 rounded bg-blue-300 mx-8 my-2 text-center text-navbar-theme ">
+            <Link href="/admissions" className="text-lg font-bold">
+              Admissions
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
