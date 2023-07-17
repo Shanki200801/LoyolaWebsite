@@ -23,9 +23,10 @@ const departments = ({ staff_details }) => {
           >
             Facilitators
           </h1>
-          <div className="flex flex-row mx-6">
-            <section className="w-1/5">
-              <div className="w-full text-base font-bold text mt-20  text-right text-navbar-theme ">
+          <div className="flex lg:flex-row flex-col lg:mx-6 mx-2">
+            {/* ---------------------desktop selector-------------------- */}
+            <section className="hidden lg:block lg:w-1/5">
+              <div className="w-full text-base font-bold text mt-20 text-right text-navbar-theme ">
                 {/* <button
                   onClick={() => setDepartments("management")}
                   className={` py-1 hover:underline rounded-l-lg  px-4  my-2 ${
@@ -47,7 +48,7 @@ const departments = ({ staff_details }) => {
                 >
                   Department of Commerce
                 </button>
-                <br />
+
                 <button
                   onClick={() => setDepartments("arts")}
                   className={` py-1 hover:underline rounded-l-lg px-4 my-2 ${
@@ -58,7 +59,7 @@ const departments = ({ staff_details }) => {
                 >
                   Department of Arts
                 </button>
-                <br />
+
                 <button
                   onClick={() => setDepartments("languages")}
                   className={` py-1 hover:underline rounded-l-lg px-4 my-2 ${
@@ -69,7 +70,7 @@ const departments = ({ staff_details }) => {
                 >
                   Department of Languages
                 </button>
-                <br />
+
                 <button
                   onClick={() => setDepartments("nonteaching")}
                   className={` py-1 hover:underline rounded-l-lg px-4 my-2 ${
@@ -80,7 +81,65 @@ const departments = ({ staff_details }) => {
                 >
                   Non-Teaching Staff
                 </button>
-                <br />
+              </div>
+            </section>
+            {/* ---------------------mobile selector-------------------- */}
+            <section className="lg:hidden lg:w-1/5">
+              <div className="text-base flex font-semibold my-2 text-left text-navbar-theme ">
+                {/* <button
+                  onClick={() => setDepartments("management")}
+                  className={` py-1 hover:underline rounded-l-lg  px-4  my-2 ${
+                    departments == "management"
+                      ? "bg-gradient-to-r from-blue-600 via-blue-500 to-blue-300 text-white bg-"
+                      : "text-navbar-theme"
+                  }`}
+                >
+                  Management
+                </button> */}
+                {/* <br /> */}
+                <button
+                  onClick={() => setDepartments("commerce")}
+                  className={`py-1 hover:underline rounded-lg px-2 my-2 ${
+                    departments == "commerce"
+                      ? "bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 text-white"
+                      : "text-navbar-theme"
+                  }`}
+                >
+                  Department of Commerce
+                </button>
+
+                <button
+                  onClick={() => setDepartments("arts")}
+                  className={` py-1 hover:underline rounded-lg px-2 my-2 ${
+                    departments == "arts"
+                      ? "bg-gradient-to-r from-blue-600 via-blue-500 to-blue-300 text-white"
+                      : "text-navbar-theme"
+                  }`}
+                >
+                  Department of Arts
+                </button>
+
+                <button
+                  onClick={() => setDepartments("languages")}
+                  className={` py-1 hover:underline rounded-lg px-2 my-2 ${
+                    departments == "languages"
+                      ? "bg-gradient-to-r from-blue-600 via-blue-500 to-blue-300 text-white"
+                      : "text-navbar-theme"
+                  }`}
+                >
+                  Department of Languages
+                </button>
+
+                <button
+                  onClick={() => setDepartments("nonteaching")}
+                  className={` py-1 hover:underline rounded-lg px-2 my-2 ${
+                    departments == "nonteaching"
+                      ? "bg-gradient-to-r from-blue-600 via-blue-500 to-blue-300 text-white"
+                      : "text-navbar-theme"
+                  }`}
+                >
+                  Non-Teaching Staff
+                </button>
               </div>
             </section>
 
@@ -102,6 +161,7 @@ const departments = ({ staff_details }) => {
               )}
             </section>
           </div>
+          <div></div>
         </div>
       </div>
     </>

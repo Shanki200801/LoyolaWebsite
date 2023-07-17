@@ -16,7 +16,7 @@ const studentAchievements = ({ achievements }) => {
         >
           Student Achievements
         </h1>
-        <div>
+        <div className="mx-4">
           {achievements.map((achievement) => (
             <div key={achievement.id} className="max-w-xl text-black mx-auto ">
               <div className="flex flex-col gap-2 px-3 py-2">

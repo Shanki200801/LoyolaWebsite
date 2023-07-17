@@ -9,12 +9,12 @@ const Counsilors = () => {
   return (
     <div className="pb-8">
       <h1
-        className={`${lobster.className} custom-letter-spacing-wider text-5xl py-6 text-center text-shadow-custom-blue text-black`}
+        className={`${lobster.className} custom-letter-spacing-wider lg:text-5xl text-4xl py-6 text-center text-shadow-custom-blue text-black`}
       >
         Counsellor
       </h1>
       <div
-        className={`${inter.className} max-w-xl text-black mx-auto bg-gradient-to-t from-sky-500 to-sky-300 p-6 text-justify rounded-lg`}
+        className={`${inter.className}  text-black lg:mx-80 mx-8 bg-gradient-to-t from-sky-500 to-sky-300 p-6 text-justify rounded-lg`}
       >
         The College provides the students with the services of professional
         counsellors to tackle emotional and academic problems. While the

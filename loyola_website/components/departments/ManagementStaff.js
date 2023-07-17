@@ -6,7 +6,7 @@ const ManagementStaff = ({ data }) => {
     <>
       {/* <div className='text-2xl text-center text-navbar-theme my-2'>MANAGEMENT STAFF</div> */}
 
-      <div className="grid grid-cols-2 gap-x-16 gap-y-6 place-content-center justify-evenly mt-8 mx-8">
+      <div className="grid lg:grid-cols-2 grid-cols-1 gap-x-16 gap-y-6 place-content-center justify-evenly mt-8 lg:mx-8 mx-4">
         {data.map((staff) => {
           return (
             <StaffCard

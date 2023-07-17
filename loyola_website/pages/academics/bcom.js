@@ -16,15 +16,15 @@ const BCom = () => {
     >
       <div className={`bg-emerald-100/90`}>
         <h1
-          className={`flex justify-center pt-10 text-black text-6xl ${specialElite.className}`}
+          className={`flex justify-center text-center pt-10 text-black text-6xl ${specialElite.className}`}
         >
           Bachelor of Commerce {"("}BCom{")"}
         </h1>
-        <div className={`grid grid-cols-2 grid-rows-2 gap-12`}>
+        <div className={`grid lg:grid-cols-2 grid-cols-1 mx-4  gap-12`}>
           <Overview />
           <Image
             src={finGrowth}
-            className="h-60 w-4/5 object-cover mt-14 rounded-2xl"
+            className="h-60 w-4/5 object-cover lg:mt-14 mt-8 rounded-2xl"
           />
           <Image
             src={excel}
@@ -45,7 +45,7 @@ const Overview = () => {
   return (
     <div
       id="overview"
-      className={`bg-gradient-to-br from-green-600 to-green-700 text-white text-lg ml-16 mt-14 w-4/5 row-span-1 text-center rounded-2xl h-60 py-5 px-14 justify-self-end`}
+      className={`bg-gradient-to-br from-green-600 to-green-700 text-white text-lg ml-16 mt-14 w-4/5 row-span-1 text-center rounded-2xl lg:h-60 py-5 lg:px-14 px-8 justify-self-end`}
     >
       <h2
         className={`text-3xl underline underline-offset-8 ${subheading.className}`}
@@ -65,7 +65,7 @@ const Eligibility = () => {
   return (
     <div
       id="eligibility"
-      className=" bg-gradient-to-tl from-green-600 to-green-700 text-white text-lg mr-16 mt-5 w-4/7 row-span-1 flex items-center flex-col rounded-2xl h-60 py-5 px-14 justify-self-start"
+      className=" bg-gradient-to-tl from-green-600 to-green-700 text-white text-lg mr-16 mt-5 w-4/7 row-span-1 flex items-center flex-col rounded-2xl lg:h-60 py-5 lg:px-14 px-8 justify-self-start"
     >
       <h2
         className={`text-3xl underline underline-offset-8 ${subheading.className}`}

@@ -22,7 +22,7 @@ const Placements = () => {
         <PlacementHeader />
         <TrainingProg />
 
-        <div className={`grid grid-cols-3 mt-10`}>
+        <div className={`grid lg:grid-cols-3 grid-cols-1 mx-4 mt-10`}>
           <TrainingCards
             body="In association with TNS India foundation - Future skills program LMS - Ms. Mary"
             className={`justify-self-end`}
@@ -49,16 +49,19 @@ const Placements = () => {
 const PlacementHeader = () => {
   return (
     <div
-      className={`h-screen grid grid-cols-2 bg-gradient-to-tr from-red-700 to-black p-10`}
+      className={` grid lg:grid-cols-2 grid-cols-1 bg-gradient-to-tr from-red-700 to-black p-10`}
     >
       <h1
-        className={`text-8xl justify-self-center self-center pb-20 text-white ${placementHead.className} tracking-tight text-shadow-white`}
+        className={`lg:text-8xl text-5xl justify-self-center self-center lg:pb-20 pb-10 text-white ${placementHead.className} tracking-tight text-shadow-white`}
       >
         PLACEMENTS
       </h1>
-      <div id="header-box" className={`w-5/6 justify-self-center self-center`}>
+      <div
+        id="header-box"
+        className={`lg:w-5/6 justify-self-center self-center`}
+      >
         <div
-          className={`text-3xl text-amber-100 bg-gradient-to-tr from-orange-400 via-orange-600 to-orange-700 shadow-2xl rounded-custom box-shadow-custom-orange p-10 ${overviewBody.className} `}
+          className={`text-3xl text-amber-100 bg-gradient-to-tr from-orange-400 via-orange-600 to-orange-700 shadow-2xl rounded-custom box-shadow-custom-orange lg:p-10 p-3 ${overviewBody.className} `}
         >
           <p className={`tracking-tight`}>
             Placement cell of Loyola Degree College aims in equipping every
@@ -88,7 +91,7 @@ const TrainingProg = () => {
         <span className={`text-red-800 whitespace-pre`}> Programs</span>
       </h2>
       <p
-        className={`px-32 text-justify mt-10 ${generalText.className} tracking-tight`}
+        className={`lg:px-32 px-8 text-justify mt-10 ${generalText.className} tracking-tight`}
       >
         Along with academics the Placement cells aims in promoting employability
         integrated training programs for students of LDC. The Placement cell in
@@ -104,7 +107,7 @@ const TrainingProg = () => {
         examinations such as UPSC, SSC and Bank PO.
       </p>
       <h3
-        className={`text-2xl px-32 mt-5 ${generalHeadings.className} underline underline-offset-2 decoration-orange-400 `}
+        className={`text-2xl lg:px-32 text-center mt-5 ${generalHeadings.className} underline underline-offset-2 decoration-orange-400 `}
       >
         Recent training programs conducted
       </h3>
@@ -117,7 +120,7 @@ const TrainingCards = (props) => {
     <a
       href="#"
       //   class={`w-64 h-52 relative block overflow-hidden rounded-lg border bg-green-200 border-gray-100 p-4 sm:p-6 lg:p-8 ${props.className}`}
-      className={`w-64 h-52 relative block overflow-hidden rounded-lg border bg-red-200 border-gray-100 shadow-md box-shadow-custom-red p-4 sm:p-6 lg:p-8 ${props.className} hover:bg-rose-700 hover:text-white`}
+      className={`w-64 lg:h-52 relative block overflow-hidden rounded-lg border bg-red-200 border-gray-100 shadow-md box-shadow-custom-red p-4 mb-2 sm:p-6 lg:p-8 ${props.className} hover:bg-rose-700 hover:text-white`}
     >
       {/* <span class="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span> */}
       <span className="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-yellow-200 via-rose-500 to-blue-400"></span>
@@ -132,13 +135,13 @@ const Talks = () => {
   return (
     <div>
       <h2
-        className={`text-5xl mt-10 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-400 tracking-tight`}
+        className={`lg:text-5xl text-4xl mt-10 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-400 tracking-tight`}
       >
         Talks &{" "}
         <span className={`text-red-800 whitespace-pre`}> Guest Lectures </span>
       </h2>
       <p
-        className={`px-32 text-justify mt-10 ${generalText.className} tracking-tight`}
+        className={`lg:px-32 px-8 text-justify mt-10 ${generalText.className} tracking-tight`}
       >
         Cognitive interactions are the best way to mould student's understanding
         on different topics and recent socio-economic trends, so to increase the
@@ -157,16 +160,16 @@ const RecentActivities = () => {
   return (
     <div>
       <h2
-        className={`text-5xl mt-10 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-400 tracking-tight`}
+        className={`lg:text-5xl text-4xl mt-10 text-center justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-400 tracking-tight`}
       >
         <span className={`text-red-800 whitespace-pre`}>
           Recent activities{" "}
-        </span>{" "}
-        conducted by the{" "}
+        </span>
+        <span>conducted by the </span>
         <span className={`text-red-800 whitespace-pre`}> Placement Cell </span>
       </h2>
       <ul
-        className={`flex flex-col items-center justify-center gap-4 px-32 text-justify mt-10 ${generalText.className} tracking-tight`}
+        className={`flex flex-col items-center justify-center gap-4 lg:px-32 px-8 text-justify mt-10 ${generalText.className} tracking-tight`}
       >
         <li>
           <span className={`text-orange-600 font-semibold whitespace-pre`}>
@@ -202,21 +205,21 @@ const Process = () => {
   return (
     <div>
       <h2
-        className={`text-5xl mt-5 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-400 tracking-tight`}
+        className={`lg:text-5xl text-4xl mt-5 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-400 tracking-tight`}
       >
         Placement{" "}
         <span className={`text-red-800 whitespace-pre`}> Process </span>
       </h2>
 
       <p
-        className={`font-medium text-red-600 text-lg px-32 text-center mt-7 ${generalText.className} tracking-tight`}
+        className={`font-medium text-red-600 text-lg lg:px-32 px-16 text-center mt-7 ${generalText.className} tracking-tight`}
       >
         All the students of the final year batch are eligible to apply for
         campus placements.
       </p>
 
       <ul
-        className={`flex flex-col gap-3 px-32 justify-center mt-3 text-md ${generalText.className} tracking-tight`}
+        className={`flex flex-col gap-3 lg:px-32 px-16 justify-center mt-3 text-md ${generalText.className} tracking-tight`}
       >
         <span
           className={`border-2 border-amber-600 rounded-lg p-3 bg-amber-300`}
@@ -269,13 +272,13 @@ const Stats = () => {
   return (
     <div>
       <h2
-        className={`text-5xl mt-5 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-400 tracking-tight`}
+        className={`lg:text-5xl text-4xl mt-5 flex justify-center ${generalHeadings.className} underline underline-offset-4 decoration-orange-400 tracking-tight`}
       >
         Placement{" "}
         <span className={`text-red-800 whitespace-pre`}> Statistics </span>
       </h2>
       <ul
-        className={`flex flex-col items-center justify-center gap-4 px-32 pb-5 text-center mt-7 ${generalText.className} tracking-tight`}
+        className={`flex flex-col items-center justify-center gap-4 lg:px-32 px-8 pb-5 text-center mt-7 ${generalText.className} tracking-tight`}
       >
         <li className={`text-left`}>
           The academic year 2020 - 2021 was momentous for the placement cell of
@@ -319,7 +322,7 @@ const PlacementDir = () => {
           />
         </div>
         <div
-          className={` ${generalText.className} text-center mt-5 lg:mt-0 text-sm lg:text-left lg:text-base lg:justify-self-start`}
+          className={` ${generalText.className} text-center mt-5 pb-4 lg:mt-0 text-sm lg:text-left lg:text-base lg:justify-self-start`}
         >
           <p className={`${generalHeadings.className} text-2xl lg:text-4xl`}>
             Placement Officer
