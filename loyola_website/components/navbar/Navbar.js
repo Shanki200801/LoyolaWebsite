@@ -47,9 +47,7 @@ const Navbar = () => {
 
       {/* Mobile nav bar  */}
       <div
-        className={`flex items-center justify-center bg-navbar-theme text-white fixed w-full ${
-          visible ? "top-0" : ""
-        } z-20 p-4 lg:hidden  `}
+        className={`flex items-center justify-center bg-navbar-theme text-white w-full z-20 p-4 lg:hidden  `}
       >
         <a href="/">
           <NavLogo />
@@ -465,7 +463,7 @@ const SideBar = () => {
           </div>
           {/* News and events menu inside the sidebar */}
           <div className="flex justify-between px-5 py-2 ">
-            <Link href="/news-events">News and events</Link>
+            <Link href="/news_events">News and events</Link>
           </div>
           {/* Admissions menu inside the sidebar */}
           <div className="flex justify-between px-5 py-2 rounded bg-blue-300 mx-8 my-2 text-center text-navbar-theme ">
