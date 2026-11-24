@@ -8,7 +8,7 @@ const infrastructure = () => {
   return (
     <>
       <div
-        className={`bg-slate-300 bg-cover bg-[url('~/public/backgrounds/bgTwo.webp')] bg-center bg-fixed`}
+        className={`bg-slate-300 bg-cover bg-[url('../public/backgrounds/bgTwo.webp')] bg-center bg-fixed`}
       >
         <div className={`bg-sky-100/90 py-4`}>
           <div

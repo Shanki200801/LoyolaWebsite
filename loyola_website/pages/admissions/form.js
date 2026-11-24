@@ -9,10 +9,16 @@ const subheading = Oswald({subsets: ['latin']});
 
 const Form = () => {
   const [religion, setReligion] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+
+  // Static demo site: never transmit applicant data anywhere.
+  function handleSubmit(e) {
+    e.preventDefault();
+    setSubmitted(true);
+  }
 
   function handleReligionTypeChange(e) {
     setReligion(e.target.value);
-    console.log(religion);
   }
   // const testJSX = () => {<label className={styles.label} htmlFor="full-name"> <input className={styles.input} id="first-name" name="first-name" type="text" required /></label><br/>};
 
@@ -20,7 +26,7 @@ const Form = () => {
         <div className={styles.body}>
             <h1 className={`${styles.h1} ${headingText.className}`}><br/>Admission Form 2023-24</h1><br/><br/>
     <p className={`${styles.p} ${subheading.className}`}>Please fill out this form with the required information</p><br/>
-    <form className={`${styles.form} ${bodyText.className}`} method="post" action=''>
+    <form className={`${styles.form} ${bodyText.className}`} onSubmit={handleSubmit} autoComplete="off">
         <label className={styles.label} htmlFor="course">Course
 
           <select className={styles.select} id="course" name="course" required>
@@ -764,6 +770,11 @@ const Form = () => {
         </fieldset>
 
         <input className={styles.inputsubmit} type="submit" value="Submit" />
+        {submitted && (
+          <p role="status" className={styles.p}>
+            Online submission is not available on this demo site. Please contact the college office to apply.
+          </p>
+        )}
       </form>
     </div>
   );

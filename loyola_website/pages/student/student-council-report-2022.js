@@ -8,7 +8,7 @@ const subheading = Oswald({ subsets: ["latin"] });
 const SCReport2022 = () => {
   return (
     <div
-      className={`bg-[url('~/public/backgrounds/bgTwo.webp')] bg-cover bg-center bg-fixed text-black`}
+      className={`bg-[url('../public/backgrounds/bgTwo.webp')] bg-cover bg-center bg-fixed text-black`}
     >
       <div className={`bg-sky-100/80 pb-10`}>
         <h1

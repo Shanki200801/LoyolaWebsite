@@ -1,3 +1,8 @@
+import managementStaff from "@/data/management-staff.json";
+import languageStaff from "@/data/language-staff.json";
+import commerceStaff from "@/data/commerce-staff.json";
+import artsStaff from "@/data/arts-staff.json";
+import nonteachingStaff from "@/data/nonteaching-staff.json";
 import React from "react";
 import { useState, useEffect } from "react";
 import ArtsStaff from "@/components/departments/ArtsStaff";
@@ -15,7 +20,7 @@ const departments = ({ staff_details }) => {
   return (
     <>
       <div
-        className={`flex flex-col justify-center bg-[url('~/public/backgrounds/bgTwo.webp')] bg-cover bg-center bg-fixed`}
+        className={`flex flex-col justify-center bg-[url('../public/backgrounds/bgTwo.webp')] bg-cover bg-center bg-fixed`}
       >
         <div className={`bg-blue-100/90 pb-8`}>
           <h1
@@ -85,7 +90,7 @@ const departments = ({ staff_details }) => {
             </section>
             {/* ---------------------mobile selector-------------------- */}
             <section className="lg:hidden lg:w-1/5">
-              <div className="text-base flex font-semibold my-2 text-left text-navbar-theme ">
+              <div className="text-base flex flex-wrap justify-center font-semibold my-2 text-left text-navbar-theme ">
                 {/* <button
                   onClick={() => setDepartments("management")}
                   className={` py-1 hover:underline rounded-l-lg  px-4  my-2 ${
@@ -170,21 +175,14 @@ const departments = ({ staff_details }) => {
 
 export default departments;
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const staff_details = {
-    "management-staff": "",
-    "language-staff": "",
-    "commerce-staff": "",
-    "arts-staff": "",
-    "nonteaching-staff": "",
+    "management-staff": managementStaff,
+    "language-staff": languageStaff,
+    "commerce-staff": commerceStaff,
+    "arts-staff": artsStaff,
+    "nonteaching-staff": nonteachingStaff,
   };
-  for (let key in staff_details) {
-    staff_details[key] = await fetch(
-      `https://loyola-website.vercel.app/api/${key}`
-    );
-    staff_details[key] = await staff_details[key].json();
-  }
-
   return {
     props: { staff_details },
   };

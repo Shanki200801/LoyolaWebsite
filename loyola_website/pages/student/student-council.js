@@ -43,7 +43,7 @@ const StuCouncil = () => {
 
   return (
     <div
-      className={`bg-[url('~/public/backgrounds/bgTwo.webp')] bg-cover bg-center bg-fixed text-black`}
+      className={`bg-[url('../public/backgrounds/bgTwo.webp')] bg-cover bg-center bg-fixed text-black`}
     >
       <div className={`bg-emerald-100/80 px-6`}>
         <h1

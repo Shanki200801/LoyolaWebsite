@@ -24,7 +24,6 @@ const Navbar = () => {
     }
 
     setPrevScrollPos(currentScrollPos);
-    console.log(visible);
   };
 
   useEffect(() => {
@@ -49,9 +48,9 @@ const Navbar = () => {
       <div
         className={`flex items-center justify-center bg-navbar-theme text-white w-full z-20 p-4 lg:hidden  `}
       >
-        <a href="/">
+        <Link href="/">
           <NavLogo />
-        </a>
+        </Link>
         <div className="absolute left-2">
           <SideBar />
         </div>

@@ -1,3 +1,4 @@
+import eventDataData from "@/data/event-data.json";
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
@@ -27,7 +28,7 @@ const EventInfo = ({ eventDataExport }) => {
 
   return (
     <div
-      className={`bg-cover bg-[url('~/public/backgrounds/bgTwo.webp')] bg-bottom bg-fixed w-full`}
+      className={`bg-cover bg-[url('../public/backgrounds/bgTwo.webp')] bg-bottom bg-fixed w-full`}
     >
       <div className={`bg-blue-100/90 px-4`}>
         <h1 className="text-navbar-theme text-2xl font-extrabold text-center pt-6 pb-12 font-serif">
@@ -65,10 +66,15 @@ const EventInfo = ({ eventDataExport }) => {
 export default EventInfo;
 
 //SSP
-export async function getServerSideProps() {
-  const url = "https://loyola-website.vercel.app/api/event-data";
-  const res = await fetch(url);
-  const eventDataExport = await res.json();
+export async function getStaticPaths() {
+  return {
+    paths: eventDataData.map((e) => ({ params: { eventroute: e.eventroute } })),
+    fallback: false,
+  };
+}
+
+export async function getStaticProps() {
+  const eventDataExport = eventDataData;
   return {
     props: { eventDataExport },
   };

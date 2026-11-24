@@ -36,6 +36,7 @@ const Admissions = () => {
       <div className={`flex justify-center p-10`}>
         <Button
           variant="contained"
+          component={Link}
           href="/admissions/form2"
           size="large"
           className={`text-xl lg:text-3xl lg:p-5 ${subheading.className}`}

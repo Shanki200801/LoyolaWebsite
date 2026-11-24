@@ -12,7 +12,7 @@ const subheading = Oswald({ subsets: ["latin"] });
 const BA = () => {
   return (
     <div
-      className={`bg-cover bg-[url('~/public/backgrounds/bgFour.webp')] bg-bottom bg-fixed`}
+      className={`bg-cover bg-[url('../public/backgrounds/bgFour.webp')] bg-bottom bg-fixed`}
     >
       <div className={`bg-yellow-100/90`}>
         <h1
@@ -102,7 +102,7 @@ const ApplyBtn = () => {
   return (
     <div id="apply-btn">
       <Link
-        href="/admissions/index"
+        href="/admissions"
         className="relative inline-flex items-center justify-start py-3.5 pl-4 pr-12 overflow-hidden font-semibold text-purple-900 transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-gray-50 group"
       >
         <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-purple-900 group-hover:h-full"></span>

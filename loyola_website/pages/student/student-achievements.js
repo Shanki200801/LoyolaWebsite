@@ -1,3 +1,4 @@
+import studentAchievementData from "@/data/student-achievement.json";
 import React from "react";
 import { Lobster_Two, Oswald, Inter } from "next/font/google";
 import { useState, useEffect } from "react";
@@ -8,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 const studentAchievements = ({ achievements }) => {
   return (
     <div
-      className={`bg-[url('~/public/backgrounds/bgTwo.webp')] bg-cover bg-center bg-fixed`}
+      className={`bg-[url('../public/backgrounds/bgTwo.webp')] bg-cover bg-center bg-fixed`}
     >
       <div className={`bg-sky-100/90 pb-6`}>
         <h1
@@ -65,9 +66,7 @@ const studentAchievements = ({ achievements }) => {
 
 export default studentAchievements;
 
-export async function getServerSideProps() {
-  const url = "https://loyola-website.vercel.app/api/student-achievement";
-  const res = await fetch(url);
-  const achievements = await res.json();
+export async function getStaticProps() {
+  const achievements = studentAchievementData;
   return { props: { achievements } };
 }

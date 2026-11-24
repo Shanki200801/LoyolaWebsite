@@ -16,7 +16,7 @@ const generalHeadings = Oswald({ subsets: ["latin"] });
 const Placements = () => {
   return (
     <div
-      className={`text-black bg-cover bg-[url('~/public/backgrounds/bgFour.webp')] bg-bottom bg-fixed`}
+      className={`text-black bg-cover bg-[url('../public/backgrounds/bgFour.webp')] bg-bottom bg-fixed`}
     >
       <div className={`bg-yellow-100/90`}>
         <PlacementHeader />

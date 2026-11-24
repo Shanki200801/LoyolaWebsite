@@ -1,3 +1,4 @@
+import libraryResourcesData from "@/data/library-resources.json";
 import React from "react";
 import { Lobster_Two, Inter, Oswald } from "next/font/google";
 import LibImg from "@/Assets/libraryImg.webp";
@@ -15,7 +16,7 @@ const oswald = Oswald({ subsets: ["latin"], weight: "400" });
 const library = ({ libraryResources }) => {
   return (
     <div
-      className={`bg-cover bg-[url('~/public/backgrounds/bgFour.webp')] bg-center bg-fixed`}
+      className={`bg-cover bg-[url('../public/backgrounds/bgFour.webp')] bg-center bg-fixed`}
     >
       <div className={`bg-blue-100/90`}>
         <h1
@@ -253,9 +254,7 @@ const LibNavigator = () => {
     </div>
   );
 };
-export async function getServerSideProps() {
-  const url = "https://loyola-website.vercel.app/api/library-resources";
-  const res = await fetch(url);
-  const libraryResources = await res.json();
+export async function getStaticProps() {
+  const libraryResources = libraryResourcesData;
   return { props: { libraryResources } };
 }

@@ -32,7 +32,7 @@ const Block = ({ imageSrc, altText, header, para }) => {
 export default function Associations() {
   return (
     <div
-      className={`grid grid-rows-15 items-center bg-blue-100 text-black bg-cover bg-[url('~/public/backgrounds/bgFour.webp')] bg-center bg-fixed`}
+      className={`grid grid-rows-15 items-center bg-blue-100 text-black bg-cover bg-[url('../public/backgrounds/bgFour.webp')] bg-center bg-fixed`}
     >
       <div className={`bg-blue-200/90`}>
         <section id="header">

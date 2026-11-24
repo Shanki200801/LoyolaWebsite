@@ -19,7 +19,7 @@ const novaCut = Space_Mono({ subsets: ["latin"], weight: "400" });
 const Certificate = () => {
   return (
     <div
-      className={`bg-cover bg-[url('~/public/backgrounds/bgFour.webp')] bg-center bg-fixed`}
+      className={`bg-cover bg-[url('../public/backgrounds/bgFour.webp')] bg-center bg-fixed`}
     >
       <div className={`bg-fuchsia-100/90`}>
         <h2

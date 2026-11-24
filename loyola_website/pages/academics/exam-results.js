@@ -8,7 +8,7 @@ const bodyText = Inter({ subsets: ["latin"] });
 const Exam = () => {
   return (
     <div
-      className={`bg-cover bg-[url('~/public/backgrounds/bgTwo.webp')] bg-center bg-fixed`}
+      className={`bg-cover bg-[url('../public/backgrounds/bgTwo.webp')] bg-center bg-fixed`}
     >
       <div className={`bg-sky-100/90`}>
         <h1

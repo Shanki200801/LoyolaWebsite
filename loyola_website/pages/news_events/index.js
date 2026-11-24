@@ -1,3 +1,4 @@
+import eventDataData from "@/data/event-data.json";
 import React from "react";
 import NewsList from "@/components/news-events-page/NewsList";
 import { Lobster_Two } from "next/font/google";
@@ -7,7 +8,7 @@ const lobster = Lobster_Two({ subsets: ["latin"], weight: "400" });
 const news_events = ({ eventDataExport }) => {
   return (
     <div
-      className={`bg-cover bg-[url('~/public/backgrounds/bgFour.webp')] bg-bottom bg-fixed`}
+      className={`bg-cover bg-[url('../public/backgrounds/bgFour.webp')] bg-bottom bg-fixed`}
     >
       <div className={`bg-blue-100/90`}>
         <h1
@@ -25,10 +26,8 @@ const news_events = ({ eventDataExport }) => {
     </div>
   );
 };
-export async function getServerSideProps() {
-  const url = "https://loyola-website.vercel.app/api/event-data";
-  const res = await fetch(url);
-  const eventDataExport = await res.json();
+export async function getStaticProps() {
+  const eventDataExport = eventDataData;
   return { props: { eventDataExport } };
 }
 export default news_events;

@@ -1,3 +1,5 @@
+import asset from "@/lib/asset";
+import qpDetailsData from "@/data/qp-details.json";
 import { Button } from "@mui/material";
 import Link from "next/link";
 import React from "react";
@@ -13,7 +15,7 @@ const libraryQP = ({ qp_details }) => {
   const [semester, setSemester] = useState("Semester 1");
   return (
     <div
-      className={`bg-cover bg-[url('~/public/backgrounds/bgTwo.webp')] bg-center bg-fixed`}
+      className={`bg-cover bg-[url('../public/backgrounds/bgTwo.webp')] bg-center bg-fixed`}
     >
       <div className={`bg-blue-100/90 py-8`}>
         <h1
@@ -49,12 +51,12 @@ const libraryQP = ({ qp_details }) => {
           {course === "BA" ? "Bachelors of Arts" : "Bachelors of Commerce"}
         </h2>
         {/* semester selector */}
-        <div className="flex flex-row justify-center py-4 px-2">
+        <div className="flex flex-row flex-wrap justify-center py-4 px-2">
           {["Semester 1", "Semester 2", "Semester 3", "Semester 4"].map(
             (item, i) => (
               <button
                 key={i}
-                className={`p-2 rounded-2xl mx-4   ${
+                className={`p-2 rounded-2xl mx-2 lg:mx-4 ${
                   semester === item
                     ? "bg-sky-600 text-white"
                     : "text-sky-800 bg-inherit"
@@ -72,11 +74,12 @@ const libraryQP = ({ qp_details }) => {
             {qp_details[course][semester].map((item, i) => (
               <li key={i} className="py-2 lg:px-32 px-8 ">
                 <a
-                  href={item}
+                  href={encodeURI(asset(item.trim()))}
                   className="visited:text-blue-800 text-black hover:underline underline-offset-2 decoration-sky-800 hover:font-semibold hover:text-sky-900"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  {item.split("/")[3]}
+                  {item.trim().split("/")[3]}
                 </a>
               </li>
             ))}
@@ -88,11 +91,7 @@ const libraryQP = ({ qp_details }) => {
 };
 
 export default libraryQP;
-export async function getServerSideProps() {
-  // const url = "http://localhost:3000/api/qp-details";
-  const url = "https://loyola-website.vercel.app/api/qp-details";
-
-  const res = await fetch(url);
-  const qp_details = await res.json();
+export async function getStaticProps() {
+  const qp_details = qpDetailsData;
   return { props: { qp_details } };
 }

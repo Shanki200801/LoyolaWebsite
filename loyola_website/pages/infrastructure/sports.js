@@ -1,3 +1,4 @@
+import sportsDataData from "@/data/sports-data.json";
 import React from "react";
 import { Lobster_Two, Inter, Oswald } from "next/font/google";
 import Image from "next/image";
@@ -9,7 +10,7 @@ const oswald = Oswald({ subsets: ["latin"], weight: "400" });
 const sports = ({ sportsData }) => {
   return (
     <div
-      className={`bg-cover bg-[url('~/public/backgrounds/bgFive.webp')] bg-right bg-fixed`}
+      className={`bg-cover bg-[url('../public/backgrounds/bgFive.webp')] bg-right bg-fixed`}
     >
       <div className={`bg-sky-200/80 py-6`}>
         <h1
@@ -80,9 +81,7 @@ const EventDescription = ({ desc }) => {
     </div>
   );
 };
-export async function getServerSideProps() {
-  const url = "https://loyola-website.vercel.app/api/sports-data";
-  const res = await fetch(url);
-  const sportsData = await res.json();
+export async function getStaticProps() {
+  const sportsData = sportsDataData;
   return { props: { sportsData } };
 }

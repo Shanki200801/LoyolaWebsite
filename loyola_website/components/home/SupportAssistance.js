@@ -11,7 +11,7 @@ import Link from "next/link";
 const SupportAssistance = () => {
   return (
     // <div className=" bg-[url('http://loyolacollegeblr.com/images/bgg.png')] bg-cover py-4 text-white">
-    <div className=" bg-[url('~/public/backgrounds/bgg.png')] bg-cover py-4 text-white">
+    <div className=" bg-[url('../public/backgrounds/bgg.png')] bg-cover py-4 text-white">
       {" "}
       <h2 className="text-2xl font-bold my-2 text-center">
         <span className="text-yellow-600">Support</span> and Assistance
@@ -33,7 +33,7 @@ const NavGrid = () => {
       key: 1,
       name: "Campus Facilities",
       icon: Campus_facilities,
-      link: "/infrastructure",
+      link: "/infrastructure/facilities",
     },
     {
       key: 2,
@@ -45,13 +45,13 @@ const NavGrid = () => {
       key: 3,
       name: "Mid Day Meals",
       icon: Mdmeals,
-      link: "",
+      link: "/infrastructure/facilities",
     },
     {
       key: 4,
       name: "Scholarships",
       icon: Scholarship,
-      link: "",
+      link: "/admissions",
     },
     {
       key: 5,

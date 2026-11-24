@@ -21,9 +21,12 @@ const Form = () => {
     setActiveTab(tab);
   };
 
+  const [submitted, setSubmitted] = useState(false);
+
+  // Static demo site: never log or transmit applicant data.
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData); // You can perform further actions with the form data here
+    setSubmitted(true);
   };
 
   const renderInputField = (tab, field) => {
@@ -128,7 +131,7 @@ const Form = () => {
   return (
     <div className="px-4 lg:px-24 bg-gradient-to-b from-gray-900 to-gray-600 r ">
       <div className="container mx-auto py-8">
-        <div className="flex justify-center mb-4">
+        <div className="flex flex-wrap justify-center gap-y-2 mb-4">
           <button
             className={`py-2 px-2 mx-1 rounded-2xl lg:mx-2 ${
               activeTab === "personal-tab-section"
@@ -328,6 +331,11 @@ const Form = () => {
             )}
           </div>
         </form>
+        {submitted && (
+          <p role="status" className="text-white text-center py-4">
+            Online submission is not available on this demo site. Please contact the college office to apply.
+          </p>
+        )}
       </div>
     </div>
   );

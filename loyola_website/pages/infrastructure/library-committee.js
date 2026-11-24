@@ -9,7 +9,7 @@ const oswald = Oswald({ subsets: ["latin"], weight: "400" });
 const library_commitee = () => {
   return (
     <div
-      className={`bg-cover bg-[url('~/public/backgrounds/bgFour.webp')] bg-center bg-fixed`}
+      className={`bg-cover bg-[url('../public/backgrounds/bgFour.webp')] bg-center bg-fixed`}
     >
       <div className={`bg-sky-100/90 pb-8`}>
         <h1

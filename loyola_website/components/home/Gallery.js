@@ -6,9 +6,8 @@ const oswald = Oswald({ subsets: ["latin"], weight: "400" });
 const inter = Inter({ subsets: ["latin"], weight: "400" });
 
 const Gallery = () => {
-  console.log(allImages);
   return (
-    <div className="bg-[url('~/public/backgrounds/bluebg-gallery.jpeg')] bg-cover bg-center bg-fixed">
+    <div className="bg-[url('../public/backgrounds/bluebg-gallery.jpeg')] bg-cover bg-center bg-fixed">
       <h1
         className={`${oswald.className} text-center text-white text-5xl py-3 drop-shadow-md shadow-gray-400`}
       >
